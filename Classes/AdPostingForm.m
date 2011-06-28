@@ -311,7 +311,9 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-//	NSLog(@"%@",advertiserTypeForm.advertiserTypeValue);
+	if (subcategory.currentCatId > 0) {
+			
+	}
 }
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

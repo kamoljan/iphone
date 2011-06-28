@@ -12,7 +12,7 @@
 
 @implementation Subcategory
 
-@synthesize subcategories, subPickerView;
+@synthesize subcategories, subPickerView, currentCatId;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
@@ -23,6 +23,7 @@
 		subPickerView = [[UIPickerView alloc] init];
 		subcategories = [[NSMutableArray alloc] init];
 		titles = [[NSMutableArray alloc] init];
+		currentCatId = [NSString stringWithFormat:@"0"];
 		NSURL *iyoURL = [NSURL URLWithString:@"http://www.iyoiyo.jp/ajax/category_tree"];
 		[self getJSONArray:iyoURL];
     }
@@ -62,12 +63,13 @@
 - (void)dealloc {
 	[subPickerView release];
 	[subcategories release];
-	[titles release];
+	[titles release];	
     [super dealloc];
 }
 
 #pragma mark -
 #pragma mark get request data
+//get JSON Data and reload picker view
 -(void) getJSONArray:(NSURL *)url
 {
 	NSData *subData = [NSData dataWithContentsOfURL:url];
@@ -75,20 +77,32 @@
 													 encoding:NSUTF8StringEncoding];
 	NSArray *tempCategories = [tempDataString JSONValue];	
 	NSMutableArray *subCat;
+	NSMutableDictionary *tempDict = [[NSMutableDictionary alloc] init];
 	NSString *subCatName ;
 	// Get regions and ad categories list
 	for (int i = 0; i < [tempCategories count]; i++) {
-		[subcategories addObject:[[tempCategories objectAtIndex:i] objectForKey:@"name"]];
-		for (int j = 0; j < [[[tempCategories objectAtIndex:i] objectForKey:@"subcategories"]count]; j++) {
+		
+		[tempDict setObject:[[tempCategories objectAtIndex:i] objectForKey:@"name"] 
+					 forKey:@"catName"];
+		[tempDict setObject:[[tempCategories objectAtIndex:i] objectForKey:@"id"] 
+					 forKey:@"catId"];
+		[subcategories addObject: [NSDictionary dictionaryWithDictionary:tempDict]];
+		
+		for (int j = 0; j < [[[tempCategories objectAtIndex:i] objectForKey:@"subcategories"] count]; j++) {
 			subCat = [[tempCategories objectAtIndex:i] objectForKey:@"subcategories"];
 			subCatName = [[subCat objectAtIndex:j] objectForKey:@"name"];
 			
-			[subcategories addObject:subCatName];
+			//[subcategories addObject:subCatName];
+			[tempDict setObject:[[subCat objectAtIndex:j] objectForKey:@"name"] 
+						 forKey:@"catName"];
+			[tempDict setObject:[[subCat objectAtIndex:j] objectForKey:@"id"] 
+						 forKey:@"catId"];
+			[subcategories addObject: [NSDictionary dictionaryWithDictionary:tempDict]];
 		}
 	}
+	
 	[self.subPickerView reloadAllComponents];
-	NSLog(@"%@", subcategories);
-
+	[tempDict release];
 }
 
 #pragma mark -
@@ -118,9 +132,16 @@ numberOfRowsInComponent:(NSInteger)component
 		return @"Please choose the subcategory";
 	}
 	else {
-		return [subcategories objectAtIndex:row];
+		return [[subcategories objectAtIndex:row] objectForKey:@"catName"];
 	}
 
+}
+
+- (void)pickerView:(UIPickerView *)pickerView 
+	  didSelectRow:(NSInteger)row 
+	   inComponent:(NSInteger)component
+{
+	currentCatId = [[subcategories objectAtIndex:row] objectForKey:@"catId"];
 }
 
 @end
