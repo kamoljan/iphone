@@ -21,11 +21,8 @@
     if (self) {
         // Custom initialization.
 		subPickerView = [[UIPickerView alloc] init];
-		subcategories = [[NSMutableArray alloc] init];
-		titles = [[NSMutableArray alloc] init];
-		currentCatId = [NSString stringWithFormat:@"0"];
-		NSURL *iyoURL = [NSURL URLWithString:@"http://www.iyoiyo.jp/ajax/category_tree"];
-		[self getJSONArray:iyoURL];
+		subcategories = [[NSMutableArray alloc] init];	
+		currentCatId = [[NSString alloc] initWithFormat:@"0"];		
     }
     return self;
 }
@@ -60,17 +57,14 @@
 }
 
 
-- (void)dealloc {
-	[subPickerView release];
-	[subcategories release];
-	[titles release];	
-    [super dealloc];
+- (void)dealloc {	
+	[super dealloc];
 }
 
 #pragma mark -
 #pragma mark get request data
 //get JSON Data and reload picker view
--(void) getJSONArray:(NSURL *)url
+-(void) loadDataWithURLArray:(NSURL *)url
 {
 	NSData *subData = [NSData dataWithContentsOfURL:url];
 	NSString *tempDataString = [[NSString alloc] initWithData:subData 
@@ -78,7 +72,6 @@
 	NSArray *tempCategories = [tempDataString JSONValue];	
 	NSMutableArray *subCat;
 	NSMutableDictionary *tempDict = [[NSMutableDictionary alloc] init];
-	NSString *subCatName ;
 	// Get regions and ad categories list
 	for (int i = 0; i < [tempCategories count]; i++) {
 		
@@ -90,8 +83,6 @@
 		
 		for (int j = 0; j < [[[tempCategories objectAtIndex:i] objectForKey:@"subcategories"] count]; j++) {
 			subCat = [[tempCategories objectAtIndex:i] objectForKey:@"subcategories"];
-			subCatName = [[subCat objectAtIndex:j] objectForKey:@"name"];
-			
 			//[subcategories addObject:subCatName];
 			[tempDict setObject:[[subCat objectAtIndex:j] objectForKey:@"name"] 
 						 forKey:@"catName"];
@@ -103,6 +94,7 @@
 	
 	[self.subPickerView reloadAllComponents];
 	[tempDict release];
+	[tempDataString release];
 }
 
 #pragma mark -

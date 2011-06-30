@@ -15,10 +15,9 @@
 	IBOutlet UIPickerView *subPickerView;
 	NSMutableArray *subcategories;
 	NSString *currentCatId;
-	NSMutableArray *titles;
 }
 
--(void) getJSONArray:(NSURL *)url;
+-(void) loadDataWithURLArray:(NSURL *)url;
 
 @property (nonatomic, retain) NSMutableArray *subcategories;
 @property (nonatomic, retain) NSString *currentCatId;

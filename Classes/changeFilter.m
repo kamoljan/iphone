@@ -124,8 +124,8 @@ arrayCategories, queryText;
 		
 	}
 	
+	[tempRegion release];
 	[tempDataString release];
-	
 	// Reload the picker view
 	[self.baseOptions reloadAllComponents];
 }
@@ -141,7 +141,7 @@ arrayCategories, queryText;
 	tempCategories = [tempDataString JSONValue];	
 	NSMutableArray *subCat;
 	NSMutableDictionary *tempDict = [[NSMutableDictionary alloc] init];
-	NSString *subCatName ;
+
 	// Get regions and ad categories list
 	for (int i = 0; i < [tempCategories count]; i++) {		
 		[tempDict setObject:[[tempCategories objectAtIndex:i] objectForKey:@"name"] 
@@ -151,7 +151,6 @@ arrayCategories, queryText;
 		[arrayCategories addObject: [NSDictionary dictionaryWithDictionary:tempDict]];		
 		for (int j = 0; j < [[[tempCategories objectAtIndex:i] objectForKey:@"subcategories"] count]; j++) {
 			subCat = [[tempCategories objectAtIndex:i] objectForKey:@"subcategories"];
-			subCatName = [[subCat objectAtIndex:j] objectForKey:@"name"];
 			
 			[tempDict setObject:[[subCat objectAtIndex:j] objectForKey:@"name"] 
 						 forKey:@"catName"];
@@ -165,7 +164,7 @@ arrayCategories, queryText;
 	// Reloa the picker view
 //	[self.baseOptions reloadAllComponents];
 	
-	
+	[tempDict release];
 	[tempDataString release];
 }
 

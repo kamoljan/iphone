@@ -10,21 +10,33 @@
 #import "AdvertiserType.h"
 #import "AdType.h"
 #import "Subcategory.h"
+#import "ExtraForms.h"
+#import "navBasedAppDelegate.h"
 
 
 @interface AdPostingForm : UIViewController 
 <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UITextViewDelegate>
 {
-	NSMutableDictionary *fields;
+	NSMutableArray *fieldsArray;
+	NSMutableArray *extraFormsArray;
+	navBasedAppDelegate *appDelegate;
 	AdvertiserType *advertiserTypeForm;
 	AdType *adType;
 	Subcategory *subcategory;
+	ExtraForms *extraParametres;
+	
 }
 
-@property (nonatomic, retain) NSDictionary *fields;
 @property (nonatomic, retain) AdvertiserType *advertiserTypeForm;
 @property (nonatomic, retain) AdType *adType;
 @property (nonatomic, retain) Subcategory *subcategory;
+@property (nonatomic, retain) ExtraForms *extraParametres;
+
+-(void) addLabel:(NSString *)labelTitle toCell:(UITableViewCell *)cell;
+-(void) addTextViewToCell:(UITableViewCell *)cell;
+-(void) addTextFieldToCell:(UITableViewCell *)cell withKeyboardType:(NSString *)keyboardType;
+-(void) prepareFieldsArray;
+-(void) loadExtraFields;
 
 -(void)addTextField:(UITableViewCell *)cell 
 			  title:(NSString *)title 
@@ -32,7 +44,4 @@
 	 fieldType:(NSString *)fieldType
 				tag:(NSUInteger)tag;
 
--(void)addTextView:(UITableViewCell *)cell 
-			  title:(NSString *)title 
-	  			tag:(NSUInteger)tag;
 @end

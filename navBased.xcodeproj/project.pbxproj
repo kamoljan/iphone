@@ -26,6 +26,8 @@
 		5B491AB513A8D2AF0052DB78 /* img16.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5B491AB413A8D2AF0052DB78 /* img16.gif */; };
 		5B9A9EBA13B3078A00324522 /* AdPostingForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A9EB813B3078A00324522 /* AdPostingForm.m */; };
 		5B9A9EBB13B3078A00324522 /* AdPostingForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B9A9EB913B3078A00324522 /* AdPostingForm.xib */; };
+		5BA8C50B13BB0BF400B144CD /* ExtraForms.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA8C50913BB0BF400B144CD /* ExtraForms.m */; };
+		5BA8C50C13BB0BF400B144CD /* ExtraForms.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA8C50A13BB0BF400B144CD /* ExtraForms.xib */; };
 		5BFF261913A9EB26002E3EF6 /* changeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF261713A9EB26002E3EF6 /* changeFilter.m */; };
 		5BFF261A13A9EB26002E3EF6 /* changeFilter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BFF261813A9EB26002E3EF6 /* changeFilter.xib */; };
 		5BFFD7A113B858D400E0317A /* AdvertiserType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFFD79F13B858D400E0317A /* AdvertiserType.m */; };
@@ -69,6 +71,9 @@
 		5B9A9EB713B3078A00324522 /* AdPostingForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdPostingForm.h; sourceTree = "<group>"; };
 		5B9A9EB813B3078A00324522 /* AdPostingForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdPostingForm.m; sourceTree = "<group>"; };
 		5B9A9EB913B3078A00324522 /* AdPostingForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AdPostingForm.xib; path = Classes/AdPostingForm.xib; sourceTree = "<group>"; };
+		5BA8C50813BB0BF400B144CD /* ExtraForms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtraForms.h; sourceTree = "<group>"; };
+		5BA8C50913BB0BF400B144CD /* ExtraForms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtraForms.m; sourceTree = "<group>"; };
+		5BA8C50A13BB0BF400B144CD /* ExtraForms.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ExtraForms.xib; path = Classes/ExtraForms.xib; sourceTree = "<group>"; };
 		5BFF261613A9EB26002E3EF6 /* changeFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = changeFilter.h; sourceTree = "<group>"; };
 		5BFF261713A9EB26002E3EF6 /* changeFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = changeFilter.m; sourceTree = "<group>"; };
 		5BFF261813A9EB26002E3EF6 /* changeFilter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = changeFilter.xib; path = Classes/changeFilter.xib; sourceTree = "<group>"; };
@@ -118,6 +123,8 @@
 				5BFFD7C013B85AE700E0317A /* AdType.m */,
 				5BFFD7FA13B888F900E0317A /* Subcategory.h */,
 				5BFFD7FB13B888F900E0317A /* Subcategory.m */,
+				5BA8C50813BB0BF400B144CD /* ExtraForms.h */,
+				5BA8C50913BB0BF400B144CD /* ExtraForms.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -163,6 +170,7 @@
 				5BFFD7A013B858D400E0317A /* AdvertiserType.xib */,
 				5BFFD7C113B85AE700E0317A /* AdType.xib */,
 				5BFFD7FC13B888F900E0317A /* Subcategory.xib */,
+				5BA8C50A13BB0BF400B144CD /* ExtraForms.xib */,
 				8D1107310486CEB800E47090 /* navBased-Info.plist */,
 			);
 			name = Resources;
@@ -257,6 +265,7 @@
 				5BFFD7A213B858D400E0317A /* AdvertiserType.xib in Resources */,
 				5BFFD7C313B85AE700E0317A /* AdType.xib in Resources */,
 				5BFFD7FE13B888F900E0317A /* Subcategory.xib in Resources */,
+				5BA8C50C13BB0BF400B144CD /* ExtraForms.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +291,7 @@
 				5BFFD7A113B858D400E0317A /* AdvertiserType.m in Sources */,
 				5BFFD7C213B85AE700E0317A /* AdType.m in Sources */,
 				5BFFD7FD13B888F900E0317A /* Subcategory.m in Sources */,
+				5BA8C50B13BB0BF400B144CD /* ExtraForms.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
