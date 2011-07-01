@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "AdvertiserType.h"
-#import "AdType.h"
 #import "Subcategory.h"
 #import "ExtraForms.h"
+#import "AddPostDataView.h"
 #import "navBasedAppDelegate.h"
 
 
@@ -18,25 +18,33 @@
 <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UITextViewDelegate>
 {
 	NSMutableArray *fieldsArray;
-	NSMutableArray *extraFormsArray;
+	Boolean shouldChangePostItem;
+	NSInteger changingIndexAtPostArray;
+	NSMutableArray *pickerViewValues;
+	IBOutlet UITableView *tableView;
 	navBasedAppDelegate *appDelegate;
 	AdvertiserType *advertiserTypeForm;
-	AdType *adType;
 	Subcategory *subcategory;
+	AddPostDataView *addPostDataView;
 	ExtraForms *extraParametres;
 	
 }
 
 @property (nonatomic, retain) AdvertiserType *advertiserTypeForm;
-@property (nonatomic, retain) AdType *adType;
 @property (nonatomic, retain) Subcategory *subcategory;
 @property (nonatomic, retain) ExtraForms *extraParametres;
+@property (nonatomic, retain) IBOutlet UITableView *tableView;
+@property (nonatomic, retain) NSMutableArray *fieldsArray;
+@property (nonatomic, retain) NSMutableArray *pickerViewValues;
+@property (nonatomic, assign) Boolean shouldChangePostItem;
+@property (nonatomic, assign) NSInteger changingIndexAtPostArray;
 
 -(void) addLabel:(NSString *)labelTitle toCell:(UITableViewCell *)cell;
 -(void) addTextViewToCell:(UITableViewCell *)cell;
--(void) addTextFieldToCell:(UITableViewCell *)cell withKeyboardType:(NSString *)keyboardType;
+-(void) addTextFieldToCell:(UITableViewCell *)cell 
+		  withKeyboardType:(NSString *)keyboardType 
+				   withTag:(NSInteger)tag;
 -(void) prepareFieldsArray;
--(void) loadExtraFields;
 
 -(void)addTextField:(UITableViewCell *)cell 
 			  title:(NSString *)title 

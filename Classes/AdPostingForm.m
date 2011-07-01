@@ -12,7 +12,8 @@
 
 @implementation AdPostingForm
 
-@synthesize advertiserTypeForm, adType, subcategory, extraParametres;
+@synthesize advertiserTypeForm, subcategory, extraParametres, tableView,
+fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
@@ -22,18 +23,19 @@
         // Custom initialization.
 		appDelegate = (navBasedAppDelegate *)[[UIApplication sharedApplication] 
 											  delegate];
-
+		shouldChangePostItem = NO;
+		changingIndexAtPostArray = 0;
+		pickerViewValues = [[NSMutableArray alloc] init];
 		fieldsArray = [[NSMutableArray alloc] init];
 		//Initialize Advertiser Type Form
 		advertiserTypeForm = [[AdvertiserType alloc] init];
-		//Initialize Ad Types form
-		adType = [[AdType alloc] init];
 		//Init Subcategories form
 		subcategory = [[Subcategory alloc] initWithNibName:nil bundle:nil];
+		NSURL *iyoURL = [NSURL URLWithString:@"http://www.iyoiyo.jp/ajax/category_tree"];
+		[self.subcategory loadDataWithURLArray:iyoURL];		
 		//Init Extra parametres view
-		extraParametres = [[ExtraForms alloc] initWithNibName:nil bundle:nil];
-		
-		[self prepareFieldsArray];
+		extraParametres = [[ExtraForms alloc] initWithNibName:nil bundle:nil];	
+		addPostDataView = [[AddPostDataView alloc] init];
     }
 
     return self;
@@ -86,11 +88,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	if ([[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"type"] == @"select") {
-		NSURL *iyoURL = [NSURL URLWithString:@"http://www.iyoiyo.jp/ajax/category_tree"];
-		[self.subcategory loadDataWithURLArray:iyoURL];
+	if ([[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"name"] == @"subcategory") {		
 		[self.navigationController pushViewController:self.subcategory animated:YES];	
 	}
+	else if ([[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"type"] == @"optional")
+	{		
+		[addPostDataView setPickerData:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"value"]];
+		[self.navigationController pushViewController:addPostDataView animated:YES];
+	}
+
 	/*
 	switch (indexPath.row) {
 		case 0:
@@ -129,16 +135,16 @@
 				tag:indexPath.row];
 	*/
 	
-	[self addLabel:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"title"] 
-			toCell:cell];
+	[self addLabel:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"title"] toCell:cell];
 	
-	NSString *fieldType = [[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"type"];
+	NSString *fieldType = [[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"type"];	
 	if (fieldType == @"textView") {
 		[self addTextViewToCell:cell];
 	}
-	else if (fieldType == @"text") {
+	else if ([fieldType isEqualToString:@"text" ]) {		
 		[self addTextFieldToCell:cell
-				withKeyboardType:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"text_type"]];
+				withKeyboardType:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"text_type"]
+						 withTag:(30 + indexPath.row)];
 	}
 	return cell;
 	
@@ -178,9 +184,12 @@
 	[adTextView release];
 }
 
--(void) addTextFieldToCell:(UITableViewCell *)cell withKeyboardType:(NSString *)keyboardType
+-(void) addTextFieldToCell:(UITableViewCell *)cell 
+		  withKeyboardType:(NSString *)keyboardType
+				   withTag:(NSInteger)tag
 {
 	UITextField *playerTextField = [[UITextField alloc] initWithFrame:CGRectMake(10, 35, 185, 30)];
+	playerTextField.tag = tag;
 	playerTextField.adjustsFontSizeToFitWidth = YES;
 	playerTextField.textColor = [UIColor blackColor];
 	playerTextField.placeholder = @"Required";
@@ -215,12 +224,27 @@
 
 -(void) prepareFieldsArray
 {
+	NSMutableDictionary *tempField = [[NSMutableDictionary alloc] init], *tempValueItem = [[NSMutableDictionary alloc] init];
+	NSMutableArray *tempValueArray = [[NSMutableArray alloc] init];
+
 	[fieldsArray removeAllObjects];
-	NSMutableDictionary *tempField = [[NSMutableDictionary alloc] init];
+		
 	[tempField setObject:@"Advertiser type" forKey:@"title"];
 	[tempField setObject:@"advertiser_type" forKey:@"name"];
 	[tempField setObject:@"optional" forKey:@"type"];
 	[tempField setObject:@"40" forKey:@"height"];
+	
+	[tempValueItem setObject:@"Personal" forKey:@"name"];
+	[tempValueItem setObject:@"1" forKey:@"value"];
+	[tempValueArray addObject:[[tempValueItem copy] autorelease]];
+	[tempValueItem removeAllObjects];	
+	[tempValueItem setObject:@"Company" forKey:@"name"];
+	[tempValueItem setObject:@"2" forKey:@"value"];
+	[tempValueArray addObject:[[tempValueItem copy] autorelease]];
+	[tempValueItem removeAllObjects];
+	
+	[tempField setObject:[[tempValueArray copy] autorelease] forKey:@"value"];
+	[tempValueArray removeAllObjects];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
@@ -255,6 +279,27 @@
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
+	if ([self.subcategory.extraFormsArray count] > 0) {		
+		//create values Array	
+		for (int i = 0;i < [self.subcategory.extraFormsArray count]; i++) {
+			[tempField setObject:[[self.subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"name"] forKey:@"title"];
+			[tempField setObject:[[self.subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"name"] forKey:@"name"];
+			
+			[tempField setObject:[[self.subcategory.extraFormsArray objectAtIndex:i] 
+								  objectForKey:@"type"] forKey:@"type"];
+			[tempField setObject:@"text" forKey:@"text_type"];
+			if ([[[self.subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"type"] isEqualToString:@"text"]) {
+				[tempField setObject:@"75" forKey:@"height"];
+			}
+			else {
+				[tempField setObject:@"40" forKey:@"height"];
+			}
+
+			
+			[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
+			[tempField removeAllObjects];			
+		}
+	}
 	
 	[tempField setObject:@"Ad type" forKey:@"title"];
 	[tempField setObject:@"ad_type" forKey:@"name"];
@@ -286,14 +331,14 @@
 	[tempField setObject:@"text" forKey:@"text_type"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
-	
+/*	
 	[tempField setObject:@"Price" forKey:@"title"];
 	[tempField setObject:@"price" forKey:@"name"];
 	[tempField setObject:@"text" forKey:@"type"];
 	[tempField setObject:@"75" forKey:@"height"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
-	
+*/	
 	[tempField setObject:@"Past Your ads images" forKey:@"title"];
 	[tempField setObject:@"file_upload_input" forKey:@"name"];
 	[tempField setObject:@"image" forKey:@"type"];
@@ -301,24 +346,12 @@
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 		
+	[tempValueItem release];
+	[tempValueArray release];
 	[tempField release];
-	if (subcategory.currentCatId != @"0") {
-		[self loadExtraFields];
-	}	
-}
-
--(void) loadExtraFields
-{
-	NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://www.iyoiyo.jp/ajax/extra_forms/%@",subcategory.currentCatId]];
-	NSData *extraData = [NSData dataWithContentsOfURL:url];
-	NSString *tempExtraDataString = [[NSString alloc] initWithData:extraData 
-														  encoding:NSUTF8StringEncoding];
-	extraFormsArray =[tempExtraDataString JSONValue];
 	
-	[tempExtraDataString release];
-	[url release];
-	// reloadData];
 	
+	[self.tableView reloadData];
 }
 
 -(void)addTextField:(UITableViewCell *)cell 
@@ -399,6 +432,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+	[self prepareFieldsArray];
 	
 }
 - (void)didReceiveMemoryWarning {
@@ -417,9 +451,9 @@
 
 - (void)dealloc {
 	[advertiserTypeForm release];
-	[adType release];
 	[subcategory release];
 	[extraParametres release];
+	[tableView release];
     [super dealloc];
 }
 

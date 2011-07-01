@@ -12,7 +12,7 @@
 
 @implementation Subcategory
 
-@synthesize subcategories, subPickerView, currentCatId;
+@synthesize subcategories, subPickerView, currentCatId, extraFormsArray;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
@@ -20,9 +20,10 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization.
-		subPickerView = [[UIPickerView alloc] init];
-		subcategories = [[NSMutableArray alloc] init];	
-		currentCatId = [[NSString alloc] initWithFormat:@"0"];		
+		self.subPickerView = [[UIPickerView alloc] init];
+		self.subcategories = [[NSMutableArray alloc] init];	
+		currentCatId = [[NSString alloc] initWithFormat:@"0"];
+		self.extraFormsArray = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -57,15 +58,17 @@
 }
 
 
-- (void)dealloc {	
+- (void)dealloc {
+	[currentCatId  release];	
 	[super dealloc];
 }
 
 #pragma mark -
-#pragma mark get request data
+#pragma mark load data
 //get JSON Data and reload picker view
 -(void) loadDataWithURLArray:(NSURL *)url
 {
+	[subcategories removeAllObjects];
 	NSData *subData = [NSData dataWithContentsOfURL:url];
 	NSString *tempDataString = [[NSString alloc] initWithData:subData 
 													 encoding:NSUTF8StringEncoding];
@@ -95,6 +98,19 @@
 	[self.subPickerView reloadAllComponents];
 	[tempDict release];
 	[tempDataString release];
+}
+
+
+-(void) loadExtraFields
+{
+	NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://www.iyoiyo.jp/ajax/extra_forms/%@",currentCatId]];
+	NSData *extraData = [NSData dataWithContentsOfURL:url];
+	NSString *tempExtraDataString = [[NSString alloc] initWithData:extraData 
+														  encoding:NSUTF8StringEncoding];
+	self.extraFormsArray =[tempExtraDataString JSONValue];
+	
+	[tempExtraDataString release];
+	[url release];
 }
 
 #pragma mark -
@@ -134,6 +150,7 @@ numberOfRowsInComponent:(NSInteger)component
 	   inComponent:(NSInteger)component
 {
 	currentCatId = [[subcategories objectAtIndex:row] objectForKey:@"catId"];
+	[self loadExtraFields];	
 }
 
 @end
