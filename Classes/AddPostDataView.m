@@ -17,8 +17,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization.
-		pickerData =[[NSArray alloc] init];
+		optionsData =[[NSMutableArray alloc] init];
 		resultValue = [[NSString alloc] init];
+		buttonsArray = [[NSMutableArray alloc] init];
 		//sampleButton = [[UIButton alloc] init];
     }
     return self;
@@ -28,29 +29,36 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {	
-    [super viewDidLoad];
+    [super viewDidLoad];		
+}
 
-	NSMutableArray *buttonsArray = [[NSMutableArray alloc] init];
+- (void)viewWillAppear:(BOOL)animated
+{
+	
+	for (int i = 0; i < [buttonsArray count]; i++) {
+		[[buttonsArray objectAtIndex:i]  removeFromSuperview];
+	}
+	[buttonsArray removeAllObjects];
 	UIButton *myButton;
-	for (int i = 0; i < [pickerData count]; i++) {
+	for (int i = 0; i < [optionsData count]; i++) {
 		myButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		myButton.frame = CGRectMake(50, (100 + (i * 60) ), 200, 44); // position in the parent view and set the size of the button
-		[myButton setTitle:[[pickerData objectAtIndex:i] objectForKey:@"name"]
+		myButton.frame = CGRectMake(50, (50 + (i * 60) ), 200, 44); // position in the parent view and set the size of the button
+		[myButton setTitle:[[optionsData objectAtIndex:i] objectForKey:@"name"]
 				  forState:UIControlStateNormal];
-		myButton.tag = (NSInteger)[[[pickerData objectAtIndex:i] objectForKey:@"value"] intValue];
+		myButton.tag = (i + 1);
 		// add targets and actions
 		[myButton addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
 		// add to a view	
 		[buttonsArray addObject:myButton];
 		[self.view addSubview:[buttonsArray objectAtIndex:i]];	
 		
-	}
-	
+	}	
 }
 
 -(IBAction) buttonClicked:(id)sender
 {
-	NSLog(@"%i",[sender tag]);
+	resultValue = [[optionsData objectAtIndex:([sender tag] - 1)] objectForKey:@"value"];
+	[[self navigationController] popViewControllerAnimated:YES];
 }
 
 /*
@@ -76,13 +84,13 @@
 
 
 - (void)dealloc {
-	[pickerData release];
+	[optionsData release];	
     [super dealloc];
 }
 
--(void) setPickerData:(NSArray *)dataArray
-{	
-	pickerData = [[dataArray copy] autorelease];	
+-(void) setOptionsData:(NSMutableArray *)dataArray
+{
+	optionsData = dataArray;	
 }
 
 @end

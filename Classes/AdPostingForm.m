@@ -21,8 +21,8 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization.
-		appDelegate = (navBasedAppDelegate *)[[UIApplication sharedApplication] 
-											  delegate];
+		//appDelegate = (navBasedAppDelegate *)[[UIApplication sharedApplication] 
+		//									  delegate];
 		shouldChangePostItem = NO;
 		changingIndexAtPostArray = 0;
 		pickerViewValues = [[NSMutableArray alloc] init];
@@ -36,6 +36,7 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 		//Init Extra parametres view
 		extraParametres = [[ExtraForms alloc] initWithNibName:nil bundle:nil];	
 		addPostDataView = [[AddPostDataView alloc] init];
+		addPostDataSelectView = [[AddPostDataSelectView alloc] init];
     }
 
     return self;
@@ -91,10 +92,15 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 	if ([[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"name"] == @"subcategory") {		
 		[self.navigationController pushViewController:self.subcategory animated:YES];	
 	}
-	else if ([[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"type"] == @"optional")
-	{		
-		[addPostDataView setPickerData:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"value"]];
+	else if ([[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"type"] isEqualToString:@"radio" ])
+	{			
+		[addPostDataView setOptionsData:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"value"]];
 		[self.navigationController pushViewController:addPostDataView animated:YES];
+	}
+	else if ([[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"type"] isEqualToString:@"select" ])
+	{
+		[addPostDataSelectView setPickerData:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"value"]];
+		[self.navigationController pushViewController:addPostDataSelectView animated:YES];
 	}
 
 	/*
@@ -146,6 +152,7 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 				withKeyboardType:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"text_type"]
 						 withTag:(30 + indexPath.row)];
 	}
+	
 	return cell;
 	
 }
@@ -231,16 +238,18 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 		
 	[tempField setObject:@"Advertiser type" forKey:@"title"];
 	[tempField setObject:@"advertiser_type" forKey:@"name"];
-	[tempField setObject:@"optional" forKey:@"type"];
+	[tempField setObject:@"radio" forKey:@"type"];
 	[tempField setObject:@"40" forKey:@"height"];
+	[tempField setObject:@"" forKey:@"post_value"];
+	[tempField setObject:@"YES" forKey:@"enbled"];
 	
 	[tempValueItem setObject:@"Personal" forKey:@"name"];
 	[tempValueItem setObject:@"1" forKey:@"value"];
-	[tempValueArray addObject:[[tempValueItem copy] autorelease]];
+	[tempValueArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempValueItem] ];
 	[tempValueItem removeAllObjects];	
 	[tempValueItem setObject:@"Company" forKey:@"name"];
 	[tempValueItem setObject:@"2" forKey:@"value"];
-	[tempValueArray addObject:[[tempValueItem copy] autorelease]];
+	[tempValueArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempValueItem]];
 	[tempValueItem removeAllObjects];
 	
 	[tempField setObject:[[tempValueArray copy] autorelease] forKey:@"value"];
@@ -252,7 +261,9 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 	[tempField setObject:@"advertiser_name" forKey:@"name"];
 	[tempField setObject:@"text" forKey:@"type"];
 	[tempField setObject:@"75" forKey:@"height"];
+	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"text" forKey:@"text_type"];
+	[tempField setObject:@"YES" forKey:@"enbled"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
@@ -260,7 +271,9 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 	[tempField setObject:@"email" forKey:@"name"];
 	[tempField setObject:@"text" forKey:@"type"];
 	[tempField setObject:@"75" forKey:@"height"];
+	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"email" forKey:@"text_type"];
+	[tempField setObject:@"YES" forKey:@"enbled"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
@@ -268,7 +281,9 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 	[tempField setObject:@"phone" forKey:@"name"];
 	[tempField setObject:@"text" forKey:@"type"];
 	[tempField setObject:@"75" forKey:@"height"];
+	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"phone" forKey:@"text_type"];
+	[tempField setObject:@"YES" forKey:@"enbled"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
@@ -276,6 +291,8 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 	[tempField setObject:@"subcategory" forKey:@"name"];
 	[tempField setObject:@"select" forKey:@"type"];
 	[tempField setObject:@"40" forKey:@"height"];
+	[tempField setObject:@"" forKey:@"post_value"];
+	[tempField setObject:@"YES" forKey:@"enbled"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
@@ -287,7 +304,11 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 			
 			[tempField setObject:[[self.subcategory.extraFormsArray objectAtIndex:i] 
 								  objectForKey:@"type"] forKey:@"type"];
+			[tempField setObject:[[self.subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"data"] 
+						  forKey:@"value"];			
+			[tempField setObject:@"" forKey:@"post_value"];
 			[tempField setObject:@"text" forKey:@"text_type"];
+			[tempField setObject:@"YES" forKey:@"enbled"];
 			if ([[[self.subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"type"] isEqualToString:@"text"]) {
 				[tempField setObject:@"75" forKey:@"height"];
 			}
@@ -303,16 +324,21 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 	
 	[tempField setObject:@"Ad type" forKey:@"title"];
 	[tempField setObject:@"ad_type" forKey:@"name"];
-	[tempField setObject:@"optional" forKey:@"type"];
+	[tempField setObject:@"radio" forKey:@"type"];
 	[tempField setObject:@"40" forKey:@"height"];
-	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
+	[tempField setObject:@"" forKey:@"post_value"];
+	[tempField setObject:@"YES" forKey:@"enbled"];
+
+	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];	
 	[tempField removeAllObjects];
 	
 	[tempField setObject:@"Postal code" forKey:@"title"];
 	[tempField setObject:@"post_code" forKey:@"name"];
 	[tempField setObject:@"text" forKey:@"type"];
 	[tempField setObject:@"75" forKey:@"height"];
+	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"text" forKey:@"text_type"];
+	[tempField setObject:@"YES" forKey:@"enbled"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
@@ -320,7 +346,9 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 	[tempField setObject:@"title" forKey:@"name"];
 	[tempField setObject:@"text" forKey:@"type"];
 	[tempField setObject:@"75" forKey:@"height"];
+	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"text" forKey:@"text_type"];
+	[tempField setObject:@"YES" forKey:@"enbled"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
@@ -328,7 +356,9 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 	[tempField setObject:@"body" forKey:@"name"];
 	[tempField setObject:@"textView" forKey:@"type"];
 	[tempField setObject:@"150" forKey:@"height"];
+	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"text" forKey:@"text_type"];
+	[tempField setObject:@"YES" forKey:@"enbled"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 /*	
@@ -336,13 +366,17 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 	[tempField setObject:@"price" forKey:@"name"];
 	[tempField setObject:@"text" forKey:@"type"];
 	[tempField setObject:@"75" forKey:@"height"];
+	[tempField setObject:@"" forKey:@"post_value"];
+	[tempField setObject:@"YES" forKey:@"enbled"]
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 */	
 	[tempField setObject:@"Past Your ads images" forKey:@"title"];
 	[tempField setObject:@"file_upload_input" forKey:@"name"];
 	[tempField setObject:@"image" forKey:@"type"];
+	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"40" forKey:@"height"];
+	[tempField setObject:@"YES" forKey:@"enbled"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 		
@@ -432,6 +466,7 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 
 - (void)viewWillAppear:(BOOL)animated
 {
+	
 	[self prepareFieldsArray];
 	
 }
@@ -450,10 +485,16 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 
 
 - (void)dealloc {
+	[fieldsArray release];
+	[pickerViewValues release];
+	[tableView release];
+	//[appDelegate release];
 	[advertiserTypeForm release];
 	[subcategory release];
+	[addPostDataView release];
+	[addPostDataSelectView release];
 	[extraParametres release];
-	[tableView release];
+
     [super dealloc];
 }
 

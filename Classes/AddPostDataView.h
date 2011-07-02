@@ -11,11 +11,11 @@
 
 @interface AddPostDataView : UIViewController 
 {
-	NSArray *pickerData;
+	NSMutableArray *optionsData;
 	NSString *resultValue;
-
+	NSMutableArray *buttonsArray; 
 }
 
--(void) setPickerData:(NSArray *)dataArray;
+-(void) setOptionsData:(NSMutableArray *)dataArray;
 -(IBAction) buttonClicked:(id)sender;
 @end

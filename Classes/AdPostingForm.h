@@ -11,6 +11,7 @@
 #import "Subcategory.h"
 #import "ExtraForms.h"
 #import "AddPostDataView.h"
+#import "AddPostDataSelectView.h"
 #import "navBasedAppDelegate.h"
 
 
@@ -18,16 +19,24 @@
 <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UITextViewDelegate>
 {
 	NSMutableArray *fieldsArray;
-	Boolean shouldChangePostItem;
-	NSInteger changingIndexAtPostArray;
 	NSMutableArray *pickerViewValues;
 	IBOutlet UITableView *tableView;
 	navBasedAppDelegate *appDelegate;
 	AdvertiserType *advertiserTypeForm;
 	Subcategory *subcategory;
 	AddPostDataView *addPostDataView;
+	AddPostDataSelectView *addPostDataSelectView;
 	ExtraForms *extraParametres;
 	
+	//used for dynamic upload extra fields
+	//the new value will be located at addPostDataVew.resultValue 
+	Boolean shouldChangePostItem;	
+	NSInteger changingIndexAtPostArray;
+	//used for check which view to use to get new post value
+	//for example radio uses AddPostDataVIew class,
+	//select uses AddPostDataSelectView
+	
+	NSInteger changingValueType;
 }
 
 @property (nonatomic, retain) AdvertiserType *advertiserTypeForm;

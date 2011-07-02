@@ -12,7 +12,7 @@
 
 @implementation Subcategory
 
-@synthesize subcategories, subPickerView, currentCatId, extraFormsArray;
+@synthesize subcategories, subPickerView, currentCatId, extraFormsArray, adTypesArray;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
@@ -24,6 +24,7 @@
 		self.subcategories = [[NSMutableArray alloc] init];	
 		currentCatId = [[NSString alloc] initWithFormat:@"0"];
 		self.extraFormsArray = [[NSMutableArray alloc] init];
+		adTypesArray = [[NSMutableArray alloc] init];
     }
     return self;
 }

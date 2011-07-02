@@ -125,11 +125,10 @@
 
 
 - (void)dealloc {
-//	[ release];
 	[searchResults release];
 	[navigationController release];
 	[searchFilter release];
-	[adId autorelease];
+	[adId release];
 	[window release];
 	[super dealloc];
 }
