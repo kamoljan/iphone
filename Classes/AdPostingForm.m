@@ -12,8 +12,8 @@
 
 @implementation AdPostingForm
 
-@synthesize advertiserTypeForm, subcategory, extraParametres, tableView,
-fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
+//@synthesize advertiserTypeForm, subcategory, extraParametres, tableView,
+//fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
@@ -21,22 +21,28 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization.
-		//appDelegate = (navBasedAppDelegate *)[[UIApplication sharedApplication] 
-		//									  delegate];
+		activeCatId = [[NSString alloc] initWithString:@"9"];
+		appDelegate = (navBasedAppDelegate *)[[UIApplication sharedApplication] 
+											  delegate];
 		shouldChangePostItem = NO;
-		changingIndexAtPostArray = 0;
+		changingIndexAtPostArray = -1;
+		changingValueType = [[NSString alloc] initWithFormat:@"no_type"];
+		changingValueKey = [[NSString alloc] initWithFormat:@"no_key"];
+		
 		pickerViewValues = [[NSMutableArray alloc] init];
 		fieldsArray = [[NSMutableArray alloc] init];
+
+		//Init Subcategories form
+		subcategory = [[Subcategory alloc] init];
+		NSURL *iyoURL = [NSURL URLWithString:@"http://www.iyoiyo.jp/ajax/category_tree"];
+		[subcategory loadDataWithURLArray:iyoURL];		
 		//Initialize Advertiser Type Form
 		advertiserTypeForm = [[AdvertiserType alloc] init];
-		//Init Subcategories form
-		subcategory = [[Subcategory alloc] initWithNibName:nil bundle:nil];
-		NSURL *iyoURL = [NSURL URLWithString:@"http://www.iyoiyo.jp/ajax/category_tree"];
-		[self.subcategory loadDataWithURLArray:iyoURL];		
 		//Init Extra parametres view
-		extraParametres = [[ExtraForms alloc] initWithNibName:nil bundle:nil];	
+		extraParametres = [[ExtraForms alloc] init];	
 		addPostDataView = [[AddPostDataView alloc] init];
 		addPostDataSelectView = [[AddPostDataSelectView alloc] init];
+		imagePostingView = [[ImagePostingView alloc] init];
     }
 
     return self;
@@ -89,8 +95,22 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+	[self shouldChangePostData:YES 
+				atIndexPostion:indexPath.row
+						forType:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"type"] 
+						forKey:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"name"]];
+	
 	if ([[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"name"] == @"subcategory") {		
-		[self.navigationController pushViewController:self.subcategory animated:YES];	
+		[self.navigationController pushViewController:subcategory animated:YES];	
+	}
+	else if ([[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"name"] == @"ad_type")
+	{		
+		[addPostDataView loadOptionsDataByurl:[NSString stringWithFormat:@"http://www.iyoiyo.jp/ajax/adtypes/%@",activeCatId] ];
+		[self.navigationController pushViewController:addPostDataView animated:YES];		
+	}
+	else if ([[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"name"] isEqualToString:@"file_upload_input" ])
+	{
+		[self.navigationController pushViewController:imagePostingView animated:YES];
 	}
 	else if ([[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"type"] isEqualToString:@"radio" ])
 	{			
@@ -296,20 +316,20 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
-	if ([self.subcategory.extraFormsArray count] > 0) {		
+	if ([subcategory.extraFormsArray count] > 0) {		
 		//create values Array	
-		for (int i = 0;i < [self.subcategory.extraFormsArray count]; i++) {
-			[tempField setObject:[[self.subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"name"] forKey:@"title"];
-			[tempField setObject:[[self.subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"name"] forKey:@"name"];
+		for (int i = 0;i < [subcategory.extraFormsArray count]; i++) {
+			[tempField setObject:[[subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"name"] forKey:@"title"];
+			[tempField setObject:[[subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"name"] forKey:@"name"];
 			
-			[tempField setObject:[[self.subcategory.extraFormsArray objectAtIndex:i] 
+			[tempField setObject:[[subcategory.extraFormsArray objectAtIndex:i] 
 								  objectForKey:@"type"] forKey:@"type"];
-			[tempField setObject:[[self.subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"data"] 
+			[tempField setObject:[[subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"data"] 
 						  forKey:@"value"];			
 			[tempField setObject:@"" forKey:@"post_value"];
 			[tempField setObject:@"text" forKey:@"text_type"];
 			[tempField setObject:@"YES" forKey:@"enbled"];
-			if ([[[self.subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"type"] isEqualToString:@"text"]) {
+			if ([[[subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"type"] isEqualToString:@"text"]) {
 				[tempField setObject:@"75" forKey:@"height"];
 			}
 			else {
@@ -385,7 +405,7 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 	[tempField release];
 	
 	
-	[self.tableView reloadData];
+	[tableView reloadData];
 }
 
 -(void)addTextField:(UITableViewCell *)cell 
@@ -456,19 +476,61 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 }
 
 #pragma mark -
+-(void) shouldChangePostData:(Boolean)change 
+			  atIndexPostion:(NSInteger)indexAtPostArray 
+					 forType:(NSString *)type
+					  forKey:(NSString *)key
+{
+	shouldChangePostItem = change;
+	changingIndexAtPostArray = indexAtPostArray;
+	changingValueType =type ;
+	changingValueKey = key ;
+}
+
+-(void) didUploadPostArray
+{ 
+
+	NSLog(@"Key: %@",changingValueKey);
+	NSLog(@"Type: %@",changingValueType);
+	NSLog(@"Index: %i",changingIndexAtPostArray);
+	
+	if ( [changingValueKey isEqualToString:@"subcategory"]) {
+		NSLog(@"Post Value: %@",subcategory.resultValue);
+		subcategory.resultValue = @"";
+	}
+else if ([changingValueType isEqualToString:@"radio"]) {
+		NSLog(@"Post Value: %@",addPostDataView.resultValue);
+		addPostDataView.resultValue = @"";
+	}
+	else if ( [changingValueType isEqualToString:@"select"])
+	{
+		NSLog(@"Post Value: %@",addPostDataSelectView.resultValue);		
+		addPostDataSelectView.resultValue = @"";
+	}
+	NSLog(@"_________________________________________");
+	shouldChangePostItem = NO;
+	changingIndexAtPostArray = -1;
+	changingValueType = @"no_type";
+	changingValueKey = @"no_key";
+
+ }
+
+#pragma mark -
 #pragma mark standart Form methods
 
 -(void)viewWillDisappear:(BOOL)animated
 {
 	appDelegate.needToRefresh = NO;
-	
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
 	
 	[self prepareFieldsArray];
-	
+	if (![subcategory.currentCatId isEqual:@"-1"]) {
+		activeCatId = subcategory.currentCatId;
+	}
+	[self didUploadPostArray];
 }
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -485,6 +547,10 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 
 
 - (void)dealloc {
+	//[changingValueType release];
+	//[changingValueKey release];
+	
+	[activeCatId release];
 	[fieldsArray release];
 	[pickerViewValues release];
 	[tableView release];
@@ -494,7 +560,7 @@ fieldsArray, shouldChangePostItem, changingIndexAtPostArray, pickerViewValues;
 	[addPostDataView release];
 	[addPostDataSelectView release];
 	[extraParametres release];
-
+	[imagePostingView release];
     [super dealloc];
 }
 

@@ -17,15 +17,17 @@
 	NSString *currentCatId;
 	NSMutableArray *extraFormsArray;
 	NSMutableArray *adTypesArray;
+	NSString *resultValue;
 }
 
 -(void) loadDataWithURLArray:(NSURL *)url;
 
 @property (nonatomic, retain) NSMutableArray *subcategories;
 @property (nonatomic, retain) NSString *currentCatId;
-@property (nonatomic, retain) IBOutlet UIPickerView *subPickerView;
+//@property (nonatomic, retain) IBOutlet UIPickerView *subPickerView;
 @property (nonatomic, retain) NSMutableArray *extraFormsArray;
 @property (nonatomic, retain) NSMutableArray *adTypesArray;
+@property (nonatomic, retain) NSString *resultValue;
 
 -(void) loadExtraFields;
 @end

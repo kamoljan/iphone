@@ -11,6 +11,7 @@
 
 @implementation AddPostDataSelectView
 
+@synthesize resultValue;
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -18,7 +19,7 @@
     if (self) {
         // Custom initialization.
 		pickerData = [[NSMutableArray alloc] init];		
-		resultValue = [[NSString alloc] init];
+		self.resultValue = [[NSString alloc] init];
 		pickerView = [[UIPickerView alloc] init];		
     }
     return self;
@@ -56,13 +57,13 @@
 - (void)viewWillAppear:(BOOL)animated
 {
 	[pickerView selectRow:0 inComponent:0 animated:NO];
+	self.resultValue = [[pickerData objectAtIndex:1] objectForKey:@"value"];	
 	
 }
 
 - (void)dealloc {
-	[pickerData release];
-	[pickerView release];
-	[resultValue release];
+	[pickerData autorelease];
+	[pickerView release];	
     [super dealloc];
 }
 
@@ -70,7 +71,7 @@
 
 -(void) setPickerData:(NSMutableArray *)dataArray
 {
-	pickerData = dataArray;
+	pickerData = [dataArray mutableCopy];
 	[pickerView reloadAllComponents];
 }
 
@@ -84,7 +85,7 @@
 // returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView 
 numberOfRowsInComponent:(NSInteger)component
-{	
+{
 	return ([pickerData count] - 1);
 }
 
@@ -98,5 +99,11 @@ numberOfRowsInComponent:(NSInteger)component
 	else {
 		return @"";
 	}
+}
+- (void)pickerView:(UIPickerView *)pickerView 
+	  didSelectRow:(NSInteger)row 
+	   inComponent:(NSInteger)component
+{
+	self.resultValue = [[pickerData objectAtIndex:(row + 1)] objectForKey:@"value"];
 }
 @end

@@ -7,10 +7,12 @@
 //
 
 #import "AddPostDataView.h"
+#import "JSON.h"
 
 
 @implementation AddPostDataView
 
+@synthesize resultValue;
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -18,8 +20,9 @@
     if (self) {
         // Custom initialization.
 		optionsData =[[NSMutableArray alloc] init];
-		resultValue = [[NSString alloc] init];
+		self.resultValue = [[NSString alloc] init];
 		buttonsArray = [[NSMutableArray alloc] init];
+		loadingDataType = [[NSString alloc] initWithString:@"default"];
 		//sampleButton = [[UIButton alloc] init];
     }
     return self;
@@ -30,6 +33,11 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {	
     [super viewDidLoad];		
+}
+
+-(void) viewWillDisappear:(BOOL)animated
+{
+	loadingDataType = @"default";
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -45,20 +53,27 @@
 		myButton.frame = CGRectMake(50, (50 + (i * 60) ), 200, 44); // position in the parent view and set the size of the button
 		[myButton setTitle:[[optionsData objectAtIndex:i] objectForKey:@"name"]
 				  forState:UIControlStateNormal];
-		myButton.tag = (i + 1);
+		myButton.tag = (i +1);
 		// add targets and actions
 		[myButton addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
 		// add to a view	
 		[buttonsArray addObject:myButton];
 		[self.view addSubview:[buttonsArray objectAtIndex:i]];	
 		
-	}	
+	}		
 }
 
 -(IBAction) buttonClicked:(id)sender
-{
-	resultValue = [[optionsData objectAtIndex:([sender tag] - 1)] objectForKey:@"value"];
-	[[self navigationController] popViewControllerAnimated:YES];
+{	
+	if ([loadingDataType isEqualToString:@"ad_type"]) {
+		self.resultValue = [[optionsData objectAtIndex:([sender tag] - 1)] objectForKey:@"id"];
+	}
+	else {		
+		self.resultValue = [NSString stringWithString: [[optionsData objectAtIndex:([sender tag] - 1)] 
+												   objectForKey:@"value"]];
+	}	
+	[self.navigationController popViewControllerAnimated:YES];	
+
 }
 
 /*
@@ -77,20 +92,34 @@
 }
 
 - (void)viewDidUnload {
-    [super viewDidUnload];
+    [super viewDidUnload];	
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
 
 
 - (void)dealloc {
-	[optionsData release];	
+	[optionsData release];
+	[loadingDataType release];
+	[buttonsArray release];
     [super dealloc];
 }
 
 -(void) setOptionsData:(NSMutableArray *)dataArray
 {
-	optionsData = dataArray;	
+	optionsData = [dataArray mutableCopy];	
+}
+
+-(void) loadOptionsDataByurl:(NSString *)urlString
+{
+	loadingDataType = @"ad_type";
+	NSURL *url = [[NSURL alloc] initWithString:urlString];
+	NSData *extraData = [NSData dataWithContentsOfURL:url];
+	NSString *tempExtraDataString = [[NSString alloc] initWithData:extraData 
+														  encoding:NSUTF8StringEncoding];
+	optionsData =[[tempExtraDataString JSONValue] retain];
+	[tempExtraDataString release];
+	[url release];
 }
 
 @end

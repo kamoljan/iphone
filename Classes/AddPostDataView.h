@@ -14,8 +14,12 @@
 	NSMutableArray *optionsData;
 	NSString *resultValue;
 	NSMutableArray *buttonsArray; 
+	NSString *loadingDataType;
 }
 
+@property (nonatomic, retain) NSString *resultValue;
+
 -(void) setOptionsData:(NSMutableArray *)dataArray;
+-(void) loadOptionsDataByurl:(NSString *)urlString;
 -(IBAction) buttonClicked:(id)sender;
 @end

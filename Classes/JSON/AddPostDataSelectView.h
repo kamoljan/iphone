@@ -17,5 +17,7 @@
 	IBOutlet UIPickerView *pickerView;
 }
 
+@property (nonatomic, retain) NSString *resultValue;
+
 -(void) setPickerData:(NSMutableArray *)dataArray;
 @end

@@ -12,7 +12,8 @@
 
 @implementation Subcategory
 
-@synthesize subcategories, subPickerView, currentCatId, extraFormsArray, adTypesArray;
+@synthesize subcategories, currentCatId, extraFormsArray, adTypesArray,
+resultValue;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
@@ -20,10 +21,11 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization.
-		self.subPickerView = [[UIPickerView alloc] init];
-		self.subcategories = [[NSMutableArray alloc] init];	
-		currentCatId = [[NSString alloc] initWithFormat:@"0"];
-		self.extraFormsArray = [[NSMutableArray alloc] init];
+		resultValue = [[NSString alloc] initWithString:@"-1"];
+		subPickerView = [[UIPickerView alloc] init];
+		subcategories = [[NSMutableArray alloc] init];	
+		currentCatId = [[NSString alloc] initWithFormat:@"-1"];
+		extraFormsArray = [[NSMutableArray alloc] init];
 		adTypesArray = [[NSMutableArray alloc] init];
     }
     return self;
@@ -53,14 +55,14 @@
 }
 
 - (void)viewDidUnload {
+	[subPickerView release];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
 
 
-- (void)dealloc {
-	[currentCatId  release];	
+- (void)dealloc {	
 	[super dealloc];
 }
 
@@ -69,7 +71,7 @@
 //get JSON Data and reload picker view
 -(void) loadDataWithURLArray:(NSURL *)url
 {
-	[subcategories removeAllObjects];
+	[self.subcategories removeAllObjects];
 	NSData *subData = [NSData dataWithContentsOfURL:url];
 	NSString *tempDataString = [[NSString alloc] initWithData:subData 
 													 encoding:NSUTF8StringEncoding];
@@ -83,7 +85,7 @@
 					 forKey:@"catName"];
 		[tempDict setObject:[[tempCategories objectAtIndex:i] objectForKey:@"id"] 
 					 forKey:@"catId"];
-		[subcategories addObject: [NSDictionary dictionaryWithDictionary:tempDict]];
+		[self.subcategories addObject: [NSDictionary dictionaryWithDictionary:tempDict]];
 		
 		for (int j = 0; j < [[[tempCategories objectAtIndex:i] objectForKey:@"subcategories"] count]; j++) {
 			subCat = [[tempCategories objectAtIndex:i] objectForKey:@"subcategories"];
@@ -92,11 +94,11 @@
 						 forKey:@"catName"];
 			[tempDict setObject:[[subCat objectAtIndex:j] objectForKey:@"id"] 
 						 forKey:@"catId"];
-			[subcategories addObject: [NSDictionary dictionaryWithDictionary:tempDict]];
+			[self.subcategories addObject: [NSDictionary dictionaryWithDictionary:tempDict]];
 		}
 	}
 	
-	[self.subPickerView reloadAllComponents];
+	[subPickerView reloadAllComponents];
 	[tempDict release];
 	[tempDataString release];
 }
@@ -108,7 +110,7 @@
 	NSData *extraData = [NSData dataWithContentsOfURL:url];
 	NSString *tempExtraDataString = [[NSString alloc] initWithData:extraData 
 														  encoding:NSUTF8StringEncoding];
-	self.extraFormsArray =[tempExtraDataString JSONValue];
+	self.extraFormsArray =[tempExtraDataString JSONValue] ;
 	
 	[tempExtraDataString release];
 	[url release];
@@ -127,21 +129,21 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView 
 numberOfRowsInComponent:(NSInteger)component
 {
-	if ([subcategories count] == 0) {
+	if ([self.subcategories count] == 0) {
 		return 1;
 	}
-	return [subcategories count];
+	return [self.subcategories count];
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView 
 			 titleForRow:(NSInteger)row 
 			forComponent:(NSInteger)component
 {
-	if ([subcategories count] == 0) {
+	if ([self.subcategories count] == 0) {
 		return @"Please choose the subcategory";
 	}
 	else {
-		return [[subcategories objectAtIndex:row] objectForKey:@"catName"];
+		return [[self.subcategories objectAtIndex:row] objectForKey:@"catName"];
 	}
 
 }
@@ -150,8 +152,9 @@ numberOfRowsInComponent:(NSInteger)component
 	  didSelectRow:(NSInteger)row 
 	   inComponent:(NSInteger)component
 {
-	currentCatId = [[subcategories objectAtIndex:row] objectForKey:@"catId"];
+	self.currentCatId = [[self.subcategories objectAtIndex:row] objectForKey:@"catId"];
 	[self loadExtraFields];	
+	self.resultValue = currentCatId;
 }
 
 @end
