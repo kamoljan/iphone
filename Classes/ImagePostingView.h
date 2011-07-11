@@ -8,18 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-
 @interface ImagePostingView : UIViewController
-<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+<UIImagePickerControllerDelegate, UINavigationControllerDelegate,
+UITableViewDelegate, UITableViewDataSource>
 {
 	NSMutableArray *imagesArray;
+	NSMutableArray *thumbs;
 	UIImagePickerController *pickerController;
 	IBOutlet UIButton *addImageButton;
-
+	IBOutlet UITableView *imagetableView;
 }
 
 @property (nonatomic, retain) NSMutableArray *imagesArray;
 
 -(IBAction) addImageToAd;
--(void) removeImageAtPosition:(NSInteger)removingImageIndex;
+-(void) removeImageAtPosition:(id)sender;
 @end

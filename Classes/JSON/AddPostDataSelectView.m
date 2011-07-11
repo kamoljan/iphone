@@ -11,7 +11,7 @@
 
 @implementation AddPostDataSelectView
 
-@synthesize resultValue;
+@synthesize resultValue, selectedItem;
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -20,7 +20,9 @@
         // Custom initialization.
 		pickerData = [[NSMutableArray alloc] init];		
 		self.resultValue = [[NSString alloc] init];
-		pickerView = [[UIPickerView alloc] init];		
+		pickerView = [[UIPickerView alloc] init];
+		self.selectedItem = [[NSMutableDictionary alloc] init];
+		startValue = 0;
     }
     return self;
 }
@@ -57,21 +59,23 @@
 - (void)viewWillAppear:(BOOL)animated
 {
 	[pickerView selectRow:0 inComponent:0 animated:NO];
-	self.resultValue = [[pickerData objectAtIndex:1] objectForKey:@"value"];	
+	self.resultValue = [[pickerData objectAtIndex:startValue] objectForKey:@"value"];	
 	
 }
 
 - (void)dealloc {
 	[pickerData autorelease];
-	[pickerView release];	
+	[pickerView release];
     [super dealloc];
 }
 
 #pragma mark -
 
--(void) setPickerData:(NSMutableArray *)dataArray
+-(void) setPickerData:(NSMutableArray *)dataArray startFrom:(NSInteger)start
 {
+	startValue = start;
 	pickerData = [dataArray mutableCopy];
+	self.selectedItem = [pickerData objectAtIndex:startValue];
 	[pickerView reloadAllComponents];
 }
 
@@ -86,7 +90,7 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView 
 numberOfRowsInComponent:(NSInteger)component
 {
-	return ([pickerData count] - 1);
+	return ([pickerData count] - startValue);
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView 
@@ -94,7 +98,7 @@ numberOfRowsInComponent:(NSInteger)component
 			forComponent:(NSInteger)component
 {
 	if ([pickerData count] > 0) {
-		return [[pickerData objectAtIndex:(row +1)] objectForKey:@"name"];
+		return [[pickerData objectAtIndex:(row +startValue)] objectForKey:@"name"];
 	}
 	else {
 		return @"";
@@ -104,6 +108,7 @@ numberOfRowsInComponent:(NSInteger)component
 	  didSelectRow:(NSInteger)row 
 	   inComponent:(NSInteger)component
 {
-	self.resultValue = [[pickerData objectAtIndex:(row + 1)] objectForKey:@"value"];
+	self.resultValue = [[pickerData objectAtIndex:(row + startValue)] objectForKey:@"value"];
+	self.selectedItem = [pickerData objectAtIndex:(row +startValue)];	
 }
 @end

@@ -20,7 +20,7 @@
     if (self) {
         // Custom initialization.
 		optionsData =[[NSMutableArray alloc] init];
-		self.resultValue = [[NSString alloc] init];
+		resultValue = [[NSString alloc] init];
 		buttonsArray = [[NSMutableArray alloc] init];
 		loadingDataType = [[NSString alloc] initWithString:@"default"];
 		//sampleButton = [[UIButton alloc] init];
@@ -65,6 +65,7 @@
 
 -(IBAction) buttonClicked:(id)sender
 {	
+	NSLog(@"Options Data  %@",optionsData);
 	if ([loadingDataType isEqualToString:@"ad_type"]) {
 		self.resultValue = [[optionsData objectAtIndex:([sender tag] - 1)] objectForKey:@"id"];
 	}
@@ -113,13 +114,13 @@
 -(void) loadOptionsDataByurl:(NSString *)urlString
 {
 	loadingDataType = @"ad_type";
-	NSURL *url = [[NSURL alloc] initWithString:urlString];
+	NSURL *url = [NSURL URLWithString:urlString];
 	NSData *extraData = [NSData dataWithContentsOfURL:url];
 	NSString *tempExtraDataString = [[NSString alloc] initWithData:extraData 
 														  encoding:NSUTF8StringEncoding];
 	optionsData =[[tempExtraDataString JSONValue] retain];
 	[tempExtraDataString release];
-	[url release];
+	
 }
 
 @end

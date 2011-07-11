@@ -31,6 +31,7 @@
 		
 		pickerViewValues = [[NSMutableArray alloc] init];
 		fieldsArray = [[NSMutableArray alloc] init];
+		postArray = [[NSMutableArray alloc] init];
 
 		//Init Subcategories form
 		subcategory = [[Subcategory alloc] init];
@@ -43,6 +44,7 @@
 		addPostDataView = [[AddPostDataView alloc] init];
 		addPostDataSelectView = [[AddPostDataSelectView alloc] init];
 		imagePostingView = [[ImagePostingView alloc] init];
+		locationForm = [[LocationForm alloc] init];
     }
 
     return self;
@@ -90,6 +92,7 @@
 	}
 //	return 100;
   */
+
 	return [[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"height"] intValue];
 } 
 
@@ -102,6 +105,9 @@
 	
 	if ([[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"name"] == @"subcategory") {		
 		[self.navigationController pushViewController:subcategory animated:YES];	
+	}
+	else if ([[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"name"] isEqualToString:@"post_code"] ) {
+		[self.navigationController pushViewController:locationForm animated:YES];
 	}
 	else if ([[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"name"] == @"ad_type")
 	{		
@@ -119,47 +125,16 @@
 	}
 	else if ([[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"type"] isEqualToString:@"select" ])
 	{
-		[addPostDataSelectView setPickerData:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"value"]];
+		[addPostDataSelectView setPickerData:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"value"] startFrom:1];
 		[self.navigationController pushViewController:addPostDataSelectView animated:YES];
 	}
-
-	/*
-	switch (indexPath.row) {
-		case 0:
-			[self.navigationController pushViewController:self.advertiserTypeForm animated:YES];
-			break;
-		case 5:			
-			//extraParametres.catId = subcategory.currentCatId;
-			[extraParametres setCatId:subcategory.currentCatId];
-			[self.navigationController pushViewController:self.extraParametres animated:YES];
-			break;
-		case 4:
-			[self.navigationController pushViewController:self.subcategory animated:YES];
-			break;
-
-		default:
-			break;
-	}
-	 */
 }
 
 -(UITableViewCell *) tableView:(UITableView *)tableView 
 		 cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-   // UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"adCell"];
-
-	//if (cell == nil) {
-	UITableViewCell *cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+   UITableViewCell *cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
 									   reuseIdentifier:@"adCell"] autorelease];
-	//}
-	/*
-	[self addTextField:cell 
-				 title:[fields objectForKey:@"advertiser_type"]
-		 withTextField:NO
-			 fieldType:@""
-				tag:indexPath.row];
-	*/
 	
 	[self addLabel:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"title"] toCell:cell];
 	
@@ -170,7 +145,7 @@
 	else if ([fieldType isEqualToString:@"text" ]) {		
 		[self addTextFieldToCell:cell
 				withKeyboardType:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"text_type"]
-						 withTag:(30 + indexPath.row)];
+						 withTag:[[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"tag"] intValue]];
 	}
 	
 	return cell;
@@ -230,6 +205,7 @@
 		playerTextField.keyboardType = UIKeyboardTypeDefault;
 	}
 	
+	//playerTextField.keyboardAppearance = UIKeyboardAppearanceAlert;
 	playerTextField.textAlignment = UITextAlignmentLeft;
 	playerTextField.borderStyle = UITextBorderStyleRoundedRect;    
 	playerTextField.returnKeyType = UIReturnKeyDone;
@@ -280,6 +256,7 @@
 	[tempField setObject:@"Advertiser name" forKey:@"title"];
 	[tempField setObject:@"advertiser_name" forKey:@"name"];
 	[tempField setObject:@"text" forKey:@"type"];
+	[tempField setObject:@"60" forKey:@"tag"];
 	[tempField setObject:@"75" forKey:@"height"];
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"text" forKey:@"text_type"];
@@ -291,6 +268,7 @@
 	[tempField setObject:@"email" forKey:@"name"];
 	[tempField setObject:@"text" forKey:@"type"];
 	[tempField setObject:@"75" forKey:@"height"];
+	[tempField setObject:@"62" forKey:@"tag"];
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"email" forKey:@"text_type"];
 	[tempField setObject:@"YES" forKey:@"enbled"];
@@ -301,6 +279,7 @@
 	[tempField setObject:@"phone" forKey:@"name"];
 	[tempField setObject:@"text" forKey:@"type"];
 	[tempField setObject:@"75" forKey:@"height"];
+	[tempField setObject:@"65" forKey:@"tag"];
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"phone" forKey:@"text_type"];
 	[tempField setObject:@"YES" forKey:@"enbled"];
@@ -335,6 +314,8 @@
 			else {
 				[tempField setObject:@"40" forKey:@"height"];
 			}
+			NSInteger tagNumber = 70 + i;
+			[tempField setObject:[NSString stringWithFormat:@"%d", tagNumber] forKey:@"tag"];
 
 			
 			[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
@@ -354,10 +335,10 @@
 	
 	[tempField setObject:@"Postal code" forKey:@"title"];
 	[tempField setObject:@"post_code" forKey:@"name"];
-	[tempField setObject:@"text" forKey:@"type"];
-	[tempField setObject:@"75" forKey:@"height"];
+	[tempField setObject:@"postal" forKey:@"type"];
+	[tempField setObject:@"40" forKey:@"height"];
 	[tempField setObject:@"" forKey:@"post_value"];
-	[tempField setObject:@"text" forKey:@"text_type"];
+	[tempField setObject:@"" forKey:@"text_type"];
 	[tempField setObject:@"YES" forKey:@"enbled"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
@@ -366,6 +347,7 @@
 	[tempField setObject:@"title" forKey:@"name"];
 	[tempField setObject:@"text" forKey:@"type"];
 	[tempField setObject:@"75" forKey:@"height"];
+	[tempField setObject:@"67" forKey:@"tag"];
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"text" forKey:@"text_type"];
 	[tempField setObject:@"YES" forKey:@"enbled"];
@@ -376,6 +358,7 @@
 	[tempField setObject:@"body" forKey:@"name"];
 	[tempField setObject:@"textView" forKey:@"type"];
 	[tempField setObject:@"150" forKey:@"height"];
+	
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"text" forKey:@"text_type"];
 	[tempField setObject:@"YES" forKey:@"enbled"];
@@ -400,6 +383,16 @@
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 		
+	[tempField setObject:@"Post this Ad" forKey:@"title"];
+	[tempField setObject:@"sendButton" forKey:@"name"];
+	[tempField setObject:@"sendButton" forKey:@"type"];
+	[tempField setObject:@"" forKey:@"post_value"];
+	[tempField setObject:@"40" forKey:@"height"];
+	[tempField setObject:@"YES" forKey:@"enbled"];
+	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
+	[tempField removeAllObjects];
+	
+	
 	[tempValueItem release];
 	[tempValueArray release];
 	[tempField release];
@@ -467,13 +460,39 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
 	[textField resignFirstResponder];
+
+	for (int i = 0; i < [fieldsArray count]; i++) {		
+		if ( [[[fieldsArray objectAtIndex:i] objectForKey:@"type"] isEqualToString:@"text"] )
+		{			
+			if ([[[fieldsArray objectAtIndex:i] objectForKey:@"tag"] intValue] == textField.tag) {
+				[self addPostString:textField.text 
+							 forKey:[[fieldsArray objectAtIndex:i] objectForKey:@"name"]];
+			}
+		}
+
+
+	}
+	
 	return YES;
 }
 
-- (void)textViewDidEndEditing:(UITextView *)textView
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range 
+ replacementText:(NSString *)text
 {
-	[textView resignFirstResponder];
+    // Any new character added is passed in as the "text" parameter
+    if ([text isEqualToString:@"\n"]) {
+        // Be sure to test for equality using the "isEqualToString" message
+        [textView resignFirstResponder];
+		
+        // Return FALSE so that the final '\n' character doesn't get added
+        return FALSE;
+    }
+    // For any other character return TRUE so that the text gets added to the view
+    return TRUE;
 }
+
+
 
 #pragma mark -
 -(void) shouldChangePostData:(Boolean)change 
@@ -488,33 +507,82 @@
 }
 
 -(void) didUploadPostArray
-{ 
+{
+	NSString *resultValue = [NSString stringWithFormat:@""];
+	if (shouldChangePostItem) {
 
-	NSLog(@"Key: %@",changingValueKey);
-	NSLog(@"Type: %@",changingValueType);
-	NSLog(@"Index: %i",changingIndexAtPostArray);
-	
-	if ( [changingValueKey isEqualToString:@"subcategory"]) {
-		NSLog(@"Post Value: %@",subcategory.resultValue);
-		subcategory.resultValue = @"";
-	}
-else if ([changingValueType isEqualToString:@"radio"]) {
-		NSLog(@"Post Value: %@",addPostDataView.resultValue);
-		addPostDataView.resultValue = @"";
-	}
-	else if ( [changingValueType isEqualToString:@"select"])
-	{
-		NSLog(@"Post Value: %@",addPostDataSelectView.resultValue);		
-		addPostDataSelectView.resultValue = @"";
-	}
-	NSLog(@"_________________________________________");
-	shouldChangePostItem = NO;
-	changingIndexAtPostArray = -1;
-	changingValueType = @"no_type";
-	changingValueKey = @"no_key";
+		if ( [changingValueKey isEqualToString:@"subcategory"]) {
+			[self addPostString:subcategory.resultValue forKey:@"subcategory"];
+			resultValue = subcategory.resultValue;
+			subcategory.resultValue = @"";
+		}
+		else if ([changingValueKey isEqualToString:@"post_code"])
+		{
+			//[self addPostArray:locationForm.resultArray];
+			[self addPostString:locationForm.resultPostCode forKey:changingValueKey];
+			[self addPostString:locationForm.resultRegionId forKey:@"prefecture_id"];
+			[self addPostString:locationForm.resultCityId forKey:@"city_id"];
+		}
+		else if ([changingValueKey isEqualToString:@"file_upload_input"]) {
+			[self addPostArray:imagePostingView.imagesArray];
+		}
 
+		else if ([changingValueType isEqualToString:@"radio"]) {
+			[self addPostString:addPostDataView.resultValue forKey:changingValueKey];
+			resultValue = addPostDataView.resultValue;
+			addPostDataView.resultValue = @"";
+			}
+		else if ( [changingValueType isEqualToString:@"select"])
+			{
+				[self addPostString:addPostDataSelectView.resultValue forKey:changingValueKey];
+				resultValue = addPostDataSelectView.resultValue;
+				addPostDataSelectView.resultValue = @"";
+				}
+		NSLog(@"_________________________________________");
+
+		[[fieldsArray objectAtIndex:changingIndexAtPostArray] setObject:resultValue
+																 forKey:changingValueKey];
+
+		shouldChangePostItem = NO;
+		changingIndexAtPostArray = -1;
+		changingValueType = @"no_type";
+		changingValueKey = @"no_key";
+
+	}
  }
+#pragma mark -
+-(void) addPostString:(NSString *)postString forKey:(NSString *)postKey
+{
+	Boolean containsPostItem = NO;
+	if ([postArray count] > 0) {
+		for (int i = 0; i<[postArray count]; i++) {
+			if ([[[postArray objectAtIndex:i] objectForKey:@"name"] isEqualToString:postKey]) {
+				containsPostItem = YES;			
+				[[postArray objectAtIndex:i] setObject:postString forKey:@"value"];
+			}
+		}
+		if (!containsPostItem) {
+			NSMutableArray *keys = [NSArray arrayWithObjects:@"name", @"value", nil];
+			NSMutableArray *values = [NSArray arrayWithObjects:postKey, postString, nil];			
+			[postArray addObject:[NSMutableDictionary dictionaryWithObjects:values 
+															 forKeys:keys]];
+			
+		}
+	}
+	else
+	{
+		NSMutableArray *keys = [NSArray arrayWithObjects:@"name", @"value", nil];
+		NSMutableArray *values = [NSArray arrayWithObjects:postKey, postString, nil];			
+		[postArray addObject:[NSMutableDictionary dictionaryWithObjects:values 
+														 forKeys:keys]];
+	}
+	NSLog(@"postArray: %@", postArray);
+}
 
+-(void) addPostArray:(NSArray *)postItemArray
+{
+	NSLog(@"images Array: %@", postItemArray);
+}
 #pragma mark -
 #pragma mark standart Form methods
 
@@ -561,6 +629,7 @@ else if ([changingValueType isEqualToString:@"radio"]) {
 	[addPostDataSelectView release];
 	[extraParametres release];
 	[imagePostingView release];
+	[locationForm release];
     [super dealloc];
 }
 

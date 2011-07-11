@@ -13,11 +13,15 @@
 <UIPickerViewDelegate, UIPickerViewDataSource>
 {
 	NSMutableArray *pickerData;
+	NSMutableDictionary *selectedItem;
 	NSString *resultValue;
 	IBOutlet UIPickerView *pickerView;
+	NSInteger startValue;
 }
 
 @property (nonatomic, retain) NSString *resultValue;
+@property (nonatomic, retain) NSMutableDictionary *selectedItem;
 
--(void) setPickerData:(NSMutableArray *)dataArray;
+-(void) setPickerData:(NSMutableArray *)dataArray startFrom:(NSInteger)start;
+
 @end

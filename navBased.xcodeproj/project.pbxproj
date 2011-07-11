@@ -26,6 +26,8 @@
 		5B3C850D13C2D903002219F1 /* ImagePostingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3C850B13C2D903002219F1 /* ImagePostingView.m */; };
 		5B3C850E13C2D903002219F1 /* ImagePostingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B3C850C13C2D903002219F1 /* ImagePostingView.xib */; };
 		5B491AB513A8D2AF0052DB78 /* img16.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5B491AB413A8D2AF0052DB78 /* img16.gif */; };
+		5B8766C513C5873D00407E43 /* LocationForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8766C313C5873D00407E43 /* LocationForm.m */; };
+		5B8766C613C5873D00407E43 /* LocationForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B8766C413C5873D00407E43 /* LocationForm.xib */; };
 		5B8D1D7F13BDE28C0048EC6D /* AddPostDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D1D7D13BDE28C0048EC6D /* AddPostDataView.m */; };
 		5B8D1D8013BDE28C0048EC6D /* AddPostDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B8D1D7E13BDE28C0048EC6D /* AddPostDataView.xib */; };
 		5B9A9EBA13B3078A00324522 /* AdPostingForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9A9EB813B3078A00324522 /* AdPostingForm.m */; };
@@ -34,6 +36,7 @@
 		5BA8C50C13BB0BF400B144CD /* ExtraForms.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA8C50A13BB0BF400B144CD /* ExtraForms.xib */; };
 		5BA92EF013BEFAFC0081CDDA /* AddPostDataSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA92EEE13BEFAFC0081CDDA /* AddPostDataSelectView.m */; };
 		5BA92EF113BEFAFC0081CDDA /* AddPostDataSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA92EEF13BEFAFC0081CDDA /* AddPostDataSelectView.xib */; };
+		5BE6CAD213C42D31002C3AD8 /* RequestPostAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6CAD113C42D31002C3AD8 /* RequestPostAd.m */; };
 		5BFF261913A9EB26002E3EF6 /* changeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF261713A9EB26002E3EF6 /* changeFilter.m */; };
 		5BFF261A13A9EB26002E3EF6 /* changeFilter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BFF261813A9EB26002E3EF6 /* changeFilter.xib */; };
 		5BFFD7A113B858D400E0317A /* AdvertiserType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFFD79F13B858D400E0317A /* AdvertiserType.m */; };
@@ -75,6 +78,9 @@
 		5B3C850B13C2D903002219F1 /* ImagePostingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePostingView.m; sourceTree = "<group>"; };
 		5B3C850C13C2D903002219F1 /* ImagePostingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ImagePostingView.xib; path = Classes/ImagePostingView.xib; sourceTree = "<group>"; };
 		5B491AB413A8D2AF0052DB78 /* img16.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = img16.gif; sourceTree = "<group>"; };
+		5B8766C213C5873D00407E43 /* LocationForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationForm.h; sourceTree = "<group>"; };
+		5B8766C313C5873D00407E43 /* LocationForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationForm.m; sourceTree = "<group>"; };
+		5B8766C413C5873D00407E43 /* LocationForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LocationForm.xib; path = Classes/LocationForm.xib; sourceTree = "<group>"; };
 		5B8D1D7C13BDE28C0048EC6D /* AddPostDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPostDataView.h; sourceTree = "<group>"; };
 		5B8D1D7D13BDE28C0048EC6D /* AddPostDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPostDataView.m; sourceTree = "<group>"; };
 		5B8D1D7E13BDE28C0048EC6D /* AddPostDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddPostDataView.xib; path = Classes/AddPostDataView.xib; sourceTree = "<group>"; };
@@ -87,6 +93,8 @@
 		5BA92EED13BEFAFC0081CDDA /* AddPostDataSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddPostDataSelectView.h; path = JSON/AddPostDataSelectView.h; sourceTree = "<group>"; };
 		5BA92EEE13BEFAFC0081CDDA /* AddPostDataSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddPostDataSelectView.m; path = JSON/AddPostDataSelectView.m; sourceTree = "<group>"; };
 		5BA92EEF13BEFAFC0081CDDA /* AddPostDataSelectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddPostDataSelectView.xib; path = Classes/JSON/AddPostDataSelectView.xib; sourceTree = "<group>"; };
+		5BE6CAD013C42D31002C3AD8 /* RequestPostAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestPostAd.h; sourceTree = "<group>"; };
+		5BE6CAD113C42D31002C3AD8 /* RequestPostAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestPostAd.m; sourceTree = "<group>"; };
 		5BFF261613A9EB26002E3EF6 /* changeFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = changeFilter.h; sourceTree = "<group>"; };
 		5BFF261713A9EB26002E3EF6 /* changeFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = changeFilter.m; sourceTree = "<group>"; };
 		5BFF261813A9EB26002E3EF6 /* changeFilter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = changeFilter.xib; path = Classes/changeFilter.xib; sourceTree = "<group>"; };
@@ -116,6 +124,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5BE6CACF13C42CE8002C3AD8 /* Request */,
 				5B2D1DD813A886B700EFA410 /* JSON */,
 				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
@@ -139,6 +148,8 @@
 				5BA92EEE13BEFAFC0081CDDA /* AddPostDataSelectView.m */,
 				5B3C850A13C2D903002219F1 /* ImagePostingView.h */,
 				5B3C850B13C2D903002219F1 /* ImagePostingView.m */,
+				5B8766C213C5873D00407E43 /* LocationForm.h */,
+				5B8766C313C5873D00407E43 /* LocationForm.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -187,6 +198,7 @@
 				5B8D1D7E13BDE28C0048EC6D /* AddPostDataView.xib */,
 				5BA92EEF13BEFAFC0081CDDA /* AddPostDataSelectView.xib */,
 				5B3C850C13C2D903002219F1 /* ImagePostingView.xib */,
+				5B8766C413C5873D00407E43 /* LocationForm.xib */,
 				8D1107310486CEB800E47090 /* navBased-Info.plist */,
 			);
 			name = Resources;
@@ -220,6 +232,15 @@
 				5B2D1DE513A886B700EFA410 /* SBJsonWriter.m */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		5BE6CACF13C42CE8002C3AD8 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				5BE6CAD013C42D31002C3AD8 /* RequestPostAd.h */,
+				5BE6CAD113C42D31002C3AD8 /* RequestPostAd.m */,
+			);
+			name = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +305,7 @@
 				5B8D1D8013BDE28C0048EC6D /* AddPostDataView.xib in Resources */,
 				5BA92EF113BEFAFC0081CDDA /* AddPostDataSelectView.xib in Resources */,
 				5B3C850E13C2D903002219F1 /* ImagePostingView.xib in Resources */,
+				5B8766C613C5873D00407E43 /* LocationForm.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +334,8 @@
 				5B8D1D7F13BDE28C0048EC6D /* AddPostDataView.m in Sources */,
 				5BA92EF013BEFAFC0081CDDA /* AddPostDataSelectView.m in Sources */,
 				5B3C850D13C2D903002219F1 /* ImagePostingView.m in Sources */,
+				5BE6CAD213C42D31002C3AD8 /* RequestPostAd.m in Sources */,
+				5B8766C513C5873D00407E43 /* LocationForm.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

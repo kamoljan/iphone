@@ -14,12 +14,13 @@
 #import "AddPostDataSelectView.h"
 #import	"ImagePostingView.h"
 #import "navBasedAppDelegate.h"
+#import "LocationForm.h"
 
 
 @interface AdPostingForm : UIViewController 
 <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UITextViewDelegate>
 {
-	NSMutableArray *fieldsArray;
+	NSMutableArray *fieldsArray, *postArray;
 	NSString *activeCatId;
 	NSMutableArray *pickerViewValues;
 	IBOutlet UITableView *tableView;
@@ -30,6 +31,7 @@
 	AddPostDataSelectView *addPostDataSelectView;
 	ExtraForms *extraParametres;
 	ImagePostingView *imagePostingView;
+	LocationForm *locationForm;
 	
 	//used for dynamic upload extra fields
 	//the new value will be located at addPostDataVew.resultValue 
@@ -43,14 +45,6 @@
 	NSString *changingValueKey;
 }
 
-//@property (nonatomic, retain) AdvertiserType *advertiserTypeForm;
-//@property (nonatomic, retain) Subcategory *subcategory;
-//@property (nonatomic, retain) ExtraForms *extraParametres;
-//@property (nonatomic, retain) IBOutlet UITableView *tableView;
-//@property (nonatomic, retain) NSMutableArray *fieldsArray;
-//@property (nonatomic, retain) NSMutableArray *pickerViewValues;
-//@property (nonatomic, assign) Boolean shouldChangePostItem;
-//@property (nonatomic, assign) NSInteger changingIndexAtPostArray;
 
 -(void) addLabel:(NSString *)labelTitle toCell:(UITableViewCell *)cell;
 -(void) addTextViewToCell:(UITableViewCell *)cell;
@@ -72,5 +66,8 @@
 					  forKey:(NSString *)key;
 
 -(void) didUploadPostArray;
+
+-(void) addPostString:(NSString *)postString forKey:(NSString *)postKey;
+-(void) addPostArray:(NSArray *)postItemArray;
 
 @end
