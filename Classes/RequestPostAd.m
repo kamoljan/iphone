@@ -67,6 +67,50 @@
 	return [returnString JSONValue];	
 }
 
+
+-(Boolean) postAddWithArray:(NSArray *)postArray toURLString:(NSString *)urlString
+{
+	
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url 
+														   cachePolicy:NSURLRequestUseProtocolCachePolicy 
+													   timeoutInterval:60.0];
+    
+    [request setHTTPMethod:@"POST"];	
+	NSString *stringBoundary = [NSString stringWithFormat: @"----------------------------------------14737809831466499882746641449"];
+	NSString *headPostData = [NSString stringWithFormat:@"multipart/form-data; boundary=%@",stringBoundary];
+	[request addValue:headPostData forHTTPHeaderField:@"Content-Type"];	
+	//setting up the body:
+	NSMutableData *postBody = [NSMutableData data];
+	for (int i=0;i<[postArray count]; i++) {
+		NSLog(@"count %d",i);
+		// add post variables		
+		[postBody appendData:[[NSString stringWithFormat:@"--%@\r\n", stringBoundary] dataUsingEncoding:NSUTF8StringEncoding]];		
+		NSString *postNameValue = [NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n",[[postArray objectAtIndex:i] objectForKey:@"name"]];
+		[postBody appendData:[postNameValue dataUsingEncoding:NSUTF8StringEncoding]];		
+		NSString *postVarValue = [NSString stringWithFormat:@"%@",[[postArray objectAtIndex:i] objectForKey:@"value"]];
+		[postBody appendData:[postVarValue dataUsingEncoding:NSUTF8StringEncoding]];
+		[postBody appendData:[@"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+	}
+	// final boundary
+	[postBody appendData:[[NSString stringWithFormat:@"--%@\r\n", stringBoundary] dataUsingEncoding:NSUTF8StringEncoding]];
+	
+	[request setHTTPBody:postBody];	
+	//get response
+	NSHTTPURLResponse* urlResponse = nil;
+	NSError *error = [[NSError alloc] init];
+	NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&error];
+	NSString *result = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+	NSLog(@"Response Code: %d", [urlResponse statusCode]);
+	if ([urlResponse statusCode] >= 200 && [urlResponse statusCode] < 300) {
+		NSLog(@"Response: %@", result);
+		
+		//here you get the response	
+		
+	}
+	
+	return YES;
+}
 - (void)dealloc {
 	
     [super dealloc];

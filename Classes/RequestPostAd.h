@@ -16,7 +16,9 @@
 
 @property (nonatomic, retain) NSURL *urlToRequest;
 
+//uses for sending images to server
 -(NSDictionary *) doRequest:(NSData *)imageData;
 
-
+//uses for sending ad 
+-(Boolean) postAddWithArray:(NSArray *)postArray toURLString:(NSString *)urlString;
 @end

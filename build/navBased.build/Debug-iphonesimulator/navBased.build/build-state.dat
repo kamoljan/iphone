@@ -1,7 +1,7 @@
 TnavBased
 v7
 r0
-t332081389.548556
+t332168219.610608
 cCheck dependencies
 cProcessInfoPlistFile /Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app/Info.plist navBased-Info.plist
 cCompileXIB /Users/yuriy/Documents/gitIphoneSource/iphone/MainWindow.xib
@@ -92,11 +92,12 @@ i"navBasedAppDelegate.h"
 i"LocationForm.h"
 
 N/Users/yuriy/Documents/gitIphoneSource/iphone/Classes/AdPostingForm.m
-c000000004E1AF16C0000000000005AAC
-t1310388588
-s23212
+c000000004E1C4A220000000000005FC4
+t1310476834
+s24516
 i"AdPostingForm.h"
 i"JSON.h"
+i"RequestPostAd.h"
 
 N/Users/yuriy/Documents/gitIphoneSource/iphone/Classes/AdPostingForm.xib
 c000000004E0D63890000000000004B7D
@@ -314,15 +315,15 @@ t1310109599
 s33496
 
 N/Users/yuriy/Documents/gitIphoneSource/iphone/Classes/RequestPostAd.h
-c000000004E141171000000000000016D
-t1309938033
-s365
+c000000004E1BE27E00000000000001FB
+t1310450302
+s507
 i<Foundation/Foundation.h>
 
 N/Users/yuriy/Documents/gitIphoneSource/iphone/Classes/RequestPostAd.m
-c000000004E14151A00000000000009C0
-t1309938970
-s2496
+c000000004E1C22460000000000001244
+t1310466630
+s4676
 i"RequestPostAd.h"
 i"JSON.h"
 
@@ -426,11 +427,11 @@ t1309178453
 s17972
 
 N/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app
-t1310388589
+t1310475418
 s612
 
 N/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app.dSYM
-t1310388589
+t1310475418
 s102
 
 N/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app/AdPostingForm.nib
@@ -498,12 +499,12 @@ t1309514942
 s11890
 
 N/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app/navBased
-t1310388589
-s189496
+t1310475418
+s189652
 
 N/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/AdPostingForm.o
-t1310388589
-s113600
+t1310475418
+s116224
 
 N/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/AdType.o
 t1309178704
@@ -526,7 +527,7 @@ t1309514945
 s55408
 
 N/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/ImagePostingView.o
-t1309951173
+t1310450304
 s67860
 
 N/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/LocationForm.o
@@ -542,8 +543,8 @@ t1309514944
 s8236
 
 N/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/RequestPostAd.o
-t1309938971
-s14628
+t1310466630
+s19888
 
 N/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/RootViewController.o
 t1309514944
@@ -1511,11 +1512,11 @@ lSLF07#2@46"Analyze /Users/yuriy/Documents/navBased/main.m329922247#329922247#0(
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies332081389#332081389#0(0"0(0#1#0"8612383712#0"0#
+lSLF07#2@18"Check dependencies332168219#332168219#0(0"0(0#1#0"8631990784#0"0#
 
 CCompileC build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/AdPostingForm.o /Users/yuriy/Documents/gitIphoneSource/iphone/Classes/AdPostingForm.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s332081389.229365
-e332081389.456966
+s332168218.431544
+e332168218.661874
 r1
 xCompileC
 xbuild/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/AdPostingForm.o
@@ -1524,7 +1525,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@77"Compile /Users/yuriy/Documents/gitIphoneSource/iphone/Classes/AdPostingForm.m332081389#332081389#0(0"0(0#0#69"/Users/yuriy/Documents/gitIphoneSource/iphone/Classes/AdPostingForm.m8623241376#2038"    cd /Users/yuriy/Documents/gitIphoneSource/iphone    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-generated-files.hmap -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-own-target-headers.hmap -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-all-target-headers.hmap -iquote /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-project-headers.hmap -F/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/DerivedSources/i386 -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/navBased_Prefix-gncphxdhlfbtvrbakrcstwusfosv/navBased_Prefix.pch -c /Users/yuriy/Documents/gitIphoneSource/iphone/Classes/AdPostingForm.m -o /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/AdPostingForm.o0#
+lSLF07#2@77"Compile /Users/yuriy/Documents/gitIphoneSource/iphone/Classes/AdPostingForm.m332168218#332168218#0(0"0(0#0#69"/Users/yuriy/Documents/gitIphoneSource/iphone/Classes/AdPostingForm.m8630422656#2038"    cd /Users/yuriy/Documents/gitIphoneSource/iphone    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-generated-files.hmap -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-own-target-headers.hmap -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-all-target-headers.hmap -iquote /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-project-headers.hmap -F/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/DerivedSources/i386 -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/navBased_Prefix-gncphxdhlfbtvrbakrcstwusfosv/navBased_Prefix.pch -c /Users/yuriy/Documents/gitIphoneSource/iphone/Classes/AdPostingForm.m -o /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/AdPostingForm.o0#
 
 CCompileC build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/AdPostingForm.o /Users/yuriy/Documents/navBased/Classes/AdPostingForm.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s330869457.928964
@@ -1631,8 +1632,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@74"Compile /Users/yuriy/Documents/gitIphoneSource/iphone/Classes/ExtraForms.m331207745#331207745#0(0"0(0#0#66"/Users/yuriy/Documents/gitIphoneSource/iphone/Classes/ExtraForms.m8612094432#2032"    cd /Users/yuriy/Documents/gitIphoneSource/iphone    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-generated-files.hmap -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-own-target-headers.hmap -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-all-target-headers.hmap -iquote /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-project-headers.hmap -F/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/DerivedSources/i386 -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/navBased_Prefix-gncphxdhlfbtvrbakrcstwusfosv/navBased_Prefix.pch -c /Users/yuriy/Documents/gitIphoneSource/iphone/Classes/ExtraForms.m -o /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/ExtraForms.o0#
 
 CCompileC build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/ImagePostingView.o /Users/yuriy/Documents/gitIphoneSource/iphone/Classes/ImagePostingView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s331643973.478009
-e331643973.629174
+s332143103.539598
+e332143104.358349
 r1
 xCompileC
 xbuild/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/ImagePostingView.o
@@ -1641,7 +1642,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@80"Compile /Users/yuriy/Documents/gitIphoneSource/iphone/Classes/ImagePostingView.m331643973#331643973#0(0"0(0#0#72"/Users/yuriy/Documents/gitIphoneSource/iphone/Classes/ImagePostingView.m8633300352#2044"    cd /Users/yuriy/Documents/gitIphoneSource/iphone    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-generated-files.hmap -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-own-target-headers.hmap -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-all-target-headers.hmap -iquote /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-project-headers.hmap -F/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/DerivedSources/i386 -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/navBased_Prefix-gncphxdhlfbtvrbakrcstwusfosv/navBased_Prefix.pch -c /Users/yuriy/Documents/gitIphoneSource/iphone/Classes/ImagePostingView.m -o /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/ImagePostingView.o0#
+lSLF07#2@80"Compile /Users/yuriy/Documents/gitIphoneSource/iphone/Classes/ImagePostingView.m332143103#332143104#0(0"0(0#0#72"/Users/yuriy/Documents/gitIphoneSource/iphone/Classes/ImagePostingView.m7307761437599099904#2044"    cd /Users/yuriy/Documents/gitIphoneSource/iphone    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-generated-files.hmap -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-own-target-headers.hmap -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-all-target-headers.hmap -iquote /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-project-headers.hmap -F/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/DerivedSources/i386 -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/navBased_Prefix-gncphxdhlfbtvrbakrcstwusfosv/navBased_Prefix.pch -c /Users/yuriy/Documents/gitIphoneSource/iphone/Classes/ImagePostingView.m -o /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/ImagePostingView.o0#
 
 CCompileC build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/LocationForm.o /Users/yuriy/Documents/gitIphoneSource/iphone/Classes/LocationForm.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s332060622.258041
@@ -1709,8 +1710,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@70"Compile /Users/yuriy/Documents/navBased/Classes/JSON/NSString+SBJSON.m329811864#329811864#0(0"0(0#0#62"/Users/yuriy/Documents/navBased/Classes/JSON/NSString+SBJSON.m8605163392#1893"    cd /Users/yuriy/Documents/navBased    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/navBased/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-generated-files.hmap -I/Users/yuriy/Documents/navBased/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-own-target-headers.hmap -I/Users/yuriy/Documents/navBased/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-all-target-headers.hmap -iquote /Users/yuriy/Documents/navBased/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-project-headers.hmap -F/Users/yuriy/Documents/navBased/build/Debug-iphonesimulator -I/Users/yuriy/Documents/navBased/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/navBased/build/navBased.build/Debug-iphonesimulator/navBased.build/DerivedSources/i386 -I/Users/yuriy/Documents/navBased/build/navBased.build/Debug-iphonesimulator/navBased.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/navBased_Prefix-begymplfunysiqhgoztnjfeezvlh/navBased_Prefix.pch -c /Users/yuriy/Documents/navBased/Classes/JSON/NSString+SBJSON.m -o /Users/yuriy/Documents/navBased/build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/NSString+SBJSON.o0#
 
 CCompileC build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/RequestPostAd.o /Users/yuriy/Documents/gitIphoneSource/iphone/Classes/RequestPostAd.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s331631770.899261
-e331631771.021417
+s332159430.695651
+e332159430.832383
 r1
 xCompileC
 xbuild/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/RequestPostAd.o
@@ -1719,7 +1720,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@77"Compile /Users/yuriy/Documents/gitIphoneSource/iphone/Classes/RequestPostAd.m331631770#331631771#0(0"0(0#0#69"/Users/yuriy/Documents/gitIphoneSource/iphone/Classes/RequestPostAd.m8635246080#2038"    cd /Users/yuriy/Documents/gitIphoneSource/iphone    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-generated-files.hmap -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-own-target-headers.hmap -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-all-target-headers.hmap -iquote /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-project-headers.hmap -F/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/DerivedSources/i386 -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/navBased_Prefix-gncphxdhlfbtvrbakrcstwusfosv/navBased_Prefix.pch -c /Users/yuriy/Documents/gitIphoneSource/iphone/Classes/RequestPostAd.m -o /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/RequestPostAd.o0#
+lSLF07#2@77"Compile /Users/yuriy/Documents/gitIphoneSource/iphone/Classes/RequestPostAd.m332159430#332159430#0(0"0(0#0#69"/Users/yuriy/Documents/gitIphoneSource/iphone/Classes/RequestPostAd.m8614931328#2038"    cd /Users/yuriy/Documents/gitIphoneSource/iphone    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-generated-files.hmap -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-own-target-headers.hmap -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-all-target-headers.hmap -iquote /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-project-headers.hmap -F/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/DerivedSources/i386 -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/navBased_Prefix-gncphxdhlfbtvrbakrcstwusfosv/navBased_Prefix.pch -c /Users/yuriy/Documents/gitIphoneSource/iphone/Classes/RequestPostAd.m -o /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/RequestPostAd.o0#
 
 CCompileC build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/RootViewController.o /Users/yuriy/Documents/gitIphoneSource/iphone/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s331207744.537597
@@ -2199,13 +2200,13 @@ ximg16.gif
 lSLF07#2@14"Copy img16.gif331207742#331207742#0(0"0(0#0#55"/Users/yuriy/Documents/gitIphoneSource/iphone/img16.gif8612298688#489"    cd /Users/yuriy/Documents/gitIphoneSource/iphone    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/yuriy/Documents/gitIphoneSource/iphone/img16.gif /Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app0#
 
 CGenerateDSYMFile /Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app.dSYM /Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app/navBased
-s332081389.501044
-e332081389.546216
+s332168218.709366
+e332168218.756565
 r1
 xGenerateDSYMFile
 x/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app.dSYM
 x/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app/navBased
-lSLF07#2@112"GenerateDSYMFile build/Debug-iphonesimulator/navBased.app.dSYM build/Debug-iphonesimulator/navBased.app/navBased332081389#332081389#0(0"0(0#0#95"/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app/navBased8634831040#407"    cd /Users/yuriy/Documents/gitIphoneSource/iphone    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app/navBased -o /Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app.dSYM0#
+lSLF07#2@112"GenerateDSYMFile build/Debug-iphonesimulator/navBased.app.dSYM build/Debug-iphonesimulator/navBased.app/navBased332168218#332168218#0(0"0(0#0#95"/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app/navBased8632031136#407"    cd /Users/yuriy/Documents/gitIphoneSource/iphone    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app/navBased -o /Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app.dSYM0#
 
 CGenerateDSYMFile /Users/yuriy/Documents/navBased/build/Debug-iphonesimulator/navBased.app.dSYM /Users/yuriy/Documents/navBased/build/Debug-iphonesimulator/navBased.app/navBased
 s330870979.850564
@@ -2217,14 +2218,14 @@ x/Users/yuriy/Documents/navBased/build/Debug-iphonesimulator/navBased.app/navBas
 lSLF07#2@112"GenerateDSYMFile build/Debug-iphonesimulator/navBased.app.dSYM build/Debug-iphonesimulator/navBased.app/navBased330870979#330870979#0(0"0(0#0#81"/Users/yuriy/Documents/navBased/build/Debug-iphonesimulator/navBased.app/navBased8655748768#365"    cd /Users/yuriy/Documents/navBased    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/yuriy/Documents/navBased/build/Debug-iphonesimulator/navBased.app/navBased -o /Users/yuriy/Documents/navBased/build/Debug-iphonesimulator/navBased.app.dSYM0#
 
 CLd /Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app/navBased normal i386
-s332081389.457062
-e332081389.500952
+s332168218.661959
+e332168218.709271
 r1
 xLd
 x/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app/navBased
 xnormal
 xi386
-lSLF07#2@100"Link /Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app/navBased332081389#332081389#0(0"0(0#0#0"8629187488#940"    cd /Users/yuriy/Documents/gitIphoneSource/iphone    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator -F/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator -filelist /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/navBased.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app/navBased0#
+lSLF07#2@100"Link /Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app/navBased332168218#332168218#0(0"0(0#0#0"8645644672#940"    cd /Users/yuriy/Documents/gitIphoneSource/iphone    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator -F/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator -filelist /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/Objects-normal/i386/navBased.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app/navBased0#
 
 CLd /Users/yuriy/Documents/navBased/build/Debug-iphonesimulator/navBased.app/navBased normal i386
 s330870979.813818
@@ -2307,12 +2308,12 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@30"Precompile navBased_Prefix.pch331207743#331207744#0(0"0(0#0#65"/Users/yuriy/Documents/gitIphoneSource/iphone/navBased_Prefix.pch8603116192#1896"    cd /Users/yuriy/Documents/gitIphoneSource/iphone    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-generated-files.hmap -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-own-target-headers.hmap -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-all-target-headers.hmap -iquote /Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/navBased-project-headers.hmap -F/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/DerivedSources/i386 -I/Users/yuriy/Documents/gitIphoneSource/iphone/build/navBased.build/Debug-iphonesimulator/navBased.build/DerivedSources -c /Users/yuriy/Documents/gitIphoneSource/iphone/navBased_Prefix.pch -o /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/navBased_Prefix-gncphxdhlfbtvrbakrcstwusfosv/navBased_Prefix.pch.gch0#
 
 CTouch /Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app
-s332081389.546299
-e332081389.548518
+s332168218.756653
+e332168218.758857
 r1
 xTouch
 x/Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app
-lSLF07#2@92"Touch /Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app332081389#332081389#0(0"0(0#0#0"8634718656#293"    cd /Users/yuriy/Documents/gitIphoneSource/iphone    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app0#
+lSLF07#2@92"Touch /Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app332168218#332168218#0(0"0(0#0#0"8631972576#293"    cd /Users/yuriy/Documents/gitIphoneSource/iphone    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/yuriy/Documents/gitIphoneSource/iphone/build/Debug-iphonesimulator/navBased.app0#
 
 CTouch /Users/yuriy/Documents/navBased/build/Debug-iphonesimulator/navBased.app
 s330870979.881345

@@ -8,6 +8,7 @@
 
 #import "AdPostingForm.h"
 #import "JSON.h"
+#import "RequestPostAd.h"
 
 
 @implementation AdPostingForm
@@ -103,7 +104,7 @@
 						forType:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"type"] 
 						forKey:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"name"]];
 	
-	if ([[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"name"] == @"subcategory") {		
+	if ([[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"name"] == @"subcategory_id") {		
 		[self.navigationController pushViewController:subcategory animated:YES];	
 	}
 	else if ([[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"name"] isEqualToString:@"post_code"] ) {
@@ -128,6 +129,13 @@
 		[addPostDataSelectView setPickerData:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"value"] startFrom:1];
 		[self.navigationController pushViewController:addPostDataSelectView animated:YES];
 	}
+	else if ([[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"type"] isEqualToString:@"sendButton" ]) {
+		RequestPostAd *postRequest = [[RequestPostAd alloc] init];
+		//[postRequest postAddWithArray:postArray toURLString:[NSString stringWithFormat:@"http://iyoiyo.jp/ios/post"]];		
+		[postRequest postAddWithArray:postArray toURLString:[NSString stringWithFormat:@"http://www.iyoiyo.jp/ios/post"]];
+		[postRequest release];
+	}
+
 }
 
 -(UITableViewCell *) tableView:(UITableView *)tableView 
@@ -287,7 +295,7 @@
 	[tempField removeAllObjects];
 	
 	[tempField setObject:@"Subcategory" forKey:@"title"];
-	[tempField setObject:@"subcategory" forKey:@"name"];
+	[tempField setObject:@"subcategory_id" forKey:@"name"];
 	[tempField setObject:@"select" forKey:@"type"];
 	[tempField setObject:@"40" forKey:@"height"];
 	[tempField setObject:@"" forKey:@"post_value"];
@@ -466,11 +474,9 @@
 		{			
 			if ([[[fieldsArray objectAtIndex:i] objectForKey:@"tag"] intValue] == textField.tag) {
 				[self addPostString:textField.text 
-							 forKey:[[fieldsArray objectAtIndex:i] objectForKey:@"name"]];
+							 forKey:[[fieldsArray objectAtIndex:i] objectForKey:@"name"]];				
 			}
 		}
-
-
 	}
 	
 	return YES;
@@ -485,6 +491,15 @@
         // Be sure to test for equality using the "isEqualToString" message
         [textView resignFirstResponder];
 		
+		for (int i = 0; i < [fieldsArray count]; i++) {		
+			if ( [[[fieldsArray objectAtIndex:i] objectForKey:@"type"] isEqualToString:@"textView"] )
+			{			
+				[self addPostString:textView.text 
+							 forKey:[[fieldsArray objectAtIndex:i] objectForKey:@"name"]];
+			}
+			
+			
+		}
         // Return FALSE so that the final '\n' character doesn't get added
         return FALSE;
     }
@@ -511,8 +526,8 @@
 	NSString *resultValue = [NSString stringWithFormat:@""];
 	if (shouldChangePostItem) {
 
-		if ( [changingValueKey isEqualToString:@"subcategory"]) {
-			[self addPostString:subcategory.resultValue forKey:@"subcategory"];
+		if ( [changingValueKey isEqualToString:@"subcategory_id"]) {
+			[self addPostString:subcategory.resultValue forKey:@"subcategory_id"];
 			resultValue = subcategory.resultValue;
 			subcategory.resultValue = @"";
 		}
@@ -520,7 +535,7 @@
 		{
 			//[self addPostArray:locationForm.resultArray];
 			[self addPostString:locationForm.resultPostCode forKey:changingValueKey];
-			[self addPostString:locationForm.resultRegionId forKey:@"prefecture_id"];
+			[self addPostString:locationForm.resultRegionId forKey:@"region_id"];
 			[self addPostString:locationForm.resultCityId forKey:@"city_id"];
 		}
 		else if ([changingValueKey isEqualToString:@"file_upload_input"]) {
@@ -599,6 +614,20 @@
 		activeCatId = subcategory.currentCatId;
 	}
 	[self didUploadPostArray];
+	
+	//getTextField text values
+	for (int i = 0; i < [fieldsArray count]; i++) {		
+		if ( [[[fieldsArray objectAtIndex:i] objectForKey:@"type"] isEqualToString:@"text"] )
+		{			
+			UITextField *tf = (UITextField *)[tableView.window viewWithTag:[[[fieldsArray objectAtIndex:i] objectForKey:@"tag"] intValue]];
+			NSLog(@"%i", tf.tag);
+/*			if ([[[fieldsArray objectAtIndex:i] objectForKey:@"tag"] intValue] == textField.tag) {
+				[self addPostString:textField.text 
+							 forKey:[[fieldsArray objectAtIndex:i] objectForKey:@"name"]];				
+			}
+ */
+		}
+	}
 }
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
