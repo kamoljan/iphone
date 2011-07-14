@@ -83,7 +83,6 @@
 	//setting up the body:
 	NSMutableData *postBody = [NSMutableData data];
 	for (int i=0;i<[postArray count]; i++) {
-		NSLog(@"count %d",i);
 		// add post variables		
 		[postBody appendData:[[NSString stringWithFormat:@"--%@\r\n", stringBoundary] dataUsingEncoding:NSUTF8StringEncoding]];		
 		NSString *postNameValue = [NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n",[[postArray objectAtIndex:i] objectForKey:@"name"]];

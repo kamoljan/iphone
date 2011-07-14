@@ -46,7 +46,10 @@
 		addPostDataSelectView = [[AddPostDataSelectView alloc] init];
 		imagePostingView = [[ImagePostingView alloc] init];
 		locationForm = [[LocationForm alloc] init];
+		
+		
     }
+
 
     return self;
 }
@@ -133,7 +136,7 @@
 		RequestPostAd *postRequest = [[RequestPostAd alloc] init];
 		//[postRequest postAddWithArray:postArray toURLString:[NSString stringWithFormat:@"http://iyoiyo.jp/ios/post"]];		
 		[postRequest postAddWithArray:postArray toURLString:[NSString stringWithFormat:@"http://www.iyoiyo.jp/ios/post"]];
-		[postRequest release];
+		[postRequest release];		
 	}
 
 }
@@ -182,7 +185,16 @@
 	adTextView.returnKeyType = UIReturnKeyDone;
 	adTextView.secureTextEntry = NO;
 	adTextView.delegate = self;
-	adTextView.text = @"Your Ad`s body text here";
+	for (int i = 0; i < [fieldsArray count]; i++) {
+		if ([[[fieldsArray objectAtIndex:i] objectForKey:@"name"] isEqualToString:@"body"] ) {
+			for (id item in postArray) {
+				if ([[item objectForKey:@"name"] isEqualToString:[[fieldsArray objectAtIndex:i] objectForKey:@"name"]]) {
+					adTextView.text = [item objectForKey:@"value"];
+				}
+			}
+		}
+	}
+	//adTextView.text = @"Your Ad`s body text here";
 	adTextView.backgroundColor = [UIColor whiteColor];
 	adTextView.autocorrectionType = UITextAutocorrectionTypeNo; // no auto correction support
 	adTextView.autocapitalizationType = UITextAutocapitalizationTypeNone; // no auto capitalization support
@@ -227,6 +239,17 @@
 	
 	playerTextField.clearButtonMode = UITextFieldViewModeNever; // no clear 'x' button to the right
 	[playerTextField setEnabled: YES];
+	
+	for (int i = 0; i < [fieldsArray count]; i++) {
+		if ([[[fieldsArray objectAtIndex:i] objectForKey:@"tag"] intValue] ==  tag) {
+		//	NSLog(@"%@",[fieldsArray objectAtIndex:i]);
+			for (id item in postArray) {
+				if ([[item objectForKey:@"name"] isEqualToString:[[fieldsArray objectAtIndex:i] objectForKey:@"name"]]) {
+					playerTextField.text = [item objectForKey:@"value"];
+				}
+			}
+		}
+	}
 	
 	[cell addSubview:playerTextField];
 	
@@ -474,11 +497,11 @@
 		{			
 			if ([[[fieldsArray objectAtIndex:i] objectForKey:@"tag"] intValue] == textField.tag) {
 				[self addPostString:textField.text 
-							 forKey:[[fieldsArray objectAtIndex:i] objectForKey:@"name"]];				
+							 forKey:[[fieldsArray objectAtIndex:i] objectForKey:@"name"]];
+				[[fieldsArray objectAtIndex:i] setObject:[NSString stringWithString:textField.text] forKey:@"post_value"];
 			}
 		}
-	}
-	
+	}	
 	return YES;
 }
 
@@ -507,8 +530,17 @@
     return TRUE;
 }
 
+-(void) fillFieldsWithData
+{
 
+}
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+	[tableView scrollRectToVisible:CGRectMake(0, 600, 320, 75) animated:YES];
+
+	return YES;
+}
 #pragma mark -
 -(void) shouldChangePostData:(Boolean)change 
 			  atIndexPostion:(NSInteger)indexAtPostArray 
@@ -591,7 +623,7 @@
 		[postArray addObject:[NSMutableDictionary dictionaryWithObjects:values 
 														 forKeys:keys]];
 	}
-	NSLog(@"postArray: %@", postArray);
+//	NSLog(@"postArray: %@", postArray);
 }
 
 -(void) addPostArray:(NSArray *)postItemArray
@@ -607,27 +639,15 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated
-{
-	
+{	
 	[self prepareFieldsArray];
 	if (![subcategory.currentCatId isEqual:@"-1"]) {
 		activeCatId = subcategory.currentCatId;
 	}
 	[self didUploadPostArray];
-	
-	//getTextField text values
-	for (int i = 0; i < [fieldsArray count]; i++) {		
-		if ( [[[fieldsArray objectAtIndex:i] objectForKey:@"type"] isEqualToString:@"text"] )
-		{			
-			UITextField *tf = (UITextField *)[tableView.window viewWithTag:[[[fieldsArray objectAtIndex:i] objectForKey:@"tag"] intValue]];
-			NSLog(@"%i", tf.tag);
-/*			if ([[[fieldsArray objectAtIndex:i] objectForKey:@"tag"] intValue] == textField.tag) {
-				[self addPostString:textField.text 
-							 forKey:[[fieldsArray objectAtIndex:i] objectForKey:@"name"]];				
-			}
- */
-		}
-	}
+//	[self fillFieldsWithData];
+	[tableView reloadData];
+
 }
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -637,7 +657,7 @@
 }
 
 - (void)viewDidUnload {
-    [super viewDidUnload];
+    [super viewDidUnload];	
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }

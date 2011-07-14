@@ -53,12 +53,7 @@
 		  withKeyboardType:(NSString *)keyboardType 
 				   withTag:(NSInteger)tag;
 -(void) prepareFieldsArray;
-
--(void)addTextField:(UITableViewCell *)cell 
-			  title:(NSString *)title 
-	  withTextField:(Boolean)withTextField 
-	 fieldType:(NSString *)fieldType
-				tag:(NSUInteger)tag;
+-(void) fillFieldsWithData;
 
 -(void) shouldChangePostData:(Boolean)change 
 			  atIndexPostion:(NSInteger)indexAtPostArray 
