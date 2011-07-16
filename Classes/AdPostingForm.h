@@ -23,7 +23,8 @@
 	NSMutableArray *fieldsArray, *postArray;
 	NSString *activeCatId;
 	NSMutableArray *pickerViewValues;
-	IBOutlet UITableView *tableView;
+	IBOutlet UITableView *adTableView;
+	NSInteger moveHeight;
 	navBasedAppDelegate *appDelegate;
 	AdvertiserType *advertiserTypeForm;
 	Subcategory *subcategory;
@@ -43,17 +44,17 @@
 	
 	NSString *changingValueType;
 	NSString *changingValueKey;
+	CGRect activeRect;
 }
 
 
 -(void) addLabel:(NSString *)labelTitle toCell:(UITableViewCell *)cell;
--(void) addTextViewToCell:(UITableViewCell *)cell;
+-(void) addTextViewToCell:(UITableViewCell *)cell withTag:(NSInteger)tag;
 
 -(void) addTextFieldToCell:(UITableViewCell *)cell 
 		  withKeyboardType:(NSString *)keyboardType 
 				   withTag:(NSInteger)tag;
 -(void) prepareFieldsArray;
--(void) fillFieldsWithData;
 
 -(void) shouldChangePostData:(Boolean)change 
 			  atIndexPostion:(NSInteger)indexAtPostArray 

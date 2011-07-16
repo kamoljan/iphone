@@ -46,7 +46,7 @@
 		addPostDataSelectView = [[AddPostDataSelectView alloc] init];
 		imagePostingView = [[ImagePostingView alloc] init];
 		locationForm = [[LocationForm alloc] init];
-		
+		moveHeight = 0;
 		
     }
 
@@ -78,7 +78,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {	
-	return [fieldsArray count];	
+	return ([fieldsArray count] + 5);	
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -96,8 +96,13 @@
 	}
 //	return 100;
   */
+	if ((indexPath.row + 1 ) < [fieldsArray count]) {
+		return [[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"height"] intValue];
+	}
+	else {
+		return 40;
+	}
 
-	return [[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"height"] intValue];
 } 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -133,12 +138,31 @@
 		[self.navigationController pushViewController:addPostDataSelectView animated:YES];
 	}
 	else if ([[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"type"] isEqualToString:@"sendButton" ]) {
-		RequestPostAd *postRequest = [[RequestPostAd alloc] init];
-		//[postRequest postAddWithArray:postArray toURLString:[NSString stringWithFormat:@"http://iyoiyo.jp/ios/post"]];		
+		RequestPostAd *postRequest = [[RequestPostAd alloc] init];	
 		[postRequest postAddWithArray:postArray toURLString:[NSString stringWithFormat:@"http://www.iyoiyo.jp/ios/post"]];
 		[postRequest release];		
 	}
+	else {
 
+		CGRect rowRect = [adTableView rectForRowAtIndexPath:indexPath];
+		
+		activeRect = CGRectMake(adTableView.contentOffset.x, adTableView.contentOffset.y, rowRect.size.width, rowRect.size.height);
+
+		if ( (rowRect.origin.y + rowRect.size.height) >  240 ) {
+			rowRect.size.height = tableView.frame.size.height;
+			[tableView scrollRectToVisible:rowRect animated:YES];
+		}
+				
+		NSInteger activeTag = [[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"tag"] intValue];
+
+		UITextField *textFieldInCell = (UITextField *)[adTableView.window viewWithTag:activeTag];
+		UITextView *textViewInCell = (UITextView *)[adTableView.window viewWithTag:activeTag];
+		textFieldInCell.userInteractionEnabled = YES;
+		[textFieldInCell becomeFirstResponder];
+		textViewInCell.userInteractionEnabled = YES;
+		[textViewInCell becomeFirstResponder];
+		
+	}
 }
 
 -(UITableViewCell *) tableView:(UITableView *)tableView 
@@ -146,12 +170,12 @@
 {
    UITableViewCell *cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
 									   reuseIdentifier:@"adCell"] autorelease];
-	
+	if ((indexPath.row + 1 ) < [fieldsArray count]) {
+		
 	[self addLabel:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"title"] toCell:cell];
-	
 	NSString *fieldType = [[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"type"];	
 	if (fieldType == @"textView") {
-		[self addTextViewToCell:cell];
+		[self addTextViewToCell:cell withTag:[[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"tag"] intValue]];
 	}
 	else if ([fieldType isEqualToString:@"text" ]) {		
 		[self addTextFieldToCell:cell
@@ -159,6 +183,7 @@
 						 withTag:[[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"tag"] intValue]];
 	}
 	
+	}
 	return cell;
 	
 }
@@ -176,7 +201,7 @@
 	
 }
 
--(void) addTextViewToCell:(UITableViewCell *)cell
+-(void) addTextViewToCell:(UITableViewCell *)cell withTag:(NSInteger)tag
 {
 	UITextView *adTextView = [[UITextView alloc] initWithFrame:CGRectMake(10, 35, 185, 100)];
 	adTextView.textColor = [UIColor blackColor];
@@ -199,8 +224,9 @@
 	adTextView.autocorrectionType = UITextAutocorrectionTypeNo; // no auto correction support
 	adTextView.autocapitalizationType = UITextAutocapitalizationTypeNone; // no auto capitalization support
 	adTextView.textAlignment = UITextAlignmentLeft;
+	adTextView.tag = tag;
 	adTextView.delegate = self;
-	
+	adTextView.userInteractionEnabled = NO;
 	[cell addSubview:adTextView];
 	
 	[adTextView release];
@@ -236,7 +262,8 @@
 	playerTextField.autocapitalizationType = UITextAutocapitalizationTypeNone; // no auto capitalization support
 	playerTextField.textAlignment = UITextAlignmentLeft;
 	playerTextField.delegate = self;
-	
+	//give keyboard interaction to tableView
+	playerTextField.userInteractionEnabled = NO;
 	playerTextField.clearButtonMode = UITextFieldViewModeNever; // no clear 'x' button to the right
 	[playerTextField setEnabled: YES];
 	
@@ -389,7 +416,7 @@
 	[tempField setObject:@"body" forKey:@"name"];
 	[tempField setObject:@"textView" forKey:@"type"];
 	[tempField setObject:@"150" forKey:@"height"];
-	
+	[tempField setObject:@"90" forKey:@"tag"];
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"text" forKey:@"text_type"];
 	[tempField setObject:@"YES" forKey:@"enbled"];
@@ -429,9 +456,9 @@
 	[tempField release];
 	
 	
-	[tableView reloadData];
+	[adTableView reloadData];
 }
-
+/*
 -(void)addTextField:(UITableViewCell *)cell 
 			  title:(NSString *)title 
 	  withTextField:(Boolean)withTextField 
@@ -473,7 +500,8 @@
 		playerTextField.textAlignment = UITextAlignmentLeft;
 		playerTextField.tag = (NSInteger)tag;
 		playerTextField.delegate = self;
-	
+	    playerTextField.userInteractionEnabled = NO;
+		
 		playerTextField.clearButtonMode = UITextFieldViewModeNever; // no clear 'x' button to the right
 		[playerTextField setEnabled: YES];
 	
@@ -485,7 +513,7 @@
 
 	[myUILabel release];
 }
-
+*/
 #pragma mark -
 #pragma mark textField
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -502,6 +530,7 @@
 			}
 		}
 	}	
+	[adTableView scrollRectToVisible:activeRect animated:YES];
 	return YES;
 }
 
@@ -530,17 +559,6 @@
     return TRUE;
 }
 
--(void) fillFieldsWithData
-{
-
-}
-
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
-{
-	[tableView scrollRectToVisible:CGRectMake(0, 600, 320, 75) animated:YES];
-
-	return YES;
-}
 #pragma mark -
 -(void) shouldChangePostData:(Boolean)change 
 			  atIndexPostion:(NSInteger)indexAtPostArray 
@@ -636,6 +654,9 @@
 -(void)viewWillDisappear:(BOOL)animated
 {
 	appDelegate.needToRefresh = NO;
+	// unregister for keyboard notifications while not visible.
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil]; 
+	    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil]; 
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -645,9 +666,15 @@
 		activeCatId = subcategory.currentCatId;
 	}
 	[self didUploadPostArray];
-//	[self fillFieldsWithData];
-	[tableView reloadData];
+	[adTableView reloadData];
+/*	
+	// register for keyboard notifications
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) 
+												 name:UIKeyboardWillShowNotification object:self.view.window]; 
 
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) 
+												 name:UIKeyboardWillHideNotification object:self.view.window]; 
+*/	
 }
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -670,7 +697,7 @@
 	[activeCatId release];
 	[fieldsArray release];
 	[pickerViewValues release];
-	[tableView release];
+	[adTableView release];
 	//[appDelegate release];
 	[advertiserTypeForm release];
 	[subcategory release];
