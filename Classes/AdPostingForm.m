@@ -10,7 +10,6 @@
 #import "JSON.h"
 #import "RequestPostAd.h"
 
-
 @implementation AdPostingForm
 
 //@synthesize advertiserTypeForm, subcategory, extraParametres, tableView,
@@ -148,7 +147,9 @@
 		
 		activeRect = CGRectMake(adTableView.contentOffset.x, adTableView.contentOffset.y, rowRect.size.width, rowRect.size.height);
 
-		if ( (rowRect.origin.y + rowRect.size.height) >  240 ) {
+		CGRect visibleRowRect = [tableView convertRect:rowRect toView:[tableView superview]];
+		
+		if ( (visibleRowRect.origin.y + visibleRowRect.size.height) >  240 ) {
 			rowRect.size.height = tableView.frame.size.height;
 			[tableView scrollRectToVisible:rowRect animated:YES];
 		}
@@ -546,6 +547,7 @@
 		for (int i = 0; i < [fieldsArray count]; i++) {		
 			if ( [[[fieldsArray objectAtIndex:i] objectForKey:@"type"] isEqualToString:@"textView"] )
 			{			
+				
 				[self addPostString:textView.text 
 							 forKey:[[fieldsArray objectAtIndex:i] objectForKey:@"name"]];
 			}
@@ -553,6 +555,7 @@
 			
 		}
         // Return FALSE so that the final '\n' character doesn't get added
+		[adTableView scrollRectToVisible:activeRect animated:YES];
         return FALSE;
     }
     // For any other character return TRUE so that the text gets added to the view
@@ -647,6 +650,17 @@
 -(void) addPostArray:(NSArray *)postItemArray
 {
 	NSLog(@"images Array: %@", postItemArray);
+}
+
+-(Boolean)checkString:(NSString *)string forType:(NSString *)type
+{/*
+	if ([type isEqualToString:@"email"]) {
+		NSString *regexForEmail = [NSString stringWithFormat:@"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"];
+		if ([string isMatchedByRegex:regexForEmail] )
+			return YES;
+	}
+  */
+	return NO;
 }
 #pragma mark -
 #pragma mark standart Form methods

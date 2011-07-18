@@ -66,4 +66,5 @@
 -(void) addPostString:(NSString *)postString forKey:(NSString *)postKey;
 -(void) addPostArray:(NSArray *)postItemArray;
 
+-(Boolean)checkString:(NSString *)string forType:(NSString *)type;
 @end
