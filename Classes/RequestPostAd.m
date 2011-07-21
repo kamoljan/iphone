@@ -68,7 +68,7 @@
 }
 
 
--(Boolean) postAddWithArray:(NSArray *)postArray toURLString:(NSString *)urlString
+-(NSDictionary *) postAddWithArray:(NSArray *)postArray toURLString:(NSString *)urlString
 {
 	
     NSURL *url = [NSURL URLWithString:urlString];
@@ -95,20 +95,20 @@
 	[postBody appendData:[[NSString stringWithFormat:@"--%@\r\n", stringBoundary] dataUsingEncoding:NSUTF8StringEncoding]];
 	
 	[request setHTTPBody:postBody];	
+//	NSLog(@"%@",postBody);
 	//get response
 	NSHTTPURLResponse* urlResponse = nil;
 	NSError *error = [[NSError alloc] init];
 	NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&error];
 	NSString *result = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-	NSLog(@"Response Code: %d", [urlResponse statusCode]);
+//	NSLog(@"Response Code: %d", [urlResponse statusCode]);
 	if ([urlResponse statusCode] >= 200 && [urlResponse statusCode] < 300) {
-		NSLog(@"Response: %@", result);
-		
-		//here you get the response	
-		
+		NSDictionary *resultDictionary = [result JSONValue];
+		NSLog(@"returning result: %@",resultDictionary);
+		return resultDictionary;
 	}
 	
-	return YES;
+	return nil;
 }
 - (void)dealloc {
 	

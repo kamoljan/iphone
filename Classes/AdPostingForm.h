@@ -34,6 +34,8 @@
 	ImagePostingView *imagePostingView;
 	LocationForm *locationForm;
 	
+	//adType saves the ad type view result data
+	NSString *adTypeValue;
 	//used for dynamic upload extra fields
 	//the new value will be located at addPostDataVew.resultValue 
 	Boolean shouldChangePostItem;	

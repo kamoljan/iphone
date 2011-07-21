@@ -20,5 +20,5 @@
 -(NSDictionary *) doRequest:(NSData *)imageData;
 
 //uses for sending ad 
--(Boolean) postAddWithArray:(NSArray *)postArray toURLString:(NSString *)urlString;
+-(NSDictionary *) postAddWithArray:(NSArray *)postArray toURLString:(NSString *)urlString;
 @end

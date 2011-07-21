@@ -12,7 +12,7 @@
 
 @implementation AddPostDataView
 
-@synthesize resultValue;
+@synthesize resultValue,resultDictionary;
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -65,9 +65,8 @@
 
 -(IBAction) buttonClicked:(id)sender
 {	
-	NSLog(@"Options Data  %@",optionsData);
 	if ([loadingDataType isEqualToString:@"ad_type"]) {
-		self.resultValue = [[optionsData objectAtIndex:([sender tag] - 1)] objectForKey:@"id"];
+		self.resultValue = [[optionsData objectAtIndex:([sender tag] - 1)] objectForKey:@"id"];		
 	}
 	else {		
 		self.resultValue = [NSString stringWithString: [[optionsData objectAtIndex:([sender tag] - 1)] 
@@ -120,7 +119,6 @@
 														  encoding:NSUTF8StringEncoding];
 	optionsData =[[tempExtraDataString JSONValue] retain];
 	[tempExtraDataString release];
-	
 }
 
 @end

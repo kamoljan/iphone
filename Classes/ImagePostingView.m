@@ -68,7 +68,6 @@
 didFinishPickingMediaWithInfo:(NSDictionary *)info
 {	
 	RequestPostAd *uploadImage = [[RequestPostAd alloc] init];
-	NSLog(@"%@", info);
 	UIImage *adImage = [info objectForKey:UIImagePickerControllerOriginalImage];
 	
 	NSData *imageData = UIImageJPEGRepresentation(adImage, 1.0);

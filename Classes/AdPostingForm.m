@@ -32,7 +32,7 @@
 		pickerViewValues = [[NSMutableArray alloc] init];
 		fieldsArray = [[NSMutableArray alloc] init];
 		postArray = [[NSMutableArray alloc] init];
-
+		adTypeValue = [[NSString	alloc] init];
 		//Init Subcategories form
 		subcategory = [[Subcategory alloc] init];
 		NSURL *iyoURL = [NSURL URLWithString:@"http://www.iyoiyo.jp/ajax/category_tree"];
@@ -118,7 +118,9 @@
 		[self.navigationController pushViewController:locationForm animated:YES];
 	}
 	else if ([[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"name"] == @"ad_type")
-	{		
+	{	
+		//[addPostDataView setOptionsData:[subcategory.extraFormsArray ]];
+		//subcategory.extraFormsArray
 		[addPostDataView loadOptionsDataByurl:[NSString stringWithFormat:@"http://www.iyoiyo.jp/ajax/adtypes/%@",activeCatId] ];
 		[self.navigationController pushViewController:addPostDataView animated:YES];		
 	}
@@ -137,9 +139,51 @@
 		[self.navigationController pushViewController:addPostDataSelectView animated:YES];
 	}
 	else if ([[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"type"] isEqualToString:@"sendButton" ]) {
-		RequestPostAd *postRequest = [[RequestPostAd alloc] init];	
-		[postRequest postAddWithArray:postArray toURLString:[NSString stringWithFormat:@"http://www.iyoiyo.jp/ios/post"]];
-		[postRequest release];		
+		RequestPostAd *postRequest = [[RequestPostAd alloc] init];
+		NSDictionary *postResultDict = [postRequest postAddWithArray:postArray toURLString:[NSString stringWithFormat:@"http://www.iyoiyo.jp/ios/post"]];
+		NSLog(@"status %@", [postResultDict objectForKey:@"status"]);
+		if (([[postResultDict objectForKey:@"status"] intValue] == 0 ) && ([postResultDict objectForKey:@"status"]) != NULL ) {
+			UIAlertView *alert = [[UIAlertView alloc]
+								  initWithTitle:@"Successfull"
+								  message:[NSString stringWithFormat:@"Please, Check your e-mail for activation(%@)",[postResultDict objectForKey:@"email"]]
+								  delegate:nil
+								  cancelButtonTitle:@"OK"
+								  otherButtonTitles:nil];
+			[alert show];
+			[alert release];
+			//[postRequest release];
+			[self.navigationController popViewControllerAnimated:YES];
+		}
+		else if ([postResultDict count] > 0) {
+			NSDictionary *errorsDict = [postResultDict objectForKey:@"ad_errors"];
+			NSMutableString *errorString = [[NSString alloc] init];			
+			for (id errorKey in [errorsDict allKeys]) {
+				NSLog(@"key: %@", [errorsDict objectForKey:errorKey]);
+				[errorString stringByAppendingFormat:@"%@\n",[errorsDict objectForKey:errorKey]];
+			}
+
+			UIAlertView *alert = [[UIAlertView alloc]
+								  initWithTitle:@"Your add doesnt added"
+								  message:errorString
+								  delegate:nil
+								  cancelButtonTitle:@"OK"
+								  otherButtonTitles:nil];
+			[alert show];
+			[alert release];
+		}
+		else {
+			UIAlertView *alert = [[UIAlertView alloc]
+								  initWithTitle:@"Your add doesnt added"
+								  message:@"Some error occured please try later"
+								  delegate:nil
+								  cancelButtonTitle:@"OK"
+								  otherButtonTitles:nil];
+			[alert show];
+			[alert release];
+		}
+
+
+		[postRequest release];
 	}
 	else {
 
@@ -171,23 +215,47 @@
 {
    UITableViewCell *cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
 									   reuseIdentifier:@"adCell"] autorelease];
-	if ((indexPath.row + 1 ) < [fieldsArray count]) {
+
+
+
+	if ( ((indexPath.row + 1 ) < [fieldsArray count]) ) {
+		if ( [[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"enabled"] isEqualToString:@"NO"] ) {
+			cell.textLabel.textColor = [UIColor grayColor];
+		}
+		else {
+			cell.textLabel.textColor = [UIColor blackColor];
+		}
+		if (([[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"enabled"] isEqualToString:@"NO"] )) {
+			cell.selectionStyle = UITableViewCellSelectionStyleNone;
+		}
 		
-	[self addLabel:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"title"] toCell:cell];
-	NSString *fieldType = [[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"type"];	
-	if (fieldType == @"textView") {
-		[self addTextViewToCell:cell withTag:[[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"tag"] intValue]];
+		[self addLabel:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"title"] toCell:cell];
+		NSString *fieldType = [[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"type"];	
+		if (fieldType == @"textView") {
+			[self addTextViewToCell:cell withTag:[[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"tag"] intValue]];
+		}
+		else if ([fieldType isEqualToString:@"text" ]) {
+			[self addTextFieldToCell:cell
+			 		withKeyboardType:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"text_type"]
+							 withTag:[[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"tag"] intValue]];
+		}
+		//NSLog(@"\n%@ \n %@",[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"name"],[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"enabled"]);
+		
 	}
-	else if ([fieldType isEqualToString:@"text" ]) {		
-		[self addTextFieldToCell:cell
-				withKeyboardType:[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"text_type"]
-						 withTag:[[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"tag"] intValue]];
-	}
-	
-	}
+
 	return cell;
 	
 }
+
+-(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ( [[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"enabled"] isEqualToString:@"NO"] ) {
+        return nil;
+    } else {
+        return indexPath;
+    }
+}
+
 
 -(void) addLabel:(NSString *)labelTitle toCell:(UITableViewCell *)cell
 {
@@ -195,7 +263,9 @@
 	UILabel *myUILabel = [[UILabel alloc] init];
 	CGSize theStringSize = [labelTitle sizeWithFont:myUILabel.font constrainedToSize:labelSize lineBreakMode:myUILabel.lineBreakMode];
 	myUILabel.frame = CGRectMake(myUILabel.frame.origin.x+10, myUILabel.frame.origin.y+5, theStringSize.width, theStringSize.height);
+	myUILabel.textColor = cell.textLabel.textColor; 
 	myUILabel.text = labelTitle;
+
 	[cell addSubview:myUILabel];
 	
 	[myUILabel release];
@@ -296,7 +366,7 @@
 	[tempField setObject:@"radio" forKey:@"type"];
 	[tempField setObject:@"40" forKey:@"height"];
 	[tempField setObject:@"" forKey:@"post_value"];
-	[tempField setObject:@"YES" forKey:@"enbled"];
+	[tempField setObject:@"YES" forKey:@"enabled"];
 	
 	[tempValueItem setObject:@"Personal" forKey:@"name"];
 	[tempValueItem setObject:@"1" forKey:@"value"];
@@ -319,7 +389,7 @@
 	[tempField setObject:@"75" forKey:@"height"];
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"text" forKey:@"text_type"];
-	[tempField setObject:@"YES" forKey:@"enbled"];
+	[tempField setObject:@"YES" forKey:@"enabled"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
@@ -330,7 +400,7 @@
 	[tempField setObject:@"62" forKey:@"tag"];
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"email" forKey:@"text_type"];
-	[tempField setObject:@"YES" forKey:@"enbled"];
+	[tempField setObject:@"YES" forKey:@"enabled"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
@@ -341,7 +411,7 @@
 	[tempField setObject:@"65" forKey:@"tag"];
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"phone" forKey:@"text_type"];
-	[tempField setObject:@"YES" forKey:@"enbled"];
+	[tempField setObject:@"YES" forKey:@"enabled"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
@@ -350,23 +420,21 @@
 	[tempField setObject:@"select" forKey:@"type"];
 	[tempField setObject:@"40" forKey:@"height"];
 	[tempField setObject:@"" forKey:@"post_value"];
-	[tempField setObject:@"YES" forKey:@"enbled"];
+	[tempField setObject:@"YES" forKey:@"enabled"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
 	if ([subcategory.extraFormsArray count] > 0) {		
 		//create values Array	
+		NSArray	*availableExtraFormArray;
 		for (int i = 0;i < [subcategory.extraFormsArray count]; i++) {
 			[tempField setObject:[[subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"name"] forKey:@"title"];
 			[tempField setObject:[[subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"name"] forKey:@"name"];
-			
-			[tempField setObject:[[subcategory.extraFormsArray objectAtIndex:i] 
-								  objectForKey:@"type"] forKey:@"type"];
-			[tempField setObject:[[subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"data"] 
-						  forKey:@"value"];			
+			[tempField setObject:[[subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"type"] forKey:@"type"];
+			[tempField setObject:[[subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"data"] forKey:@"value"];			
 			[tempField setObject:@"" forKey:@"post_value"];
 			[tempField setObject:@"text" forKey:@"text_type"];
-			[tempField setObject:@"YES" forKey:@"enbled"];
+			[tempField setObject:@"NO" forKey:@"enabled"];
 			if ([[[subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"type"] isEqualToString:@"text"]) {
 				[tempField setObject:@"75" forKey:@"height"];
 			}
@@ -375,7 +443,15 @@
 			}
 			NSInteger tagNumber = 70 + i;
 			[tempField setObject:[NSString stringWithFormat:@"%d", tagNumber] forKey:@"tag"];
-
+			
+			//check extra forms for availability in ad_types aray of subcategory
+			availableExtraFormArray = [[subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"ad_types"];			
+			for (int i = 0; i < [availableExtraFormArray count]; i++) {								
+				if ([adTypeValue intValue] == [[availableExtraFormArray objectAtIndex:i] intValue]) {
+					[tempField setObject:@"YES" forKey:@"enabled"];
+				}
+				
+			}
 			
 			[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 			[tempField removeAllObjects];			
@@ -387,7 +463,7 @@
 	[tempField setObject:@"radio" forKey:@"type"];
 	[tempField setObject:@"40" forKey:@"height"];
 	[tempField setObject:@"" forKey:@"post_value"];
-	[tempField setObject:@"YES" forKey:@"enbled"];
+	[tempField setObject:@"YES" forKey:@"enabled"];
 
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];	
 	[tempField removeAllObjects];
@@ -398,7 +474,7 @@
 	[tempField setObject:@"40" forKey:@"height"];
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"" forKey:@"text_type"];
-	[tempField setObject:@"YES" forKey:@"enbled"];
+	[tempField setObject:@"YES" forKey:@"enabled"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
@@ -409,7 +485,7 @@
 	[tempField setObject:@"67" forKey:@"tag"];
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"text" forKey:@"text_type"];
-	[tempField setObject:@"YES" forKey:@"enbled"];
+	[tempField setObject:@"YES" forKey:@"enabled"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
@@ -420,7 +496,7 @@
 	[tempField setObject:@"90" forKey:@"tag"];
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"text" forKey:@"text_type"];
-	[tempField setObject:@"YES" forKey:@"enbled"];
+	[tempField setObject:@"YES" forKey:@"enabled"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 /*	
@@ -438,7 +514,7 @@
 	[tempField setObject:@"image" forKey:@"type"];
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"40" forKey:@"height"];
-	[tempField setObject:@"YES" forKey:@"enbled"];
+	[tempField setObject:@"YES" forKey:@"enabled"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 		
@@ -447,7 +523,7 @@
 	[tempField setObject:@"sendButton" forKey:@"type"];
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"40" forKey:@"height"];
-	[tempField setObject:@"YES" forKey:@"enbled"];
+	[tempField setObject:@"YES" forKey:@"enabled"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
@@ -532,6 +608,7 @@
 		}
 	}	
 	[adTableView scrollRectToVisible:activeRect animated:YES];
+	textField.userInteractionEnabled = NO;
 	return YES;
 }
 
@@ -556,6 +633,7 @@
 		}
         // Return FALSE so that the final '\n' character doesn't get added
 		[adTableView scrollRectToVisible:activeRect animated:YES];
+		textView.userInteractionEnabled = NO;
         return FALSE;
     }
     // For any other character return TRUE so that the text gets added to the view
@@ -575,7 +653,7 @@
 }
 
 -(void) didUploadPostArray
-{
+{	
 	NSString *resultValue = [NSString stringWithFormat:@""];
 	if (shouldChangePostItem) {
 
@@ -644,12 +722,26 @@
 		[postArray addObject:[NSMutableDictionary dictionaryWithObjects:values 
 														 forKeys:keys]];
 	}
-//	NSLog(@"postArray: %@", postArray);
 }
 
 -(void) addPostArray:(NSArray *)postItemArray
-{
-	NSLog(@"images Array: %@", postItemArray);
+{	
+	
+	for (int i =0; i < [postArray count]; i++) {
+		if ( [[[postArray objectAtIndex:i] objectForKey:@"name"] isEqualToString:@"image"] )
+		{
+			[postArray removeObjectAtIndex:i];
+			i--;
+		}
+	}
+	
+	if ([postItemArray count] > 0)	
+	for (NSDictionary * itemDict in postItemArray) {
+		NSMutableArray *postItemKeys  = [NSArray arrayWithObjects:@"name", @"value", nil];
+		NSArray *postItemValues = [NSArray arrayWithObjects:@"image", [itemDict objectForKey:@"fid"], nil];
+		[postArray addObject:[NSMutableDictionary dictionaryWithObjects:postItemValues forKeys:postItemKeys]];
+	}
+	NSLog(@"postArray: %@", postArray);
 }
 
 -(Boolean)checkString:(NSString *)string forType:(NSString *)type
@@ -675,6 +767,10 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {	
+	if ([changingValueKey isEqualToString:@"ad_type"]) {				
+		adTypeValue = addPostDataView.resultValue;
+		NSLog(@"result Value is: %@",addPostDataView.resultValue);
+	}	
 	[self prepareFieldsArray];
 	if (![subcategory.currentCatId isEqual:@"-1"]) {
 		activeCatId = subcategory.currentCatId;
@@ -707,7 +803,7 @@
 - (void)dealloc {
 	//[changingValueType release];
 	//[changingValueKey release];
-	
+	[adTypeValue release];
 	[activeCatId release];
 	[fieldsArray release];
 	[pickerViewValues release];

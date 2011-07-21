@@ -15,9 +15,11 @@
 	NSString *resultValue;
 	NSMutableArray *buttonsArray; 
 	NSString *loadingDataType;
+	NSMutableDictionary *resultDictionary;
 }
 
 @property (nonatomic, retain) NSString *resultValue;
+@property (nonatomic, retain) NSMutableDictionary *resultDictionary;
 
 -(void) setOptionsData:(NSMutableArray *)dataArray;
 -(void) loadOptionsDataByurl:(NSString *)urlString;
