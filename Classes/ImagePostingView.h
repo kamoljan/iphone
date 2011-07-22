@@ -16,11 +16,12 @@ UITableViewDelegate, UITableViewDataSource>
 	NSMutableArray *thumbs;
 	UIImagePickerController *pickerController;
 	IBOutlet UIButton *addImageButton;
+	IBOutlet UIButton *addCameraImageButton;
 	IBOutlet UITableView *imagetableView;
 }
 
 @property (nonatomic, retain) NSMutableArray *imagesArray;
 
--(IBAction) addImageToAd;
+-(IBAction) addImageToAd:(id)sender;
 -(void) removeImageAtPosition:(id)sender;
 @end

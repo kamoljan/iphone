@@ -76,6 +76,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 	[self.imagesArray addObject:adImageDic];
 	
 	[uploadImage release];
+	[adImageDic release];
 	[picker dismissModalViewControllerAnimated:YES];
 	
 	NSURL *imageUrl = [NSURL URLWithString:[[self.imagesArray lastObject] objectForKey:@"thumb"]];
@@ -93,18 +94,49 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 	[picker dismissModalViewControllerAnimated:YES];
 }
 #pragma mark -
--(IBAction) addImageToAd
-{
-	if ([UIImagePickerController isSourceTypeAvailable: 
-		 UIImagePickerControllerSourceTypePhotoLibrary]) {
-		UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-		picker.delegate = self;
-		picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-		[self presentModalViewController:picker animated:YES];
-		[picker release];
+-(IBAction) addImageToAd:(id)sender
+{	
+	UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+	picker.delegate = self;
+	if (sender == addCameraImageButton) {
+		if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+			picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+			[self presentModalViewController:picker animated:YES];
+			[picker release];
+		}
+		else {
+			UIAlertView *alert = [[UIAlertView alloc]
+								  initWithTitle:@"Error accessing photo library"
+								  message:@"Device does not support a camera"
+								  delegate:nil
+								  cancelButtonTitle:@"Cansel"
+								  otherButtonTitles:nil];
+			[alert show];
+			[alert release];
+			[picker	release];			
+		}		
 	}
 	else {
-		UIAlertView *alert = [[UIAlertView alloc]
+		if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+			picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+			[self presentModalViewController:picker animated:YES];
+			[picker release];
+		}
+		else {
+			UIAlertView *alert = [[UIAlertView alloc]
+								  initWithTitle:@"Error accessing photo library"
+								  message:@"Device does not support a photo library"
+								  delegate:nil
+								  cancelButtonTitle:@"Cansel"
+								  otherButtonTitles:nil];
+			[alert show];
+			[alert release];
+			[picker	release];
+		}
+
+	}
+	
+	/*UIAlertView *alert = [[UIAlertView alloc]
 							   initWithTitle:@"Error accessing photo library"
 							  message:@"Device does not support a photo library"
 							  delegate:nil
@@ -112,7 +144,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 							  otherButtonTitles:nil];
 		[alert show];
 		[alert release];
-	}
+	*/
 
 }
 
