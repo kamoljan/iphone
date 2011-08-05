@@ -139,6 +139,8 @@
 		[self.navigationController pushViewController:addPostDataSelectView animated:YES];
 	}
 	else if ([[[fieldsArray objectAtIndex:indexPath.row] objectForKey:@"type"] isEqualToString:@"sendButton" ]) {
+		
+		/**************************************************************************/
 		RequestPostAd *postRequest = [[RequestPostAd alloc] init];
 		NSDictionary *postResultDict = [postRequest postAddWithArray:postArray toURLString:[NSString stringWithFormat:@"http://www.iyoiyo.jp/ios/post"]];
 		NSLog(@"status %@", [postResultDict objectForKey:@"status"]);
@@ -380,6 +382,7 @@
 	[tempField setObject:@"40" forKey:@"height"];
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"YES" forKey:@"enabled"];
+	[tempField setObject:@"YES" forKey:@"required"];
 	
 	[tempValueItem setObject:@"Personal" forKey:@"name"];
 	[tempValueItem setObject:@"1" forKey:@"value"];
@@ -403,6 +406,7 @@
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"text" forKey:@"text_type"];
 	[tempField setObject:@"YES" forKey:@"enabled"];
+	[tempField setObject:@"YES" forKey:@"required"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
@@ -414,6 +418,7 @@
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"email" forKey:@"text_type"];
 	[tempField setObject:@"YES" forKey:@"enabled"];
+	[tempField setObject:@"YES" forKey:@"required"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
@@ -425,6 +430,7 @@
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"phone" forKey:@"text_type"];
 	[tempField setObject:@"YES" forKey:@"enabled"];
+	[tempField setObject:@"YES" forKey:@"required"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
@@ -434,6 +440,7 @@
 	[tempField setObject:@"40" forKey:@"height"];
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"YES" forKey:@"enabled"];
+	[tempField setObject:@"YES" forKey:@"required"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
@@ -443,6 +450,7 @@
 	[tempField setObject:@"40" forKey:@"height"];
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"YES" forKey:@"enabled"];
+	[tempField setObject:@"YES" forKey:@"required"];
 	
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];	
 	[tempField removeAllObjects];
@@ -454,7 +462,7 @@
 			[tempField setObject:[[subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"name"] forKey:@"title"];
 			[tempField setObject:[[subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"name"] forKey:@"name"];
 			[tempField setObject:[[subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"type"] forKey:@"type"];
-			[tempField setObject:[[subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"data"] forKey:@"value"];			
+			[tempField setObject:[[subcategory.extraFormsArray objectAtIndex:i] objectForKey:@"data"] forKey:@"value"];
 			[tempField setObject:@"" forKey:@"post_value"];
 			[tempField setObject:@"text" forKey:@"text_type"];
 			[tempField setObject:@"NO" forKey:@"enabled"];
@@ -488,6 +496,7 @@
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"" forKey:@"text_type"];
 	[tempField setObject:@"YES" forKey:@"enabled"];
+	[tempField setObject:@"YES" forKey:@"required"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
@@ -499,6 +508,7 @@
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"text" forKey:@"text_type"];
 	[tempField setObject:@"YES" forKey:@"enabled"];
+	[tempField setObject:@"YES" forKey:@"required"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
 	
@@ -510,18 +520,10 @@
 	[tempField setObject:@"" forKey:@"post_value"];
 	[tempField setObject:@"text" forKey:@"text_type"];
 	[tempField setObject:@"YES" forKey:@"enabled"];
+	[tempField setObject:@"YES" forKey:@"required"];
 	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
 	[tempField removeAllObjects];
-/*	
-	[tempField setObject:@"Price" forKey:@"title"];
-	[tempField setObject:@"price" forKey:@"name"];
-	[tempField setObject:@"text" forKey:@"type"];
-	[tempField setObject:@"75" forKey:@"height"];
-	[tempField setObject:@"" forKey:@"post_value"];
-	[tempField setObject:@"YES" forKey:@"enbled"]
-	[fieldsArray addObject:[NSMutableDictionary dictionaryWithDictionary:tempField] ];
-	[tempField removeAllObjects];
-*/	
+
 	[tempField setObject:@"Past Your ads images" forKey:@"title"];
 	[tempField setObject:@"file_upload_input" forKey:@"name"];
 	[tempField setObject:@"image" forKey:@"type"];
