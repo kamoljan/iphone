@@ -1,8 +1,8 @@
 //
 //  main.m
-//  navBased
+//  IyoIyoApp
 //
-//  Created by yuriy on 6/15/11.
+//  Created by yuriy on 8/11/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 

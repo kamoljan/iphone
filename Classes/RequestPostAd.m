@@ -28,8 +28,9 @@
     return self;
 }
 
--(NSDictionary *) doRequest:(NSData *)imageData
+-(NSDictionary *) addImage:(UIImage *)image
 {
+	NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
 	// setting up the request object now
 	NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];
 	[request setURL:urlToRequest];
@@ -64,11 +65,11 @@
 	NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
 	NSString *returnString = [[[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding] autorelease];
 	
-	return [returnString JSONValue];	
+	return [returnString JSONValue];
 }
 
 
--(NSDictionary *) postAddWithArray:(NSArray *)postArray toURLString:(NSString *)urlString
+-(NSDictionary *) postAdWithArray:(NSArray *)postArray imagesArray:(NSArray *)images toURLString:(NSString *)urlString
 {
 	
     NSURL *url = [NSURL URLWithString:urlString];
@@ -85,12 +86,25 @@
 	for (int i=0;i<[postArray count]; i++) {
 		// add post variables		
 		[postBody appendData:[[NSString stringWithFormat:@"--%@\r\n", stringBoundary] dataUsingEncoding:NSUTF8StringEncoding]];		
-		NSString *postNameValue = [NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n",[[postArray objectAtIndex:i] objectForKey:@"name"]];
+		NSString *postNameValue = [NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\nimage"];
 		[postBody appendData:[postNameValue dataUsingEncoding:NSUTF8StringEncoding]];		
-		NSString *postVarValue = [NSString stringWithFormat:@"%@",[[postArray objectAtIndex:i] objectForKey:@"value"]];
+		NSString *postVarValue = [NSString stringWithFormat:@"%@",[[images objectAtIndex:i] objectForKey:@""]];
 		[postBody appendData:[postVarValue dataUsingEncoding:NSUTF8StringEncoding]];
 		[postBody appendData:[@"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
 	}
+	
+	if ( (images != nil) || ([images count] > 0) ) {
+		for (int i=0;i<[postArray count]; i++) {
+			// add post variables		
+			[postBody appendData:[[NSString stringWithFormat:@"--%@\r\n", stringBoundary] dataUsingEncoding:NSUTF8StringEncoding]];		
+			NSString *postNameValue = [NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n",[[postArray objectAtIndex:i] objectForKey:@"name"]];
+			[postBody appendData:[postNameValue dataUsingEncoding:NSUTF8StringEncoding]];		
+			NSString *postVarValue = [NSString stringWithFormat:@"%@",[[postArray objectAtIndex:i] objectForKey:@"fid"]];
+			[postBody appendData:[postVarValue dataUsingEncoding:NSUTF8StringEncoding]];
+			[postBody appendData:[@"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+		}
+	}
+	
 	// final boundary
 	[postBody appendData:[[NSString stringWithFormat:@"--%@\r\n", stringBoundary] dataUsingEncoding:NSUTF8StringEncoding]];
 	
@@ -100,11 +114,11 @@
 	NSHTTPURLResponse* urlResponse = nil;
 	NSError *error = [[NSError alloc] init];
 	NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&error];
-	NSString *result = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+	NSString *result = [[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding] autorelease];
 //	NSLog(@"Response Code: %d", [urlResponse statusCode]);
 	if ([urlResponse statusCode] >= 200 && [urlResponse statusCode] < 300) {
-		NSDictionary *resultDictionary = [result JSONValue];
-		NSLog(@"returning result: %@",resultDictionary);
+		NSDictionary *resultDictionary = [NSDictionary dictionaryWithDictionary:[result JSONValue]];
+	//	NSLog(@"returning result: %@",resultDictionary);
 		return resultDictionary;
 	}
 	
