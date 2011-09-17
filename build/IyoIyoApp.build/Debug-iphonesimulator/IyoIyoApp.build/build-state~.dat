@@ -1,0 +1,888 @@
+TIyoIyoApp
+v7
+r0
+t337764270.574426
+cCheck dependencies
+cProcessPCH /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch.gch IyoIyoApp_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/IyoIyoAppViewController.o /Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
+c000000004CC128950000000000000110
+t1287727253
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC12246000000000029B310
+t1287725638
+s2732816
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC1226D000000000029D5D0
+t1287725677
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC1225F0000000000001466
+t1287725663
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC1281F0000000000000AA1
+t1287727135
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC12883000000000074D7B0
+t1287727235
+s7657392
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/AdPosting.h
+c000000004E704A970000000000000877
+t1315981975
+s2167
+i<Foundation/Foundation.h>
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/AdPosting.m
+c000000004E707B3D0000000000003FBA
+t1315994429
+s16314
+i"AdPosting.h"
+i"IyoiyoAPI.h"
+i"RequestPostAd.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/AdPostingView.h
+c000000004E71A69B0000000000000172
+t1316071067
+s370
+i<UIKit/UIKit.h>
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/AdPostingView.m
+c000000004E71A7EF0000000000000915
+t1316071407
+s2325
+i"AdPostingView.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/AdPostingView.xib
+c000000004E71A7BD0000000000004BBD
+t1316071357
+s19389
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/AddPosting.h
+c000000004E589CFA0000000000000322
+t1314430202
+s802
+i<Foundation/Foundation.h>
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/AddPosting.m
+c000000004E589D03000000000000238C
+t1314430211
+s9100
+i"AdPosting.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppAppDelegate.h
+c000000004E71A146000000000000024B
+t1316069702
+s587
+i<UIKit/UIKit.h>
+i"AdPosting.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppAppDelegate.m
+c000000004E71A1AE0000000000000AEB
+t1316069806
+s2795
+i"IyoIyoAppAppDelegate.h"
+i"IyoIyoAppViewController.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppViewController.h
+c000000004E71A390000000000000016B
+t1316070288
+s363
+i<UIKit/UIKit.h>
+i"IyoIyoAppAppDelegate.h"
+i"AdPostingView.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppViewController.m
+c000000004E71A3D80000000000000BF1
+t1316070360
+s3057
+i"IyoIyoAppViewController.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/IyoiyoAPI.h
+c000000004E6F4DEB00000000000002B9
+t1315917291
+s697
+i<Foundation/Foundation.h>
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/IyoiyoAPI.m
+c000000004E6F4FA900000000000007CF
+t1315917737
+s1999
+i"IyoiyoAPI.h"
+i"JSON.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/JSON.h
+c000000004A748DD200000000000008F9
+t1249152466
+s2297
+i"SBJSON.h"
+i"NSObject+SBJSON.h"
+i"NSString+SBJSON.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/NSObject+SBJSON.h
+c000000004A748DD20000000000000A01
+t1249152466
+s2561
+i<Foundation/Foundation.h>
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/NSObject+SBJSON.m
+c000000004A748DD2000000000000089C
+t1249152466
+s2204
+i"NSObject+SBJSON.h"
+i"SBJsonWriter.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/NSString+SBJSON.h
+c000000004A748DD20000000000000916
+t1249152466
+s2326
+i<Foundation/Foundation.h>
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/NSString+SBJSON.m
+c000000004A748DD2000000000000087C
+t1249152466
+s2172
+i"NSString+SBJSON.h"
+i"SBJsonParser.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/RequestPostAd.h
+c000000004E707514000000000000021B
+t1315992852
+s539
+i<Foundation/Foundation.h>
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/RequestPostAd.m
+c000000004E7077CA00000000000015E6
+t1315993546
+s5606
+i"RequestPostAd.h"
+i"JSON.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/SBJSON.h
+c000000004A748DD20000000000000AED
+t1249152466
+s2797
+i<Foundation/Foundation.h>
+i"SBJsonParser.h"
+i"SBJsonWriter.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/SBJSON.m
+c000000004A748DD20000000000001ABC
+t1249152466
+s6844
+i"SBJSON.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonBase.h
+c000000004A748DD20000000000000B82
+t1249152466
+s2946
+i<Foundation/Foundation.h>
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonBase.m
+c000000004A748DD20000000000000AC1
+t1249152466
+s2753
+i"SBJsonBase.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonParser.h
+c000000004A748DD20000000000000C0B
+t1249152466
+s3083
+i<Foundation/Foundation.h>
+i"SBJsonBase.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonParser.m
+c000000004A748DD200000000000036CF
+t1249152466
+s14031
+i"SBJsonParser.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonWriter.h
+c000000004A748DD20000000000001140
+t1249152466
+s4416
+i<Foundation/Foundation.h>
+i"SBJsonBase.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonWriter.m
+c000000004A748DD20000000000001E83
+t1249152466
+s7811
+i"SBJsonWriter.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/imageLoadingQueue.h
+c000000004E4E4A2C000000000000023C
+t1313753644
+s572
+i<Foundation/Foundation.h>
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/imageLoadingQueue.m
+c000000004E589C2A0000000000000BBF
+t1314429994
+s3007
+i"imageLoadingQueue.h"
+i"IyoiyoAPI.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.h
+c000000004E71A72E00000000000000D4
+t1316071214
+s212
+i<UIKit/UIKit.h>
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m
+c000000004E71A72E0000000000001123
+t1316071214
+s4387
+i"untitled.h"
+
+N/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.xib
+c000000004E71A72E0000000000001C63
+t1316071214
+s7267
+
+N/Users/yuriy/Documents/IyoIyoApp/IyoIyoAppViewController.xib
+c000000004E589CBA0000000000003E08
+t1314430138
+s15880
+
+N/Users/yuriy/Documents/IyoIyoApp/IyoIyoApp_Prefix.pch
+c000000004E4381CB00000000000000BB
+t1313046987
+s187
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/yuriy/Documents/IyoIyoApp/MainWindow.xib
+c000000004E4381CB0000000000004E41
+t1313046987
+s20033
+
+N/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app.dSYM
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/AdPostingView.nib
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/Info.plist
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/IyoIyoApp
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/IyoIyoAppViewController.nib
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/MainWindow.nib
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/PkgInfo
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/untitled.nib
+t1316071276
+s979
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/AdPosting.o
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/AdPostingView.o
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/AddPosting.o
+t1314429259
+s27712
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/IyoIyoApp.LinkFileList
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/IyoIyoAppAppDelegate.o
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/IyoIyoAppViewController.o
+t1316071470
+s46496
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/IyoiyoAPI.o
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/NSObject+SBJSON.o
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/NSString+SBJSON.o
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/RequestPostAd.o
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/SBJSON.o
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/SBJsonBase.o
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/SBJsonParser.o
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/SBJsonWriter.o
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/imageLoadingQueue.o
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/main.o
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/untitled.o
+t2
+s0
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/AdPosting.plist
+t1316070125
+s276
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/AdPostingView.plist
+t1316070816
+s276
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/AddPosting.plist
+t1314429960
+s276
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/IyoIyoAppAppDelegate.plist
+t1316070816
+s276
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/IyoIyoAppViewController.plist
+t1316070816
+s276
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/IyoiyoAPI.plist
+t1315979951
+s276
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/NSObject+SBJSON.plist
+t1313234587
+s276
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/NSString+SBJSON.plist
+t1313234587
+s276
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/RequestPostAd.plist
+t1315993550
+s276
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/SBJSON.plist
+t1313234587
+s276
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/SBJsonBase.plist
+t1313234587
+s276
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/SBJsonParser.plist
+t1313234592
+s276
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/SBJsonWriter.plist
+t1313234588
+s276
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/imageLoadingQueue.plist
+t1315917559
+s276
+
+N/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/main.plist
+t1313234587
+s276
+
+N/Users/yuriy/Documents/IyoIyoApp/main.m
+c000000004E4381CB0000000000000164
+t1313046987
+s356
+i<UIKit/UIKit.h>
+
+N/var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-fafymmfafieogocvmwdljfacaclj/IyoIyoApp_Prefix.pch.pth
+t1313234587
+s2783996
+
+N/var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch.gch
+t1316071470
+s15453392
+
+NIyoIyoApp-Info.plist
+c000000004E4381CB000000000000038D
+t1313046987
+s909
+
+CAnalyze /Users/yuriy/Documents/IyoIyoApp/Classes/AdPosting.m
+s337762925.387738
+e337762925.494071
+r1
+xAnalyze
+x/Users/yuriy/Documents/IyoIyoApp/Classes/AdPosting.m
+lSLF07#2@60"Analyze /Users/yuriy/Documents/IyoIyoApp/Classes/AdPosting.m337762925#337762925#0(0"0(0#0#52"/Users/yuriy/Documents/IyoIyoApp/Classes/AdPosting.m8618293600#1916"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-fafymmfafieogocvmwdljfacaclj/IyoIyoApp_Prefix.pch --analyze /Users/yuriy/Documents/IyoIyoApp/Classes/AdPosting.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/AdPosting.plist0#
+
+CAnalyze /Users/yuriy/Documents/IyoIyoApp/Classes/AdPostingView.m
+s337763616.833942
+e337763616.876480
+r1
+xAnalyze
+x/Users/yuriy/Documents/IyoIyoApp/Classes/AdPostingView.m
+lSLF07#2@64"Analyze /Users/yuriy/Documents/IyoIyoApp/Classes/AdPostingView.m337763616#337763616#0(0"0(0#0#56"/Users/yuriy/Documents/IyoIyoApp/Classes/AdPostingView.m8605753088#1924"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-fafymmfafieogocvmwdljfacaclj/IyoIyoApp_Prefix.pch --analyze /Users/yuriy/Documents/IyoIyoApp/Classes/AdPostingView.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/AdPostingView.plist0#
+
+CAnalyze /Users/yuriy/Documents/IyoIyoApp/Classes/AddPosting.m
+s336122760.251937
+e336122760.343291
+r1
+xAnalyze
+x/Users/yuriy/Documents/IyoIyoApp/Classes/AddPosting.m
+lSLF07#2@61"Analyze /Users/yuriy/Documents/IyoIyoApp/Classes/AddPosting.m336122760#336122760#0(0"0(0#0#53"/Users/yuriy/Documents/IyoIyoApp/Classes/AddPosting.m8619132608#1918"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-fafymmfafieogocvmwdljfacaclj/IyoIyoApp_Prefix.pch --analyze /Users/yuriy/Documents/IyoIyoApp/Classes/AddPosting.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/AddPosting.plist0#
+
+CAnalyze /Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppAppDelegate.m
+s337763616.724762
+e337763616.787617
+r1
+xAnalyze
+x/Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppAppDelegate.m
+lSLF07#2@71"Analyze /Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppAppDelegate.m337763616#337763616#0(0"0(0#0#63"/Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppAppDelegate.m8617516736#1938"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-fafymmfafieogocvmwdljfacaclj/IyoIyoApp_Prefix.pch --analyze /Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppAppDelegate.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/IyoIyoAppAppDelegate.plist0#
+
+CAnalyze /Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppViewController.m
+s337763616.787703
+e337763616.835578
+r1
+xAnalyze
+x/Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppViewController.m
+lSLF07#2@74"Analyze /Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppViewController.m337763616#337763616#0(0"0(0#0#66"/Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppViewController.m8618344736#1944"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-fafymmfafieogocvmwdljfacaclj/IyoIyoApp_Prefix.pch --analyze /Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppViewController.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/IyoIyoAppViewController.plist0#
+
+CAnalyze /Users/yuriy/Documents/IyoIyoApp/Classes/IyoiyoAPI.m
+s337672751.716395
+e337672751.762020
+r1
+xAnalyze
+x/Users/yuriy/Documents/IyoIyoApp/Classes/IyoiyoAPI.m
+lSLF07#2@60"Analyze /Users/yuriy/Documents/IyoIyoApp/Classes/IyoiyoAPI.m337672751#337672751#0(0"0(0#0#52"/Users/yuriy/Documents/IyoIyoApp/Classes/IyoiyoAPI.m8616342464#1916"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-fafymmfafieogocvmwdljfacaclj/IyoIyoApp_Prefix.pch --analyze /Users/yuriy/Documents/IyoIyoApp/Classes/IyoiyoAPI.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/IyoiyoAPI.plist0#
+
+CAnalyze /Users/yuriy/Documents/IyoIyoApp/Classes/NSObject+SBJSON.m
+s334927387.867983
+e334927387.908045
+r1
+xAnalyze
+x/Users/yuriy/Documents/IyoIyoApp/Classes/NSObject+SBJSON.m
+lSLF07#2@66"Analyze /Users/yuriy/Documents/IyoIyoApp/Classes/NSObject+SBJSON.m334927387#334927387#0(0"0(0#0#58"/Users/yuriy/Documents/IyoIyoApp/Classes/NSObject+SBJSON.m8621103008#1928"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-fafymmfafieogocvmwdljfacaclj/IyoIyoApp_Prefix.pch --analyze /Users/yuriy/Documents/IyoIyoApp/Classes/NSObject+SBJSON.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/NSObject+SBJSON.plist0#
+
+CAnalyze /Users/yuriy/Documents/IyoIyoApp/Classes/NSString+SBJSON.m
+s334927387.908134
+e334927387.946896
+r1
+xAnalyze
+x/Users/yuriy/Documents/IyoIyoApp/Classes/NSString+SBJSON.m
+lSLF07#2@66"Analyze /Users/yuriy/Documents/IyoIyoApp/Classes/NSString+SBJSON.m334927387#334927387#0(0"0(0#0#58"/Users/yuriy/Documents/IyoIyoApp/Classes/NSString+SBJSON.m8620911264#1928"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-fafymmfafieogocvmwdljfacaclj/IyoIyoApp_Prefix.pch --analyze /Users/yuriy/Documents/IyoIyoApp/Classes/NSString+SBJSON.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/NSString+SBJSON.plist0#
+
+CAnalyze /Users/yuriy/Documents/IyoIyoApp/Classes/RequestPostAd.m
+s337686350.792186
+e337686350.877264
+r1
+xAnalyze
+x/Users/yuriy/Documents/IyoIyoApp/Classes/RequestPostAd.m
+lSLF07#2@64"Analyze /Users/yuriy/Documents/IyoIyoApp/Classes/RequestPostAd.m337686350#337686350#0(0"0(0#0#56"/Users/yuriy/Documents/IyoIyoApp/Classes/RequestPostAd.m8618734528#1924"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-fafymmfafieogocvmwdljfacaclj/IyoIyoApp_Prefix.pch --analyze /Users/yuriy/Documents/IyoIyoApp/Classes/RequestPostAd.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/RequestPostAd.plist0#
+
+CAnalyze /Users/yuriy/Documents/IyoIyoApp/Classes/SBJSON.m
+s334927387.919320
+e334927387.964735
+r1
+xAnalyze
+x/Users/yuriy/Documents/IyoIyoApp/Classes/SBJSON.m
+lSLF07#2@57"Analyze /Users/yuriy/Documents/IyoIyoApp/Classes/SBJSON.m334927387#334927387#0(0"0(0#0#49"/Users/yuriy/Documents/IyoIyoApp/Classes/SBJSON.m8620783360#1910"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-fafymmfafieogocvmwdljfacaclj/IyoIyoApp_Prefix.pch --analyze /Users/yuriy/Documents/IyoIyoApp/Classes/SBJSON.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/SBJSON.plist0#
+
+CAnalyze /Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonBase.m
+s334927387.946994
+e334927387.989213
+r1
+xAnalyze
+x/Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonBase.m
+lSLF07#2@61"Analyze /Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonBase.m334927387#334927387#0(0"0(0#0#53"/Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonBase.m8620648320#1918"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-fafymmfafieogocvmwdljfacaclj/IyoIyoApp_Prefix.pch --analyze /Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonBase.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/SBJsonBase.plist0#
+
+CAnalyze /Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonParser.m
+s334927387.964820
+e334927392.060924
+r1
+xAnalyze
+x/Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonParser.m
+lSLF07#2@63"Analyze /Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonParser.m334927387#334927392#0(0"0(0#0#55"/Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonParser.m8620449792#1922"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-fafymmfafieogocvmwdljfacaclj/IyoIyoApp_Prefix.pch --analyze /Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonParser.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/SBJsonParser.plist0#
+
+CAnalyze /Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonWriter.m
+s334927387.989304
+e334927388.127870
+r1
+xAnalyze
+x/Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonWriter.m
+lSLF07#2@63"Analyze /Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonWriter.m334927387#334927388#0(0"0(0#0#55"/Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonWriter.m8618176224#1922"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-fafymmfafieogocvmwdljfacaclj/IyoIyoApp_Prefix.pch --analyze /Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonWriter.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/SBJsonWriter.plist0#
+
+CAnalyze /Users/yuriy/Documents/IyoIyoApp/Classes/imageLoadingQueue.m
+s337610359.684263
+e337610359.734861
+r1
+xAnalyze
+x/Users/yuriy/Documents/IyoIyoApp/Classes/imageLoadingQueue.m
+lSLF07#2@68"Analyze /Users/yuriy/Documents/IyoIyoApp/Classes/imageLoadingQueue.m337610359#337610359#0(0"0(0#0#60"/Users/yuriy/Documents/IyoIyoApp/Classes/imageLoadingQueue.m8619222944#1932"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-fafymmfafieogocvmwdljfacaclj/IyoIyoApp_Prefix.pch --analyze /Users/yuriy/Documents/IyoIyoApp/Classes/imageLoadingQueue.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/imageLoadingQueue.plist0#
+
+CAnalyze /Users/yuriy/Documents/IyoIyoApp/main.m
+s334927387.741497
+e334927387.823957
+r1
+xAnalyze
+x/Users/yuriy/Documents/IyoIyoApp/main.m
+lSLF07#2@47"Analyze /Users/yuriy/Documents/IyoIyoApp/main.m334927387#334927387#0(0"0(0#0#39"/Users/yuriy/Documents/IyoIyoApp/main.m8621370240#1898"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-fafymmfafieogocvmwdljfacaclj/IyoIyoApp_Prefix.pch --analyze /Users/yuriy/Documents/IyoIyoApp/main.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/StaticAnalyzer/normal/i386/main.plist0#
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies337764269#337764269#0(0"0(0#1#0"8619736928#0"0#
+
+CCompileC build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/AdPosting.o /Users/yuriy/Documents/IyoIyoApp/Classes/AdPosting.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s337687234.562588
+e337687234.701909
+r1
+xCompileC
+xbuild/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/AdPosting.o
+x/Users/yuriy/Documents/IyoIyoApp/Classes/AdPosting.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/yuriy/Documents/IyoIyoApp/Classes/AdPosting.m337687234#337687234#0(0"0(0#0#52"/Users/yuriy/Documents/IyoIyoApp/Classes/AdPosting.m8618316064#1907"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch -c /Users/yuriy/Documents/IyoIyoApp/Classes/AdPosting.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/AdPosting.o0#
+
+CCompileC build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/AdPostingView.o /Users/yuriy/Documents/IyoIyoApp/Classes/AdPostingView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s337764208.606445
+e337764208.729746
+r1
+xCompileC
+xbuild/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/AdPostingView.o
+x/Users/yuriy/Documents/IyoIyoApp/Classes/AdPostingView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/yuriy/Documents/IyoIyoApp/Classes/AdPostingView.m337764208#337764208#0(0"0(0#0#56"/Users/yuriy/Documents/IyoIyoApp/Classes/AdPostingView.m8620150336#1915"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch -c /Users/yuriy/Documents/IyoIyoApp/Classes/AdPostingView.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/AdPostingView.o0#
+
+CCompileC build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/AddPosting.o /Users/yuriy/Documents/IyoIyoApp/Classes/AddPosting.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s336122059.520374
+e336122059.671803
+r1
+xCompileC
+xbuild/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/AddPosting.o
+x/Users/yuriy/Documents/IyoIyoApp/Classes/AddPosting.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/yuriy/Documents/IyoIyoApp/Classes/AddPosting.m336122059#336122059#0(0"0(0#0#53"/Users/yuriy/Documents/IyoIyoApp/Classes/AddPosting.m8619349920#1909"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch -c /Users/yuriy/Documents/IyoIyoApp/Classes/AddPosting.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/AddPosting.o0#
+
+CCompileC build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/IyoIyoAppAppDelegate.o /Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s337764077.000122
+e337764077.140235
+r1
+xCompileC
+xbuild/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/IyoIyoAppAppDelegate.o
+x/Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@71"Compile /Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppAppDelegate.m337764077#337764077#0(0"0(0#0#63"/Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppAppDelegate.m8619533216#1929"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch -c /Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppAppDelegate.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/IyoIyoAppAppDelegate.o0#
+
+CCompileC build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/IyoIyoAppViewController.o /Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s337764270.512196
+e337764270.574375
+r1
+xCompileC
+xbuild/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/IyoIyoAppViewController.o
+x/Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@74"Compile /Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppViewController.m337764270#337764270#0(0"0(0#0#66"/Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppViewController.m8619442560#1935"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch -c /Users/yuriy/Documents/IyoIyoApp/Classes/IyoIyoAppViewController.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/IyoIyoAppViewController.o0#
+
+CCompileC build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/IyoiyoAPI.o /Users/yuriy/Documents/IyoIyoApp/Classes/IyoiyoAPI.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s337610537.703422
+e337610537.833966
+r1
+xCompileC
+xbuild/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/IyoiyoAPI.o
+x/Users/yuriy/Documents/IyoIyoApp/Classes/IyoiyoAPI.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/yuriy/Documents/IyoIyoApp/Classes/IyoiyoAPI.m337610537#337610537#0(0"0(0#0#52"/Users/yuriy/Documents/IyoIyoApp/Classes/IyoiyoAPI.m8617025664#1907"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch -c /Users/yuriy/Documents/IyoIyoApp/Classes/IyoiyoAPI.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/IyoiyoAPI.o0#
+
+CCompileC build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/NSObject+SBJSON.o /Users/yuriy/Documents/IyoIyoApp/Classes/NSObject+SBJSON.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s334927322.352526
+e334927322.408304
+r1
+xCompileC
+xbuild/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/NSObject+SBJSON.o
+x/Users/yuriy/Documents/IyoIyoApp/Classes/NSObject+SBJSON.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@66"Compile /Users/yuriy/Documents/IyoIyoApp/Classes/NSObject+SBJSON.m334927322#334927322#0(0"0(0#0#58"/Users/yuriy/Documents/IyoIyoApp/Classes/NSObject+SBJSON.m8623944160#1919"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch -c /Users/yuriy/Documents/IyoIyoApp/Classes/NSObject+SBJSON.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/NSObject+SBJSON.o0#
+
+CCompileC build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/NSString+SBJSON.o /Users/yuriy/Documents/IyoIyoApp/Classes/NSString+SBJSON.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s334927322.408398
+e334927322.471712
+r1
+xCompileC
+xbuild/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/NSString+SBJSON.o
+x/Users/yuriy/Documents/IyoIyoApp/Classes/NSString+SBJSON.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@66"Compile /Users/yuriy/Documents/IyoIyoApp/Classes/NSString+SBJSON.m334927322#334927322#0(0"0(0#0#58"/Users/yuriy/Documents/IyoIyoApp/Classes/NSString+SBJSON.m8623663616#1919"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch -c /Users/yuriy/Documents/IyoIyoApp/Classes/NSString+SBJSON.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/NSString+SBJSON.o0#
+
+CCompileC build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/RequestPostAd.o /Users/yuriy/Documents/IyoIyoApp/Classes/RequestPostAd.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s337686350.727148
+e337686350.861292
+r1
+xCompileC
+xbuild/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/RequestPostAd.o
+x/Users/yuriy/Documents/IyoIyoApp/Classes/RequestPostAd.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/yuriy/Documents/IyoIyoApp/Classes/RequestPostAd.m337686350#337686350#0(0"0(0#0#56"/Users/yuriy/Documents/IyoIyoApp/Classes/RequestPostAd.m8620619392#1915"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch -c /Users/yuriy/Documents/IyoIyoApp/Classes/RequestPostAd.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/RequestPostAd.o0#
+
+CCompileC build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/SBJSON.o /Users/yuriy/Documents/IyoIyoApp/Classes/SBJSON.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s334927322.416414
+e334927322.498986
+r1
+xCompileC
+xbuild/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/SBJSON.o
+x/Users/yuriy/Documents/IyoIyoApp/Classes/SBJSON.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@57"Compile /Users/yuriy/Documents/IyoIyoApp/Classes/SBJSON.m334927322#334927322#0(0"0(0#0#49"/Users/yuriy/Documents/IyoIyoApp/Classes/SBJSON.m8622403680#1901"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch -c /Users/yuriy/Documents/IyoIyoApp/Classes/SBJSON.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/SBJSON.o0#
+
+CCompileC build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/SBJsonBase.o /Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonBase.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s334927322.472517
+e334927322.531639
+r1
+xCompileC
+xbuild/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/SBJsonBase.o
+x/Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonBase.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonBase.m334927322#334927322#0(0"0(0#0#53"/Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonBase.m8622310912#1909"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch -c /Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonBase.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/SBJsonBase.o0#
+
+CCompileC build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/SBJsonParser.o /Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s334927322.499085
+e334927322.643676
+r1
+xCompileC
+xbuild/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/SBJsonParser.o
+x/Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonParser.m334927322#334927322#0(0"0(0#0#55"/Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonParser.m8621991232#1913"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch -c /Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonParser.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/SBJsonParser.o0#
+
+CCompileC build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/SBJsonWriter.o /Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonWriter.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s334927322.531737
+e334927322.638722
+r1
+xCompileC
+xbuild/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/SBJsonWriter.o
+x/Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonWriter.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonWriter.m334927322#334927322#0(0"0(0#0#55"/Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonWriter.m8621536736#1913"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch -c /Users/yuriy/Documents/IyoIyoApp/Classes/SBJsonWriter.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/SBJsonWriter.o0#
+
+CCompileC build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/imageLoadingQueue.o /Users/yuriy/Documents/IyoIyoApp/Classes/imageLoadingQueue.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s337610331.958593
+e337610332.040589
+r1
+xCompileC
+xbuild/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/imageLoadingQueue.o
+x/Users/yuriy/Documents/IyoIyoApp/Classes/imageLoadingQueue.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@68"Compile /Users/yuriy/Documents/IyoIyoApp/Classes/imageLoadingQueue.m337610331#337610332#0(0"0(0#0#60"/Users/yuriy/Documents/IyoIyoApp/Classes/imageLoadingQueue.m8621481408#1923"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch -c /Users/yuriy/Documents/IyoIyoApp/Classes/imageLoadingQueue.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/imageLoadingQueue.o0#
+
+CCompileC build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/main.o /Users/yuriy/Documents/IyoIyoApp/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s334740348.990018
+e334740349.081274
+r1
+xCompileC
+xbuild/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/main.o
+x/Users/yuriy/Documents/IyoIyoApp/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@47"Compile /Users/yuriy/Documents/IyoIyoApp/main.m334740348#334740349#0(0"0(0#0#39"/Users/yuriy/Documents/IyoIyoApp/main.m8618155680#1889"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch -c /Users/yuriy/Documents/IyoIyoApp/main.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/main.o0#
+
+CCompileC build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/untitled.o /Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s337764077.140320
+e337764077.189598
+r0
+xCompileC
+xbuild/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/untitled.o
+x/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m: In function '-[untitled numberOfSectionsInTableView:]':
+o/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m:61: error: expected expression before '<' token
+o/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m:62: warning: control reaches end of non-void function
+o/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m: In function '-[untitled tableView:numberOfRowsInSection:]':
+o/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m:67: error: expected expression before '<' token
+o/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m:68: warning: control reaches end of non-void function
+lSLF07#2@59"Compile /Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m337764077#337764077#0(634"/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m: In function '-[untitled numberOfSectionsInTableView:]':/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m:61: error: expected expression before '<' token/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m:62: warning: control reaches end of non-void function/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m: In function '-[untitled tableView:numberOfRowsInSection:]':/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m:67: error: expected expression before '<' token/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m:68: warning: control reaches end of non-void function4(4@36"Expected expression before '<' token337764077#109#100#0(6@51"/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m337764014#61#0#61#0#19"expected * before *0(22@40"Control reaches end of non-void function337764077#209#106#0(6@51"/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m337764014#62#0#62#0#40"control reaches end of non-void function0(4@36"Expected expression before '<' token337764077#428#100#0(6@51"/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m337764014#67#0#67#0#19"expected * before *0(22@40"Control reaches end of non-void function337764077#528#106#0(6@51"/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m337764014#68#0#68#0#40"control reaches end of non-void function0(0#0#51"/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m8619410400#1905"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -include /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch -c /Users/yuriy/Documents/IyoIyoApp/Classes/untitled.m -o /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/untitled.o1#
+
+CCompileXIB /Users/yuriy/Documents/IyoIyoApp/Classes/AdPostingView.xib
+s337764208.247353
+e337764208.605238
+r1
+xCompileXIB
+x/Users/yuriy/Documents/IyoIyoApp/Classes/AdPostingView.xib
+o2011-09-15 12:23:28.485 Interface Builder Cocoa Touch Tool[27491:1903] CFPreferences: user home directory at file://localhost/Users/yuriy/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF07#2@36"CompileXIB Classes/AdPostingView.xib337764208#337764208#0(240"2011-09-15 12:23:28.485 Interface Builder Cocoa Touch Tool[27491:1903] CFPreferences: user home directory at file://localhost/Users/yuriy/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.0(0#0#58"/Users/yuriy/Documents/IyoIyoApp/Classes/AdPostingView.xib8618162048#568"    cd /Users/yuriy/Documents/IyoIyoApp    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/AdPostingView.nib /Users/yuriy/Documents/IyoIyoApp/Classes/AdPostingView.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/yuriy/Documents/IyoIyoApp/Classes/untitled.xib
+s337764076.660389
+e337764076.991114
+r1
+xCompileXIB
+x/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.xib
+o2011-09-15 12:21:16.925 Interface Builder Cocoa Touch Tool[27364:1903] CFPreferences: user home directory at file://localhost/Users/yuriy/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF07#2@31"CompileXIB Classes/untitled.xib337764076#337764076#0(240"2011-09-15 12:21:16.925 Interface Builder Cocoa Touch Tool[27364:1903] CFPreferences: user home directory at file://localhost/Users/yuriy/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.0(0#0#53"/Users/yuriy/Documents/IyoIyoApp/Classes/untitled.xib8618634976#558"    cd /Users/yuriy/Documents/IyoIyoApp    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/untitled.nib /Users/yuriy/Documents/IyoIyoApp/Classes/untitled.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/yuriy/Documents/IyoIyoApp/IyoIyoAppViewController.xib
+s336122940.421585
+e336122940.822436
+r1
+xCompileXIB
+x/Users/yuriy/Documents/IyoIyoApp/IyoIyoAppViewController.xib
+o2011-08-27 12:29:00.683 Interface Builder Cocoa Touch Tool[61840:1903] CFPreferences: user home directory at file://localhost/Users/yuriy/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF07#2@38"CompileXIB IyoIyoAppViewController.xib336122940#336122940#0(240"2011-08-27 12:29:00.683 Interface Builder Cocoa Touch Tool[61840:1903] CFPreferences: user home directory at file://localhost/Users/yuriy/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.0(0#0#60"/Users/yuriy/Documents/IyoIyoApp/IyoIyoAppViewController.xib18296350235492424#580"    cd /Users/yuriy/Documents/IyoIyoApp    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/IyoIyoAppViewController.nib /Users/yuriy/Documents/IyoIyoApp/IyoIyoAppViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/yuriy/Documents/IyoIyoApp/MainWindow.xib
+s334740347.491095
+e334740347.961660
+r1
+xCompileXIB
+x/Users/yuriy/Documents/IyoIyoApp/MainWindow.xib
+o2011-08-11 12:25:47.847 Interface Builder Cocoa Touch Tool[92888:1b03] CFPreferences: user home directory at file://localhost/Users/yuriy/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF07#2@25"CompileXIB MainWindow.xib334740347#334740347#0(240"2011-08-11 12:25:47.847 Interface Builder Cocoa Touch Tool[92888:1b03] CFPreferences: user home directory at file://localhost/Users/yuriy/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.0(0#0#47"/Users/yuriy/Documents/IyoIyoApp/MainWindow.xib8616483328#554"    cd /Users/yuriy/Documents/IyoIyoApp    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/MainWindow.nib /Users/yuriy/Documents/IyoIyoApp/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CGenerateDSYMFile /Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app.dSYM /Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/IyoIyoApp
+s337764208.761356
+e337764208.781921
+r1
+xGenerateDSYMFile
+x/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app.dSYM
+x/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/IyoIyoApp
+lSLF07#2@115"GenerateDSYMFile build/Debug-iphonesimulator/IyoIyoApp.app.dSYM build/Debug-iphonesimulator/IyoIyoApp.app/IyoIyoApp337764208#337764208#0(0"0(0#0#84"/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/IyoIyoApp8619932800#371"    cd /Users/yuriy/Documents/IyoIyoApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/IyoIyoApp -o /Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app.dSYM0#
+
+CLd /Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/IyoIyoApp normal i386
+s337764208.729833
+e337764208.761265
+r1
+xLd
+x/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/IyoIyoApp
+xnormal
+xi386
+lSLF07#2@89"Link /Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/IyoIyoApp337764208#337764208#0(0"0(0#0#0"8619153760#880"    cd /Users/yuriy/Documents/IyoIyoApp    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -filelist /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/Objects-normal/i386/IyoIyoApp.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/IyoIyoApp0#
+
+CProcessInfoPlistFile /Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/Info.plist IyoIyoApp-Info.plist
+s334740347.487606
+e334740347.491028
+r1
+xProcessInfoPlistFile
+x/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/Info.plist
+xIyoIyoApp-Info.plist
+lSLF07#2@28"Process IyoIyoApp-Info.plist334740347#334740347#0(0"0(0#0#53"/Users/yuriy/Documents/IyoIyoApp/IyoIyoApp-Info.plist8613448352#467"    cd /Users/yuriy/Documents/IyoIyoApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility IyoIyoApp-Info.plist -genpkginfo /Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app/Info.plist0#
+
+CProcessPCH /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-fafymmfafieogocvmwdljfacaclj/IyoIyoApp_Prefix.pch.pth IyoIyoApp_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.analyzer
+s334927386.772072
+e334927387.740569
+r1
+xProcessPCH
+x/var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-fafymmfafieogocvmwdljfacaclj/IyoIyoApp_Prefix.pch.pth
+xIyoIyoApp_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.analyzer
+lSLF07#2@31"Precompile IyoIyoApp_Prefix.pch334927386#334927387#0(0"0(0#0#53"/Users/yuriy/Documents/IyoIyoApp/IyoIyoApp_Prefix.pch8616355520#1776"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -c /Users/yuriy/Documents/IyoIyoApp/IyoIyoApp_Prefix.pch -o /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-fafymmfafieogocvmwdljfacaclj/IyoIyoApp_Prefix.pch.pth0#
+
+CProcessPCH /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch.gch IyoIyoApp_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s337764269.759826
+e337764270.512037
+r1
+xProcessPCH
+x/var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch.gch
+xIyoIyoApp_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@31"Precompile IyoIyoApp_Prefix.pch337764269#337764270#0(0"0(0#0#53"/Users/yuriy/Documents/IyoIyoApp/IyoIyoApp_Prefix.pch8102047676671553536#1785"    cd /Users/yuriy/Documents/IyoIyoApp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-generated-files.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-own-target-headers.hmap -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-all-target-headers.hmap -iquote /Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/IyoIyoApp-project-headers.hmap -F/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator -I/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/include -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources/i386 -I/Users/yuriy/Documents/IyoIyoApp/build/IyoIyoApp.build/Debug-iphonesimulator/IyoIyoApp.build/DerivedSources -c /Users/yuriy/Documents/IyoIyoApp/IyoIyoApp_Prefix.pch -o /var/folders/sE/sEQDL35xEDiL5CdV2hPW7k++-+2/-Caches-/com.apple.Xcode.1025/SharedPrecompiledHeaders/IyoIyoApp_Prefix-gwihbtvhtkomfccnaxiflpseadkl/IyoIyoApp_Prefix.pch.gch0#
+
+CTouch /Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app
+s337764208.782012
+e337764208.784194
+r1
+xTouch
+x/Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app
+lSLF07#2@80"Touch /Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app337764208#337764208#0(0"0(0#0#0"8619785952#268"    cd /Users/yuriy/Documents/IyoIyoApp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/yuriy/Documents/IyoIyoApp/build/Debug-iphonesimulator/IyoIyoApp.app0#
+

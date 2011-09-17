@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* IyoIyoAppAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {862, 562}}";
+			sepNavSelRange = "{579, 0}";
+			sepNavVisRange = "{0, 587}";
+		};
+	};
+	1D3623250D0F684500981E51 /* IyoIyoAppAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 1105}}";
+			sepNavSelRange = "{858, 0}";
+			sepNavVisRange = "{250, 1695}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* IyoIyoApp */ = {
+		activeExec = 0;
+		executables = (
+			5BAB4E3B13F3B94B00C47CA5 /* IyoIyoApp */,
+		);
+	};
+	28D7ACF60DDB3853001CB0EB /* IyoIyoAppViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {862, 562}}";
+			sepNavSelRange = "{352, 0}";
+			sepNavVisRange = "{0, 363}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* IyoIyoAppViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {862, 1391}}";
+			sepNavSelRange = "{973, 20}";
+			sepNavVisRange = "{1442, 1456}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 5BAB4E3B13F3B94B00C47CA5 /* IyoIyoApp */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* IyoIyoApp */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* IyoIyoApp */,
+		);
+		breakpoints = (
+		);
+		codeSenseManager = 5BAB4E4E13F3B95B00C47CA5 /* Code sense */;
+		executables = (
+			5BAB4E3B13F3B94B00C47CA5 /* IyoIyoApp */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					647,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					684,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					700,
+					60,
+					20,
+					48.16259765625,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 337935346;
+			PBXWorkspaceStateSaveDate = 337935346;
+		};
+		perUserProjectItems = {
+			5B05236A14238A0B00ED86A5 = 5B05236A14238A0B00ED86A5 /* PBXTextBookmark */;
+			5B05236B14238A0B00ED86A5 = 5B05236B14238A0B00ED86A5 /* PBXTextBookmark */;
+			5B2A7F3C1421DBA400A99F51 = 5B2A7F3C1421DBA400A99F51 /* PBXTextBookmark */;
+			5B2A7F3E1421DBA400A99F51 = 5B2A7F3E1421DBA400A99F51 /* PBXTextBookmark */;
+			5B2A7F8E1421DFB900A99F51 = 5B2A7F8E1421DFB900A99F51 /* PBXTextBookmark */;
+			5B2A7F901421DFB900A99F51 = 5B2A7F901421DFB900A99F51 /* PBXTextBookmark */;
+			5B2A7F9C14220E8400A99F51 = 5B2A7F9C14220E8400A99F51 /* PBXTextBookmark */;
+			5B2A7F9D14220E8400A99F51 = 5B2A7F9D14220E8400A99F51 /* PBXTextBookmark */;
+			5B2A7F9E14220E8400A99F51 = 5B2A7F9E14220E8400A99F51 /* PBXTextBookmark */;
+			5B6A2574141F86FE009F80FE = 5B6A2574141F86FE009F80FE /* PBXTextBookmark */;
+			5B6A257F141F872D009F80FE = 5B6A257F141F872D009F80FE /* PBXTextBookmark */;
+			5B7CD95C1420AE7F0092381B = 5B7CD95C1420AE7F0092381B /* PBXTextBookmark */;
+			5B7CD9771420B1350092381B = 5B7CD9771420B1350092381B /* PBXTextBookmark */;
+			5BDE3A9F1408D036009A501B = 5BDE3A9F1408D036009A501B /* PBXTextBookmark */;
+			5BDE3B061408D3EE009A501B = 5BDE3B061408D3EE009A501B /* PBXTextBookmark */;
+		};
+		sourceControlManager = 5BAB4E4D13F3B95B00C47CA5 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	5B05236A14238A0B00ED86A5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* IyoIyoAppAppDelegate.m */;
+		name = "IyoIyoAppAppDelegate.m: 29";
+		rLen = 0;
+		rLoc = 747;
+		rType = 0;
+		vrLen = 1695;
+		vrLoc = 250;
+	};
+	5B05236B14238A0B00ED86A5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* IyoIyoAppAppDelegate.m */;
+		name = "IyoIyoAppAppDelegate.m: 36";
+		rLen = 0;
+		rLoc = 858;
+		rType = 0;
+		vrLen = 1695;
+		vrLoc = 250;
+	};
+	5B2A7F3C1421DBA400A99F51 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5BAB4E5013F3B98700C47CA5 /* AdPosting.m */;
+		name = "AdPosting.m: 167";
+		rLen = 0;
+		rLoc = 4891;
+		rType = 0;
+		vrLen = 1001;
+		vrLoc = 4562;
+	};
+	5B2A7F3E1421DBA400A99F51 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* IyoIyoAppAppDelegate.h */;
+		name = "IyoIyoAppAppDelegate.h: 22";
+		rLen = 0;
+		rLoc = 579;
+		rType = 0;
+		vrLen = 587;
+		vrLoc = 0;
+	};
+	5B2A7F571421DD0C00A99F51 /* AdPostingView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {862, 562}}";
+			sepNavSelRange = "{364, 0}";
+			sepNavVisRange = "{0, 370}";
+		};
+	};
+	5B2A7F581421DD0C00A99F51 /* AdPostingView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 1170}}";
+			sepNavSelRange = "{1895, 0}";
+			sepNavVisRange = "{164, 1361}";
+		};
+	};
+	5B2A7F8E1421DFB900A99F51 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5B2A7F571421DD0C00A99F51 /* AdPostingView.h */;
+		name = "AdPostingView.h: 19";
+		rLen = 0;
+		rLoc = 364;
+		rType = 0;
+		vrLen = 370;
+		vrLoc = 0;
+	};
+	5B2A7F901421DFB900A99F51 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5BAB4E4F13F3B98700C47CA5 /* AdPosting.h */;
+		name = "AdPosting.h: 34";
+		rLen = 0;
+		rLoc = 1221;
+		rType = 0;
+		vrLen = 1606;
+		vrLoc = 132;
+	};
+	5B2A7F9C14220E8400A99F51 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5B2A7F581421DD0C00A99F51 /* AdPostingView.m */;
+		name = "AdPostingView.m: 64";
+		rLen = 0;
+		rLoc = 1895;
+		rType = 0;
+		vrLen = 1361;
+		vrLoc = 164;
+	};
+	5B2A7F9D14220E8400A99F51 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* IyoIyoAppViewController.h */;
+		name = "IyoIyoAppViewController.h: 15";
+		rLen = 0;
+		rLoc = 352;
+		rType = 0;
+		vrLen = 363;
+		vrLoc = 0;
+	};
+	5B2A7F9E14220E8400A99F51 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* IyoIyoAppViewController.m */;
+		name = "IyoIyoAppViewController.m: 39";
+		rLen = 20;
+		rLoc = 973;
+		rType = 0;
+		vrLen = 1456;
+		vrLoc = 1442;
+	};
+	5B6A2354141DD5D8009F80FE /* RequestPostAd.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {845, 559}}";
+			sepNavSelRange = "{469, 30}";
+			sepNavVisRange = "{0, 539}";
+		};
+	};
+	5B6A2355141DD5D8009F80FE /* RequestPostAd.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1286, 1677}}";
+			sepNavSelRange = "{2504, 118}";
+			sepNavVisRange = "{1399, 2534}";
+		};
+	};
+	5B6A2574141F86FE009F80FE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5BAB4E6713F6903800C47CA5 /* IyoiyoAPI.h */;
+		name = "IyoiyoAPI.h: 18";
+		rLen = 64;
+		rLoc = 321;
+		rType = 0;
+		vrLen = 697;
+		vrLoc = 0;
+	};
+	5B6A257F141F872D009F80FE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5BAB4E6813F6903800C47CA5 /* IyoiyoAPI.m */;
+		name = "IyoiyoAPI.m: 42";
+		rLen = 0;
+		rLoc = 1023;
+		rType = 0;
+		vrLen = 1336;
+		vrLoc = 538;
+	};
+	5B7CD95C1420AE7F0092381B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5B6A2354141DD5D8009F80FE /* RequestPostAd.h */;
+		name = "RequestPostAd.h: 23";
+		rLen = 30;
+		rLoc = 469;
+		rType = 0;
+		vrLen = 539;
+		vrLoc = 0;
+	};
+	5B7CD9771420B1350092381B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5B6A2355141DD5D8009F80FE /* RequestPostAd.m */;
+		name = "RequestPostAd.m: 72";
+		rLen = 118;
+		rLoc = 2504;
+		rType = 0;
+		vrLen = 2534;
+		vrLoc = 1399;
+	};
+	5BAB4E3B13F3B94B00C47CA5 /* IyoIyoApp */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+			{
+				active = YES;
+				name = NSZombieEnabled;
+				value = YES;
+			},
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = IyoIyoApp;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	5BAB4E4D13F3B95B00C47CA5 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	5BAB4E4E13F3B95B00C47CA5 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	5BAB4E4F13F3B98700C47CA5 /* AdPosting.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {862, 858}}";
+			sepNavSelRange = "{1221, 0}";
+			sepNavVisRange = "{132, 1606}";
+		};
+	};
+	5BAB4E5013F3B98700C47CA5 /* AdPosting.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {887, 6318}}";
+			sepNavSelRange = "{4891, 0}";
+			sepNavVisRange = "{4562, 1001}";
+			sepNavWindowFrame = "{{15, 295}, {1127, 702}}";
+		};
+	};
+	5BAB4E6713F6903800C47CA5 /* IyoiyoAPI.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {831, 538}}";
+			sepNavSelRange = "{321, 64}";
+			sepNavVisRange = "{0, 697}";
+		};
+	};
+	5BAB4E6813F6903800C47CA5 /* IyoiyoAPI.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {880, 923}}";
+			sepNavSelRange = "{1023, 0}";
+			sepNavVisRange = "{538, 1336}";
+		};
+	};
+	5BB8687F13FCF4C1009682C2 /* imageLoadingQueue.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {911, 444}}";
+			sepNavSelRange = "{341, 0}";
+			sepNavVisRange = "{0, 572}";
+		};
+	};
+	5BB8688013FCF4C1009682C2 /* imageLoadingQueue.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {915, 1521}}";
+			sepNavSelRange = "{2196, 0}";
+			sepNavVisRange = "{2025, 405}";
+		};
+	};
+	5BDE3A9F1408D036009A501B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5BB8687F13FCF4C1009682C2 /* imageLoadingQueue.h */;
+		name = "imageLoadingQueue.h: 18";
+		rLen = 0;
+		rLoc = 341;
+		rType = 0;
+		vrLen = 572;
+		vrLoc = 0;
+	};
+	5BDE3B061408D3EE009A501B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5BB8688013FCF4C1009682C2 /* imageLoadingQueue.m */;
+		name = "imageLoadingQueue.m: 74";
+		rLen = 0;
+		rLoc = 2080;
+		rType = 0;
+		vrLen = 1310;
+		vrLoc = 1622;
+	};
+}
