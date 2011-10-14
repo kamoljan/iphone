@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* IyoAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* IyoAppAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
+		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
+		5B0BC4971435AD2700B1BE75 /* inputTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0BC4951435AD2700B1BE75 /* inputTextView.m */; };
+		5B0BC4981435AD2700B1BE75 /* inputTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B0BC4961435AD2700B1BE75 /* inputTextView.xib */; };
+		5B0BC4D81436F64F00B1BE75 /* ImageAddingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0BC4D61436F64F00B1BE75 /* ImageAddingView.m */; };
+		5B0BC4D91436F64F00B1BE75 /* ImageAddingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B0BC4D71436F64F00B1BE75 /* ImageAddingView.xib */; };
+		5B222B72142A01B100804AE0 /* SelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B222B70142A01B100804AE0 /* SelectView.m */; };
+		5B222B73142A01B100804AE0 /* SelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B222B71142A01B100804AE0 /* SelectView.xib */; };
+		5B54B31514275696002918DC /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B54B30E14275696002918DC /* SBJSON.m */; };
+		5B54B31614275696002918DC /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B54B31014275696002918DC /* SBJsonBase.m */; };
+		5B54B31714275696002918DC /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B54B31214275696002918DC /* SBJsonParser.m */; };
+		5B54B31814275696002918DC /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B54B31414275696002918DC /* SBJsonWriter.m */; };
+		5B54B31E1427570B002918DC /* IyoiyoAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B54B31D1427570B002918DC /* IyoiyoAPI.m */; };
+		5B54B32114275729002918DC /* imageLoadingQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B54B32014275729002918DC /* imageLoadingQueue.m */; };
+		5B54B3261427575B002918DC /* AdPostingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B54B3241427575B002918DC /* AdPostingView.m */; };
+		5B54B3271427575B002918DC /* AdPostingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B54B3251427575B002918DC /* AdPostingView.xib */; };
+		5B54B32B1427578B002918DC /* RequestPostAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B54B32A1427578B002918DC /* RequestPostAd.m */; };
+		5B54B32E142757A0002918DC /* AdPosting.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B54B32D142757A0002918DC /* AdPosting.m */; };
+		5B54B34C14275848002918DC /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B54B34914275848002918DC /* NSObject+SBJSON.m */; };
+		5B54B34D14275848002918DC /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B54B34B14275848002918DC /* NSString+SBJSON.m */; };
+		5B54B40514276F9F002918DC /* inputText.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B54B40314276F9F002918DC /* inputText.m */; };
+		5B54B40614276F9F002918DC /* inputText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B54B40414276F9F002918DC /* inputText.xib */; };
+		5B89DFBE142863AF00E75261 /* AdvertiserType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B89DFBC142863AF00E75261 /* AdvertiserType.m */; };
+		5B89DFBF142863AF00E75261 /* AdvertiserType.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B89DFBD142863AF00E75261 /* AdvertiserType.xib */; };
+		5B89E07614287CFE00E75261 /* CategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B89E07414287CFE00E75261 /* CategoryView.m */; };
+		5B89E07714287CFE00E75261 /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B89E07514287CFE00E75261 /* CategoryView.xib */; };
+		5BE77D11142B20EF00E64E99 /* AdTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE77D0F142B20EF00E64E99 /* AdTypeView.m */; };
+		5BE77D12142B20EF00E64E99 /* AdTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE77D10142B20EF00E64E99 /* AdTypeView.xib */; };
+		5BE77D49142C55A600E64E99 /* PostCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE77D47142C55A600E64E99 /* PostCodeView.m */; };
+		5BE77D4A142C55A600E64E99 /* PostCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE77D48142C55A600E64E99 /* PostCodeView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* IyoAppAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IyoAppAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* IyoAppAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IyoAppAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* IyoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IyoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28A0AAE50D9B0CCF005BE974 /* IyoApp_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IyoApp_Prefix.pch; sourceTree = "<group>"; };
+		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		28F335F01007B36200424DE2 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5B0BC4941435AD2700B1BE75 /* inputTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inputTextView.h; sourceTree = "<group>"; };
+		5B0BC4951435AD2700B1BE75 /* inputTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = inputTextView.m; sourceTree = "<group>"; };
+		5B0BC4961435AD2700B1BE75 /* inputTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = inputTextView.xib; sourceTree = "<group>"; };
+		5B0BC4D51436F64F00B1BE75 /* ImageAddingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAddingView.h; sourceTree = "<group>"; };
+		5B0BC4D61436F64F00B1BE75 /* ImageAddingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageAddingView.m; sourceTree = "<group>"; };
+		5B0BC4D71436F64F00B1BE75 /* ImageAddingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageAddingView.xib; sourceTree = "<group>"; };
+		5B222B6F142A01B100804AE0 /* SelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectView.h; sourceTree = "<group>"; };
+		5B222B70142A01B100804AE0 /* SelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectView.m; sourceTree = "<group>"; };
+		5B222B71142A01B100804AE0 /* SelectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectView.xib; sourceTree = "<group>"; };
+		5B54B30D14275696002918DC /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		5B54B30E14275696002918DC /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		5B54B30F14275696002918DC /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		5B54B31014275696002918DC /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		5B54B31114275696002918DC /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		5B54B31214275696002918DC /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		5B54B31314275696002918DC /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		5B54B31414275696002918DC /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		5B54B31A142756CD002918DC /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		5B54B31C1427570B002918DC /* IyoiyoAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IyoiyoAPI.h; sourceTree = "<group>"; };
+		5B54B31D1427570B002918DC /* IyoiyoAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IyoiyoAPI.m; sourceTree = "<group>"; };
+		5B54B31F14275729002918DC /* imageLoadingQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageLoadingQueue.h; sourceTree = "<group>"; };
+		5B54B32014275729002918DC /* imageLoadingQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageLoadingQueue.m; sourceTree = "<group>"; };
+		5B54B3231427575B002918DC /* AdPostingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdPostingView.h; sourceTree = "<group>"; };
+		5B54B3241427575B002918DC /* AdPostingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdPostingView.m; sourceTree = "<group>"; };
+		5B54B3251427575B002918DC /* AdPostingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdPostingView.xib; sourceTree = "<group>"; };
+		5B54B3291427578B002918DC /* RequestPostAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestPostAd.h; sourceTree = "<group>"; };
+		5B54B32A1427578B002918DC /* RequestPostAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestPostAd.m; sourceTree = "<group>"; };
+		5B54B32C142757A0002918DC /* AdPosting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdPosting.h; sourceTree = "<group>"; };
+		5B54B32D142757A0002918DC /* AdPosting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdPosting.m; sourceTree = "<group>"; };
+		5B54B34814275848002918DC /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		5B54B34914275848002918DC /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		5B54B34A14275848002918DC /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		5B54B34B14275848002918DC /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		5B54B40214276F9F002918DC /* inputText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inputText.h; sourceTree = "<group>"; };
+		5B54B40314276F9F002918DC /* inputText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = inputText.m; sourceTree = "<group>"; };
+		5B54B40414276F9F002918DC /* inputText.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = inputText.xib; sourceTree = "<group>"; };
+		5B89DFBB142863AF00E75261 /* AdvertiserType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertiserType.h; sourceTree = "<group>"; };
+		5B89DFBC142863AF00E75261 /* AdvertiserType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertiserType.m; sourceTree = "<group>"; };
+		5B89DFBD142863AF00E75261 /* AdvertiserType.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdvertiserType.xib; sourceTree = "<group>"; };
+		5B89E07314287CFE00E75261 /* CategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryView.h; sourceTree = "<group>"; };
+		5B89E07414287CFE00E75261 /* CategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryView.m; sourceTree = "<group>"; };
+		5B89E07514287CFE00E75261 /* CategoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
+		5BE77D0E142B20EF00E64E99 /* AdTypeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdTypeView.h; sourceTree = "<group>"; };
+		5BE77D0F142B20EF00E64E99 /* AdTypeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdTypeView.m; sourceTree = "<group>"; };
+		5BE77D10142B20EF00E64E99 /* AdTypeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdTypeView.xib; sourceTree = "<group>"; };
+		5BE77D46142C55A600E64E99 /* PostCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostCodeView.h; sourceTree = "<group>"; };
+		5BE77D47142C55A600E64E99 /* PostCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostCodeView.m; sourceTree = "<group>"; };
+		5BE77D48142C55A600E64E99 /* PostCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCodeView.xib; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* IyoApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "IyoApp-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5B54B3281427576E002918DC /* Custom Classes */,
+				5B54B32214275739002918DC /* View Based Classes */,
+				5B54B31B142756D4002918DC /* iyoiyoJSONAPI */,
+				5B54B3191427569B002918DC /* JSON */,
+				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
+				28C286E00D94DF7D0034E888 /* RootViewController.m */,
+				1D3623240D0F684500981E51 /* IyoAppAppDelegate.h */,
+				1D3623250D0F684500981E51 /* IyoAppAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* IyoApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				28A0AAE50D9B0CCF005BE974 /* IyoApp_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				28F335F01007B36200424DE2 /* RootViewController.xib */,
+				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* IyoApp-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B54B3191427569B002918DC /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				5B54B34814275848002918DC /* NSObject+SBJSON.h */,
+				5B54B34914275848002918DC /* NSObject+SBJSON.m */,
+				5B54B34A14275848002918DC /* NSString+SBJSON.h */,
+				5B54B34B14275848002918DC /* NSString+SBJSON.m */,
+				5B54B31A142756CD002918DC /* JSON.h */,
+				5B54B30D14275696002918DC /* SBJSON.h */,
+				5B54B30E14275696002918DC /* SBJSON.m */,
+				5B54B30F14275696002918DC /* SBJsonBase.h */,
+				5B54B31014275696002918DC /* SBJsonBase.m */,
+				5B54B31114275696002918DC /* SBJsonParser.h */,
+				5B54B31214275696002918DC /* SBJsonParser.m */,
+				5B54B31314275696002918DC /* SBJsonWriter.h */,
+				5B54B31414275696002918DC /* SBJsonWriter.m */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		5B54B31B142756D4002918DC /* iyoiyoJSONAPI */ = {
+			isa = PBXGroup;
+			children = (
+				5B54B31F14275729002918DC /* imageLoadingQueue.h */,
+				5B54B32014275729002918DC /* imageLoadingQueue.m */,
+				5B54B31C1427570B002918DC /* IyoiyoAPI.h */,
+				5B54B31D1427570B002918DC /* IyoiyoAPI.m */,
+			);
+			name = iyoiyoJSONAPI;
+			sourceTree = "<group>";
+		};
+		5B54B32214275739002918DC /* View Based Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5B54B3231427575B002918DC /* AdPostingView.h */,
+				5B54B3241427575B002918DC /* AdPostingView.m */,
+				5B54B3251427575B002918DC /* AdPostingView.xib */,
+				5B54B40214276F9F002918DC /* inputText.h */,
+				5B54B40314276F9F002918DC /* inputText.m */,
+				5B54B40414276F9F002918DC /* inputText.xib */,
+				5B0BC4941435AD2700B1BE75 /* inputTextView.h */,
+				5B0BC4951435AD2700B1BE75 /* inputTextView.m */,
+				5B0BC4961435AD2700B1BE75 /* inputTextView.xib */,
+				5B89DFBB142863AF00E75261 /* AdvertiserType.h */,
+				5B89DFBC142863AF00E75261 /* AdvertiserType.m */,
+				5B89DFBD142863AF00E75261 /* AdvertiserType.xib */,
+				5B89E07314287CFE00E75261 /* CategoryView.h */,
+				5B89E07414287CFE00E75261 /* CategoryView.m */,
+				5B89E07514287CFE00E75261 /* CategoryView.xib */,
+				5B222B6F142A01B100804AE0 /* SelectView.h */,
+				5B222B70142A01B100804AE0 /* SelectView.m */,
+				5B222B71142A01B100804AE0 /* SelectView.xib */,
+				5BE77D0E142B20EF00E64E99 /* AdTypeView.h */,
+				5BE77D0F142B20EF00E64E99 /* AdTypeView.m */,
+				5BE77D10142B20EF00E64E99 /* AdTypeView.xib */,
+				5BE77D46142C55A600E64E99 /* PostCodeView.h */,
+				5BE77D47142C55A600E64E99 /* PostCodeView.m */,
+				5BE77D48142C55A600E64E99 /* PostCodeView.xib */,
+				5B0BC4D51436F64F00B1BE75 /* ImageAddingView.h */,
+				5B0BC4D61436F64F00B1BE75 /* ImageAddingView.m */,
+				5B0BC4D71436F64F00B1BE75 /* ImageAddingView.xib */,
+			);
+			name = "View Based Classes";
+			sourceTree = "<group>";
+		};
+		5B54B3281427576E002918DC /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5B54B32C142757A0002918DC /* AdPosting.h */,
+				5B54B32D142757A0002918DC /* AdPosting.m */,
+				5B54B3291427578B002918DC /* RequestPostAd.h */,
+				5B54B32A1427578B002918DC /* RequestPostAd.m */,
+			);
+			name = "Custom Classes";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* IyoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "IyoApp" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IyoApp;
+			productName = IyoApp;
+			productReference = 1D6058910D05DD3D006BFB54 /* IyoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "IyoApp" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* IyoApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
+				28F335F11007B36200424DE2 /* RootViewController.xib in Resources */,
+				5B54B3271427575B002918DC /* AdPostingView.xib in Resources */,
+				5B54B40614276F9F002918DC /* inputText.xib in Resources */,
+				5B89DFBF142863AF00E75261 /* AdvertiserType.xib in Resources */,
+				5B89E07714287CFE00E75261 /* CategoryView.xib in Resources */,
+				5B222B73142A01B100804AE0 /* SelectView.xib in Resources */,
+				5BE77D12142B20EF00E64E99 /* AdTypeView.xib in Resources */,
+				5BE77D4A142C55A600E64E99 /* PostCodeView.xib in Resources */,
+				5B0BC4981435AD2700B1BE75 /* inputTextView.xib in Resources */,
+				5B0BC4D91436F64F00B1BE75 /* ImageAddingView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* IyoAppAppDelegate.m in Sources */,
+				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
+				5B54B31514275696002918DC /* SBJSON.m in Sources */,
+				5B54B31614275696002918DC /* SBJsonBase.m in Sources */,
+				5B54B31714275696002918DC /* SBJsonParser.m in Sources */,
+				5B54B31814275696002918DC /* SBJsonWriter.m in Sources */,
+				5B54B31E1427570B002918DC /* IyoiyoAPI.m in Sources */,
+				5B54B32114275729002918DC /* imageLoadingQueue.m in Sources */,
+				5B54B3261427575B002918DC /* AdPostingView.m in Sources */,
+				5B54B32B1427578B002918DC /* RequestPostAd.m in Sources */,
+				5B54B32E142757A0002918DC /* AdPosting.m in Sources */,
+				5B54B34C14275848002918DC /* NSObject+SBJSON.m in Sources */,
+				5B54B34D14275848002918DC /* NSString+SBJSON.m in Sources */,
+				5B54B40514276F9F002918DC /* inputText.m in Sources */,
+				5B89DFBE142863AF00E75261 /* AdvertiserType.m in Sources */,
+				5B89E07614287CFE00E75261 /* CategoryView.m in Sources */,
+				5B222B72142A01B100804AE0 /* SelectView.m in Sources */,
+				5BE77D11142B20EF00E64E99 /* AdTypeView.m in Sources */,
+				5BE77D49142C55A600E64E99 /* PostCodeView.m in Sources */,
+				5B0BC4971435AD2700B1BE75 /* inputTextView.m in Sources */,
+				5B0BC4D81436F64F00B1BE75 /* ImageAddingView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = IyoApp_Prefix.pch;
+				INFOPLIST_FILE = "IyoApp-Info.plist";
+				PRODUCT_NAME = IyoApp;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = IyoApp_Prefix.pch;
+				INFOPLIST_FILE = "IyoApp-Info.plist";
+				PRODUCT_NAME = IyoApp;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "IyoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "IyoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
