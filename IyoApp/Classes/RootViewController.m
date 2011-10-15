@@ -19,12 +19,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	/*
 	appDelegate = (IyoAppAppDelegate *)[[UIApplication sharedApplication] delegate];
 	AdPostingView *postView = [[AdPostingView alloc] initWithNibName:nil bundle:nil];
 	[self.navigationController pushViewController:postView animated:YES];
 	[postView release];
+	 */
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	//Back button
+	UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc]init];
+	temporaryBarButtonItem.title = @"Back";
+	self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
+	[temporaryBarButtonItem release];
 	
 	
 }
@@ -71,7 +78,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return 3;
 }
 
 
@@ -86,6 +93,19 @@
     }
     
 	// Configure the cell.
+	switch (indexPath.row) {
+		case 0:
+			cell.textLabel.text = @"Post Ad";
+			break;
+		case 1:
+			cell.textLabel.text = @"Search with Filter";
+			break;
+		case 2:
+			cell.textLabel.text = @"Search";
+			break;
+		default:
+			break;
+	}
 
     return cell;
 }
@@ -143,6 +163,24 @@
 	 [self.navigationController pushViewController:detailViewController animated:YES];
 	 [detailViewController release];
 	 */
+	switch (indexPath.row) {
+		case 0:
+			appDelegate = (IyoAppAppDelegate *)[[UIApplication sharedApplication] delegate];
+			AdPostingView *postView = [[AdPostingView alloc] initWithNibName:nil bundle:nil];
+			[self.navigationController pushViewController:postView animated:YES];
+			[postView release];
+			break;
+		case 1:
+			
+			break;
+		case 2:
+			
+			break;
+
+		default:
+			break;
+	}
+	
 }
 
 

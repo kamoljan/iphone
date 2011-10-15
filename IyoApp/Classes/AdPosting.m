@@ -119,13 +119,13 @@ currentPrefectureId, currentPrefecture, currentCityId, currentCity, currentCatId
 {	
 	NSMutableDictionary *tempDict = [[NSMutableDictionary alloc] init];
 	[tempDict setValue:@"Sell" forKey:@"name"];
-	[tempDict setValue:@"1" forKey:@"id"];
+	[tempDict setValue:[NSDecimalNumber numberWithInt:1] forKey:@"id"];
 	if ([SIAdTypes retainCount] > 2) {
 		[SIAdTypes release];
 	}
 	[self.SIAdTypes addObject:[NSDictionary dictionaryWithDictionary:tempDict]];
 	[tempDict setValue:@"I`m looking for" forKey:@"name"];
-	[tempDict setValue:@"2" forKey:@"id"];
+	[tempDict setValue:[NSDecimalNumber numberWithInt:2] forKey:@"id"];
 	[self.SIAdTypes addObject:[NSDictionary dictionaryWithDictionary:tempDict]];
 	[tempDict release];
 }

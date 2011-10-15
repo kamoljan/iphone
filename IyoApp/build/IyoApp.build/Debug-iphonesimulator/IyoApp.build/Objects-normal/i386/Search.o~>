@@ -1,0 +1,10 @@
+/Users/yuriy/Documents/IyoApp/Classes/Search.m:11: error: @synthesize property must be in implementation context
+/Users/yuriy/Documents/IyoApp/Classes/Search.m: In function '-[Search init]':
+/Users/yuriy/Documents/IyoApp/Classes/Search.m:17: warning: control reaches end of non-void function
+/Users/yuriy/Documents/IyoApp/Classes/Search.m: At top level:
+/Users/yuriy/Documents/IyoApp/Classes/Search.m:20: warning: property 'dataSource' requires method '-dataSource' to be defined - use @synthesize, @dynamic or provide a method implementation
+/Users/yuriy/Documents/IyoApp/Classes/Search.m:20: warning: property 'dataSource' requires the method 'setDataSource:' to be defined - use @synthesize, @dynamic or provide a method implementation
+/Users/yuriy/Documents/IyoApp/Classes/Search.m:20: warning: property 'imagesSource' requires method '-imagesSource' to be defined - use @synthesize, @dynamic or provide a method implementation
+/Users/yuriy/Documents/IyoApp/Classes/Search.m:20: warning: property 'imagesSource' requires the method 'setImagesSource:' to be defined - use @synthesize, @dynamic or provide a method implementation
+/Users/yuriy/Documents/IyoApp/Classes/Search.m:20: warning: incomplete implementation of class 'Search'
+/Users/yuriy/Documents/IyoApp/Classes/Search.m:20: warning: method definition for '-searchWithFilter:' not found

@@ -21,6 +21,7 @@
 		5B0BC4D91436F64F00B1BE75 /* ImageAddingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B0BC4D71436F64F00B1BE75 /* ImageAddingView.xib */; };
 		5B222B72142A01B100804AE0 /* SelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B222B70142A01B100804AE0 /* SelectView.m */; };
 		5B222B73142A01B100804AE0 /* SelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B222B71142A01B100804AE0 /* SelectView.xib */; };
+		5B36623314497EF900F7BA33 /* Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B36623214497EF900F7BA33 /* Search.m */; };
 		5B54B31514275696002918DC /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B54B30E14275696002918DC /* SBJSON.m */; };
 		5B54B31614275696002918DC /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B54B31014275696002918DC /* SBJsonBase.m */; };
 		5B54B31714275696002918DC /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B54B31214275696002918DC /* SBJsonParser.m */; };
@@ -67,6 +68,8 @@
 		5B222B6F142A01B100804AE0 /* SelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectView.h; sourceTree = "<group>"; };
 		5B222B70142A01B100804AE0 /* SelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectView.m; sourceTree = "<group>"; };
 		5B222B71142A01B100804AE0 /* SelectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectView.xib; sourceTree = "<group>"; };
+		5B36623114497EF900F7BA33 /* Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search.h; sourceTree = "<group>"; };
+		5B36623214497EF900F7BA33 /* Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search.m; sourceTree = "<group>"; };
 		5B54B30D14275696002918DC /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
 		5B54B30E14275696002918DC /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
 		5B54B30F14275696002918DC /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
@@ -259,6 +262,8 @@
 				5B54B32D142757A0002918DC /* AdPosting.m */,
 				5B54B3291427578B002918DC /* RequestPostAd.h */,
 				5B54B32A1427578B002918DC /* RequestPostAd.m */,
+				5B36623114497EF900F7BA33 /* Search.h */,
+				5B36623214497EF900F7BA33 /* Search.m */,
 			);
 			name = "Custom Classes";
 			sourceTree = "<group>";
@@ -356,6 +361,7 @@
 				5BE77D49142C55A600E64E99 /* PostCodeView.m in Sources */,
 				5B0BC4971435AD2700B1BE75 /* inputTextView.m in Sources */,
 				5B0BC4D81436F64F00B1BE75 /* ImageAddingView.m in Sources */,
+				5B36623314497EF900F7BA33 /* Search.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
