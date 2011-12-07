@@ -7,15 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "imageLoadingQueue.h"
 
 @interface Search : NSObject {
-	NSMutableArray *dataSource,*imagesSource;
+	NSArray *dataSource;
+	NSMutableArray *imagesSource;
 	NSInteger startCount;
+	imageLoadingQueue *asyncLoad;
+	
 }
 
-@property (nonatomic, retain) NSMutableArray *dataSource;
+@property (nonatomic, retain) NSArray *dataSource;
 @property (nonatomic, retain) NSMutableArray *imagesSource;
 
 -(void) searchWithFilter:(NSArray *)filter;
+-(void) startLoadingImages;
+-(void) setTbView:(UITableView *)tableView;
+-(void) stopLoadingImages;
 @end

@@ -8,6 +8,8 @@
 
 #import "RootViewController.h"
 #import "AdPostingView.h"
+#import "SearchView.h"
+#import "FilterView.h"
 
 
 @implementation RootViewController
@@ -27,6 +29,7 @@
 	 */
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	appDelegate = (IyoAppAppDelegate *)[[UIApplication sharedApplication] delegate];
 	//Back button
 	UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc]init];
 	temporaryBarButtonItem.title = @"Back";
@@ -164,19 +167,24 @@
 	 [detailViewController release];
 	 */
 	switch (indexPath.row) {
-		case 0:
-			appDelegate = (IyoAppAppDelegate *)[[UIApplication sharedApplication] delegate];
+		case 0:	{	
 			AdPostingView *postView = [[AdPostingView alloc] initWithNibName:nil bundle:nil];
 			[self.navigationController pushViewController:postView animated:YES];
 			[postView release];
 			break;
-		case 1:
-			
+		}
+		case 1: {
+			FilterView *iyoFilterView = [[FilterView alloc] init];
+			[self.navigationController pushViewController:iyoFilterView animated:YES];
+			[iyoFilterView release];
 			break;
-		case 2:
-			
+		}
+		case 2:{
+			SearchView *iyoSearchView = [[SearchView alloc] init];
+			[self.navigationController pushViewController:iyoSearchView animated:YES];
+			[iyoSearchView release];
 			break;
-
+		}
 		default:
 			break;
 	}

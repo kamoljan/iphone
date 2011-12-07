@@ -1,0 +1,22 @@
+/Users/yuriy/Documents/IyoApp/Classes/FilterSelectView.m:59: error: stray '\303' in program
+/Users/yuriy/Documents/IyoApp/Classes/FilterSelectView.m:59: error: stray '\237' in program
+/Users/yuriy/Documents/IyoApp/Classes/FilterSelectView.m:59: warning: incomplete implementation of class 'FilterSelectView'
+/Users/yuriy/Documents/IyoApp/Classes/FilterSelectView.m:59: warning: method definition for '-pickerView:numberOfRowsInComponent:' not found
+/Users/yuriy/Documents/IyoApp/Classes/FilterSelectView.m:59: warning: method definition for '-numberOfComponentsInPickerView:' not found
+/Users/yuriy/Documents/IyoApp/Classes/FilterSelectView.m:59: warning: class 'FilterSelectView' does not fully implement the 'UIPickerViewDataSource' protocol
+{standard input}:122:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L00000000003$pb"
+{standard input}:122:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression
+{standard input}:118:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L00000000003$pb"
+{standard input}:118:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression
+{standard input}:89:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000002$pb"
+{standard input}:89:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression
+{standard input}:85:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L00000000002$pb"
+{standard input}:85:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression
+{standard input}:56:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_0" minus "L00000000001$pb"
+{standard input}:56:symbol: "L_OBJC_SELECTOR_REFERENCES_0" can't be undefined in a subtraction expression
+{standard input}:52:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L00000000001$pb"
+{standard input}:52:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression
+{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_SUP_REFS_$_0
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_0
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_1
+{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_2

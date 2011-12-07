@@ -11,7 +11,7 @@
 
 
 @implementation imageLoadingQueue
-
+@synthesize tbView;
 
 
 -(id)init
@@ -27,6 +27,7 @@
 		//
     }
 	 */
+	
 	NSAutoreleasePool *imageLoadingPool = [[NSAutoreleasePool alloc] init];
 	backgroundThread = [NSOperationQueue new];
 	[backgroundThread setMaxConcurrentOperationCount:10];
@@ -38,13 +39,21 @@
 
 
 -(void) startImageLoadingThreadForObject:(id)object withURLString:(NSString *)urlString
-{
-	
+{	
 	//Adding items to queues array
 	NSNumber *index=[NSNumber numberWithInt:[queueItems count]];
 		
 	NSDictionary *queueItem = [NSDictionary	dictionaryWithObjects:[NSArray arrayWithObjects:object, index, nil]
 														  forKeys:[NSArray arrayWithObjects:@"object", @"index", nil]];
+	
+	UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+	activityView.frame = CGRectMake(0, 0, 30, 30);
+	activityView.hidesWhenStopped = YES;
+	[activityView startAnimating];
+	[object setImage:nil];
+	[object addSubview:activityView];
+	[activityView release];
+	
 	[queueItems addObject:queueItem];
 		
 	//Start loading image in background thread
@@ -63,13 +72,21 @@
 
 -(void) loadImage:(NSDictionary *)objectInfo
 {
-	IyoiyoAPI *iyoAPI = [[IyoiyoAPI alloc] init];		
-	UIImage *image = [iyoAPI loadImageByURLString:[objectInfo objectForKey:@"imageURLString"]];
-
-
+	IyoiyoAPI *iyoAPI = [[IyoiyoAPI alloc] init];
+	UIImage *image;
+	if (![[objectInfo objectForKey:@"imageURLString"] isKindOfClass:[NSNull class]]) {					
+		image = [iyoAPI loadImageByURLString:[objectInfo objectForKey:@"imageURLString"]];
+	}
+	else {
+		image = [UIImage imageNamed:@"empty.PNG"];
+	}
+	if ( (image == nil) || (image == NULL)) {
+		image = [UIImage imageNamed:@"empty.PNG"];
+	}
+	
 	NSMutableDictionary *imageInfo = [NSMutableDictionary dictionaryWithDictionary:objectInfo];
-	[imageInfo setObject:image forKey:@"image"];
-
+	[imageInfo setObject:image forKey:@"image"];	
+		
 	[self performSelectorOnMainThread:@selector(changeObjectImage:) withObject:imageInfo 
 						waitUntilDone:NO];	
 	[iyoAPI release];
@@ -84,7 +101,15 @@
 			[queueItems removeObjectAtIndex:i];
 		}		
 	}
+	//[objectInfo setValue:[objectInfo objectForKey:@"image"] forKey:@"Object"];
+	for (UIView *item in [[objectInfo objectForKey:@"object"] subviews]) {
+		[item removeFromSuperview];
+	}	
 	[[objectInfo objectForKey:@"object"] setImage:[objectInfo objectForKey:@"image"]];
+	if ([tbView retainCount] > 1) {
+		[tbView reloadData];
+	}
+	
 }
 
 -(void) stopImageLoadingThreadForObject:(id)object
@@ -100,12 +125,11 @@
 
 -(void) stopAllImageLoadingThreads
 {
-	[queueItems removeAllObjects];
-	[backgroundThread cancelAllOperations];	
+	[backgroundThread cancelAllOperations];
+	[queueItems removeAllObjects];		
 }
 
--(void)dealloc
-{
+-(void)dealloc{	
 	[backgroundThread release];
 	[super dealloc];	
 }

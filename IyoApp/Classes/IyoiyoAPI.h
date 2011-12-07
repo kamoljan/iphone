@@ -14,6 +14,7 @@
 }
 
 -(NSArray *) loadStringByURLstring:(NSString *)urlString;
+-(NSDictionary *) loadDictionaryByURLString:(NSString *) urlString;
 -(UIImage *) loadImageByURLString:(NSString *)urlString;
 -(NSArray *) loadCurrentMapItemsByPostCode:(NSString *)postCode;
 -(NSArray *) loadRegions;
@@ -23,4 +24,6 @@
 -(NSArray *) loadAdTypesByCategoryId:(NSString *)categoryId;
 -(NSArray *) loadCityAndPrefectureByPostCode:(NSString *)postcode;
 
+-(NSDictionary *) searchWithFilter:(NSArray *)filter;
+-(NSDictionary *) loadAdById:(NSString *)adId;
 @end

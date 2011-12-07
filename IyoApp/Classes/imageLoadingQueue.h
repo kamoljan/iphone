@@ -12,9 +12,10 @@
 @interface imageLoadingQueue : NSObject {
 	NSOperationQueue *backgroundThread;
 	NSMutableArray *queueItems;
-	
+	UITableView *tbView;	
 }
 
+@property (nonatomic,assign) UITableView *tbView;
 -(void)changeObjectImage:(NSDictionary *)objectInfo;
 -(void) loadImage:(NSDictionary *)objectInfo;
 -(void) startImageLoadingThreadForObject:(id)object withURLString:(NSString *)urlString;
