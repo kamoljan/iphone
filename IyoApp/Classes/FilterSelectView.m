@@ -11,6 +11,8 @@
 
 @implementation FilterSelectView
 
+@synthesize pickerViewDataSource, returnValueLabel, returnValue, dataSourceKeyString, 
+dataSourceValueString;
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -36,7 +38,30 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
+#pragma mark -
+- (NSString *)pickerView:(UIPickerView *)pickerView 
+			 titleForRow:(NSInteger)row 
+			forComponent:(NSInteger)component{
+	return [[self.pickerViewDataSource objectAtIndex:row] objectForKey:self.dataSourceValueString];
+}
+// returns the number of 'columns' to display.
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+	return 1;
+}
 
+// returns the # of rows in each component..
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+	if (self.pickerViewDataSource != nil ) {
+		return [self.pickerViewDataSource count];
+	}
+	return 0;
+}
+- (void)pickerView:(UIPickerView *)pickerView 
+	  didSelectRow:(NSInteger)row 
+	   inComponent:(NSInteger)component{
+	
+}
+#pragma mark -
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];

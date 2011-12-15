@@ -14,11 +14,12 @@
     UIWindow *window;
     UINavigationController *navigationController;
 	AdPosting *iyoAdPosting;
+	NSArray *searchFilter;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 @property (nonatomic, retain) AdPosting *iyoAdPosting;
-
+@property (nonatomic, retain) NSArray *searchFilter;
 @end
 

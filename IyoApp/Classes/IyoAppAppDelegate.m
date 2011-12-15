@@ -14,7 +14,7 @@
 
 @synthesize window;
 @synthesize navigationController;
-@synthesize iyoAdPosting;
+@synthesize iyoAdPosting, searchFilter;
 
 
 #pragma mark -

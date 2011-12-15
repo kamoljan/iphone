@@ -15,6 +15,7 @@
 	UITableView *filterTblView;
 	NSString *selectedSubCategoryId;
 	NSMutableArray *dataSourceArray;
+	id searchFilterArray;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *filterTblView;

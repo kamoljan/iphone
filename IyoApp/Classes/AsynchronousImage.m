@@ -65,7 +65,7 @@
 	
 	
 	UIImage *tempImage = [UIImage imageWithData:data]; 
-	//x=(w/h)*y
+	// autoscale image using x=(w/h)*y formula
 	CGFloat originW = tempImage.size.width;
 	CGFloat originH = tempImage.size.height;
 	CGFloat imagesW = imageViewToChange.frame.size.width;

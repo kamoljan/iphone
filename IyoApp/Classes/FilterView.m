@@ -7,7 +7,9 @@
 //
 
 #import "FilterView.h"
-#import "inputText.h"
+#import "IyoAppAppDelegate.h"
+#import "TextView.h"
+#import "FilterSelectView.h"
 
 @implementation FilterView
 @synthesize filterTblView, selectedSubcategoryId;
@@ -18,7 +20,10 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization.
-		dataSourceArray = [[NSMutableArray alloc] init];		
+		dataSourceArray = [[NSMutableArray alloc] init];
+		IyoAppAppDelegate *appDelegate = (IyoAppAppDelegate *)[[UIApplication sharedApplication] delegate];
+		searchFilterArray = appDelegate.searchFilter;
+		
     }
     return self;
 }
@@ -66,20 +71,28 @@
 }
 #pragma mark -
 -(void)buildDataSourceArray{
+	TextView *textForm = [[TextView alloc] init];
 	NSMutableDictionary *tempDic;	
-	NSArray *keys = [NSArray arrayWithObjects:@"label",@"viewType","object",nil];
-	NSArray *objects = [NSArray arrayWithObjects:@"Search text",@"text",nil];	
+	NSArray *keys = [NSArray arrayWithObjects:@"label",@"name",@"viewType",@"object",nil];
+	NSArray *objects = [NSArray arrayWithObjects:@"Search text",@"query",@"text",textForm,nil];	
 	tempDic = [NSMutableDictionary dictionaryWithObjects:objects forKeys:keys];
+	[textForm autorelease];
 	[dataSourceArray addObject:tempDic];
+	
 	NSMutableDictionary *tempDic2;
-	NSArray *keys2 = [NSArray arrayWithObjects:@"label",@"viewType",nil];
-	NSArray *objects2 = [NSArray arrayWithObjects:@"Select subcategory",@"select",nil];	
+	FilterSelectView *pickerForm = [[FilterSelectView alloc] init];
+	NSArray *keys2 = [NSArray arrayWithObjects:@"label",@"name",@"viewType",@"object",nil];
+	NSArray *objects2 = [NSArray arrayWithObjects:@"Select subcategory",@"category_id",@"select",pickerForm,nil];	
 	tempDic2 = [NSMutableDictionary dictionaryWithObjects:objects2 forKeys:keys2];
+	[pickerForm autorelease];
 	[dataSourceArray addObject:tempDic2];
+	
 	NSMutableDictionary *tempDic3;
-	NSArray *keys3 = [NSArray arrayWithObjects:@"label",@"viewType",nil];
-	NSArray *objects3 = [NSArray arrayWithObjects:@"Select region",@"select",nil];
+	FilterSelectView *pickerForm2 = [[FilterSelectView alloc] init];
+	NSArray *keys3 = [NSArray arrayWithObjects:@"label",@"name",@"viewType",@"object",nil];
+	NSArray *objects3 = [NSArray arrayWithObjects:@"Select region",@"region_id",@"select",pickerForm2,nil];
 	tempDic3 = [NSMutableDictionary dictionaryWithObjects:objects3 forKeys:keys3];
+	[pickerForm2 autorelease];
 	[dataSourceArray addObject:tempDic3];
 	
 	
@@ -100,7 +113,7 @@
 
 
 - (void)dealloc {
-	[dataSourceArray release];
+	[dataSourceArray release];	
     [super dealloc];
 }
 
