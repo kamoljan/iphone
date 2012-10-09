@@ -1,0 +1,316 @@
+    /* Large desktop */
+@media (min-width: 1200px) { }
+     
+    /* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	
+
+.search #head header {
+    min-height: 115px;
+	width:98%;
+}
+ 
+	
+#main{
+	width:98%; }
+	  
+.main{ 
+	width:100%;}
+	
+.center_box { 
+    width:100%;}
+	
+.drwn_dv {
+	width:98%;}
+	
+.srch_brdc { 
+    width:98%;}
+	
+.ftabs { 
+    width:98%;
+}
+	
+.filter-list {
+	width:98%;}
+	
+.filter { 
+    width:98%;}	 
+
+.list {
+	width: 97.56%;}
+	
+.details { 
+    width: 50%;}
+	
+.item-cat {
+    display: none; }
+	
+.copyright {
+	width:98%; }
+	  
+.foot_links{
+	width:98%;}
+	
+ 
+
+.drwn_dv {
+	display:none;}
+	
+.prg_bar { 
+    width: 100%;
+}
+
+ 
+ 
+.tp_mn {
+    float: left !important;
+    margin: 10px 0 0;
+}
+ 
+
+.tp_mn li a { 
+    padding: 9px 50px 7px 15px; 
+}
+
+.right_menu { 
+    width: 60%;
+	margin:0 auto;
+	float:none;
+	
+}
+
+.donation-box {
+    padding: 0;
+    width: 100%;
+	margin:30px 0 0;
+}
+.search .newadd-link {
+	width:96%;}
+	
+.ad-bar {
+	width:95.5%;}
+	
+.up-triangle {
+	left:50%;} 
+	
+.ad-bar .txt1 {
+	width:100%} 
+
+}
+     
+    /* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	
+
+.search #head header {
+    min-height: 55px;
+	width:98%;
+}
+ 
+	
+#main{
+	width:98%; }
+	  
+.main{ 
+	width:100%;}
+	
+.center_box { 
+    width:100%;}
+	
+.drwn_dv {
+	width:100%;}
+	
+.srch_brdc { 
+    width:100%;}
+	
+.ftabs { 
+    width:100%;
+}
+	
+.filter-list {
+	width:100%;}
+	
+.filter { 
+    width:98%;}	 
+
+.list {
+	width:96.5%;}
+	
+.details { 
+    width: 50%;}
+	
+.item-cat {
+    display: none; }
+	
+.copyright {
+	width:98%; }
+	  
+.foot_links{
+	width:98%;}
+	
+.tp_mn {
+    float: left !important;
+    margin: 11px 0 0 8px;
+    width: 98%;
+	display:none;
+}
+
+.tp_mn li {
+    float: left;
+    width: 98%;
+	padding:0 0 3px;}
+
+.tp_mn li a {
+    width: 97%;
+	border-radius:4px 4px 4px 4px;
+	border: 1px solid #c29f1a !important;}
+
+.drwn_dv {
+	display:none;}
+	
+.prg_bar { 
+    width: 100%;
+}
+
+.right_menu { 
+    width: 98%;
+	margin:0 auto;
+	float:none;
+}
+
+.donation-box {
+    padding: 0;
+    width: 100%;
+	margin:30px 0 0;
+}
+.search .newadd-link {
+	width:96%;}
+	
+.ad-bar {
+	width:95.5%;}
+	
+.up-triangle {
+	left:50%;}
+	
+.ad-bar .txt1 {
+	width:100%}
+	
+.links{
+	display:none;}
+	
+.nav_buttons{
+	display:block;
+	float:right;}
+	
+.nav_button_01{
+	margin:0 10px 0 0 ;}
+	
+.nav_button_02{
+	margin:0 10px 0 0 ;}	
+ }
+     
+    /* Landscape phones and down */
+@media (max-width: 480px) {
+
+.search #head header {
+    min-height: 55px;
+	width:450px;
+}
+ 
+	
+#main{
+	width:450px; }
+	  
+.main{ 
+	width:450px;}
+	
+.center_box { 
+    width: 100%;}
+	
+.drwn_dv {
+	width: 100%;}
+	
+.srch_brdc { 
+    width: 100%;}
+	
+.filter-list {
+	width: 100%;}
+	
+.filter { 
+    width: 100%;}	 
+
+.list {
+	width: 97.56%;}
+	
+.details { 
+    width: 50%;}
+	
+.item-cat {
+    display: none; }
+	
+.copyright {
+	width:450px; }
+	  
+.foot_links{
+	width:450px;}
+	
+.tp_mn {
+    float: left !important;
+    width: 98%;
+	margin:11px 0 0;
+	display:none;}
+
+.tp_mn li {
+    float: left;
+    width: 98%;
+	padding:0 0 3px;}
+
+.tp_mn li a {
+    width: 97%;
+	border-radius:4px 4px 4px 4px;
+	border: 1px solid #c29f1a !important;}
+
+.drwn_dv {
+	display:none;}
+	
+.prg_bar { 
+    width: 100%;
+}
+
+.right_menu { 
+    width: 98%;
+	margin:0 auto;
+}
+
+.donation-box {
+    padding: 0;
+    width: 100%;
+	margin:30px 0 0;
+}
+.search .newadd-link {
+	width:96%;}
+	
+.ad-bar {
+	width:95.5%;}
+	
+.up-triangle {
+	left:50%;}
+	
+.ad-bar .txt1 {
+	width:100%}
+	
+.nav_buttons{
+	display:block;
+	float:right;}
+	
+.nav_button_01{
+	margin:0 10px 0 0 ;}
+	
+ 
+.brand{
+	width:80%;
+	float:left;}
+	
+.brand img{
+	width:100%;}
+}
