@@ -1,0 +1,213 @@
+.iyo_message{
+	background: -moz-linear-gradient(center top , #fce99c, #e7d48a) repeat scroll 0 0 transparent;
+	border: 1px solid #c29f1a;
+	padding:10px 0 11px 18px;
+	color:#684700;
+	border-radius:4px 4px 4px 4px ;
+	float:left;
+	margin:0 0 8px;
+	width:210px;
+	text-decoration:none !important;}
+	
+.iyo_message img{
+	margin-right:12px;}
+
+.iyo_message:hover{
+	background: -moz-linear-gradient(center top , #e7d48a, #fce99c) repeat scroll 0 0 transparent;}
+	
+.contact_pub{
+	background-color:#f3f2db;
+	width:202px;
+	height:353px;
+	float:left;
+	margin:0 0 20px;
+	border-radius:4px 4px 4px 4px;
+	border:1px solid #dadac8;
+	border-shadow:3px;
+	box-shadow: 0 0 5px #dadac8;
+	padding:15px;}
+	
+.contact_pub p{
+	margin:0 0 5px;}	
+
+.contact_pub input{
+	}
+	
+.cntct_inpt{
+	width:198px;
+	margin:6px 0 0 ;
+	border-radius:4px 4px 4px 4px;
+	border:1px solid #bcb7ac;
+	height:26px;}
+	
+.contact_pub textarea {
+	border-radius:4px 4px 4px 4px;
+	border:1px solid #bcb7ac;
+	width:198px;
+	margin:5px 0 15px;}
+	
+	
+
+.top_simple { 
+    float: left;
+    overflow: visible;
+    padding: 15px 2px 15px;
+    position: relative;
+    width: 965px;
+}
+#page-ulist .top_simple {
+    height: 6px;
+}
+.top_simple a {
+    text-decoration: none;
+}
+.top_simple a:hover {
+    text-decoration: underline;
+}
+.top_simple h1.list-name {
+    clear: both;
+    float: left;
+    margin: 5px 0;
+    width: 875px;
+}
+.top_simple h1.donation-flag {
+    background-position: -425px -233px;
+    padding: 0 0 0 34px;
+}
+
+.top_simple .bdcrmp {
+    float: left;
+    margin: 0;
+}
+.bdcrmp {
+    color: #303030;
+    margin: 6px 1px 10px;
+    padding: 0;
+}
+
+.bdcrmp a.first-path {
+    margin-left: 0;
+}
+
+#list_href {
+    float: right;
+    margin: 0;
+    padding-right: 5px;
+}
+
+top_simple h1.list-name {
+    clear: both;
+    float: left;
+    margin: 5px 0;
+    width: 875px;
+}
+
+.cancel-delete {
+    float: left;
+    line-height: 23px;
+    margin: 0;
+}
+
+ 
+
+
+#main_image_div {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 640px;
+}
+
+.in-properties {
+    float: left;
+    margin: 0 20px 0 0;
+    overflow: hidden;
+    width: 490px;
+}
+
+.properties ul {
+    float: left;
+    font-weight: normal;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.properties ul li {
+    float: left;
+    width: 50%;
+}
+
+.properties p {
+    float: left;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.left {
+    text-align: left;
+}
+
+
+.iyo_tfriend{
+	background-color:#f3f2db;
+	border-radius:4px 4px 4px 4px;
+	padding: 15px 25px 15px 20px;
+	border:1px solid #dadac8;
+	box-shadow: 0 0 5px #dadac8;
+	width:605px;}
+
+.tfriend {
+    margin: 0 0 20px 0;
+	float:left;
+}
+
+.tfriend strong{
+	font-weight:bold;
+	color:#222222;}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border: 0 none;
+    border-collapse: collapse;
+    padding: 0;
+}
+
+table td {
+    padding: 0;
+}
+
+
+
+.tfrnd {
+    margin: 5px 5px 0 0;
+    padding: 2px;
+    width: 165px;
+	border: 1px solid #999999;
+}
+input.tf-send {
+    height: 27px;
+    margin-top: 5px;
+    width: 75px;
+}
+
+
+.rules-a {
+    float: left;  
+}
+
+.rules-a a {
+    text-decoration: none;
+}
+
+.rules-a a:hover {
+	text-decoration:underline;}
+a:link {
+    font-style: normal;
+}

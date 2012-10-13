@@ -24,11 +24,31 @@
              <a href="#" class="brand"><img src="img/logo2.png" title="" /></a>
         </div>
         <div class="nav_buttons">
-        	<a href="#" class="nav_button_01" title=""><img src="img/search_button.png" width="42" height="39" alt="" title="" /></a>
-            <a href="#" class="nav_button_02" title=""><img src="img/menu_button.png" width="42" height="39" alt="" title="" /></a>
+        	<a href="#" class="nav_button_01" onclick="change('iyo_mob_srch')"  title=""><img src="img/search_button.png" width="42" height="39" alt="" title="" /></a>
+            <a href="#" class="nav_button_02" onclick="change('iyo_mob_menu')" title=""><img src="img/menu_button.png" width="42" height="39" alt="" title="" /></a>
         </div> 
+        <script>
+				function change(iyo_mob_menu){
+			var cssDisplay = document.getElementById(iyo_mob_menu).style.display;
+			if(cssDisplay == 'block'){
+				document.getElementById(iyo_mob_menu).style.display = 'none';
+				return;
+			}
+			document.getElementById(iyo_mob_menu).style.display = 'block';
+		}
+		</script>
+        <script>
+				function change(iyo_mob_srch){
+			var cssDisplay = document.getElementById(iyo_mob_srch).style.display;
+			if(cssDisplay == 'block'){
+				document.getElementById(iyo_mob_srch).style.display = 'none';
+				return;
+			}
+			document.getElementById(iyo_mob_srch).style.display = 'block';
+		}
+		</script>
         
-        <ul class="tp_mn">
+        <ul class="tp_mn" id="iyo_mob_menu">
         	<li><a href="#" title="" class="border_radius_left brd_non"><img src="img/tp_mn_01.png" width="28" height="28" title="" /><p>広告を掲載する </p></a></li>
             <li><a href="#" title="" class="brd_non on"><img src="img/tp_mn_02.png" width="28" height="28" title="" /><p>広告一覧</p></a></li>
             <li><a href="#" title="" class="brd_non"><img src="img/tp_mn_03.png" width="28" height="28" title="" /><p>お気に入り </p></a></li>
@@ -43,14 +63,14 @@
 		<div class="main_body clearfix"> 
 			<div class="main">
             	<div class="center_box">
-                	<div class="drwn_dv">
+                	<div class="drwn_dv" id="iyo_mob_srch">
                     	<div class="float-left">
                         	<a href="#" title=""><img src="img/drwn_lnk_01.png" width="142" height="35" title="" alt="" /></a>
                         </div>
                         <div class="float-left">
                         	<a href="#" title=""><img src="img/drwn_lnk_02.png" width="84" height="35" title="" alt="" /></a>
                         </div>
-                        <div class="float-left">
+                        <div class="float-left srch_txt_blg">
                         	<form method="get" id="search-form" class="search-form" action="http://www.iyoiyo.jp/search">
                                 <input type="text" name="" value="" placeholder="Enter keyword" size="100" class="search_txt float-left"  />
                                 <input type="image" src="img/search_go.png" alt="Search" class="float-left" />

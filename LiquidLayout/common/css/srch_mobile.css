@@ -118,7 +118,7 @@
     width:100%;}
 	
 .drwn_dv {
-	width:100%;}
+	width:96%;}
 	
 .srch_brdc { 
     width:100%;}
@@ -206,7 +206,13 @@
 	margin:0 10px 0 0 ;}
 	
 .nav_button_02{
-	margin:0 10px 0 0 ;}	
+	margin:0 10px 0 0 ;}
+	
+.srch_txt_blg{
+	width:60%;}
+	
+.search_txt {
+	width:75%;}	
  }
      
     /* Landscape phones and down */
@@ -228,7 +234,7 @@
     width: 100%;}
 	
 .drwn_dv {
-	width: 100%;}
+	width: 97%;}
 	
 .srch_brdc { 
     width: 100%;}
@@ -256,7 +262,7 @@
 	
 .tp_mn {
     float: left !important;
-    width: 98%;
+    width: 99%;
 	margin:11px 0 0;
 	display:none;}
 
@@ -266,7 +272,7 @@
 	padding:0 0 3px;}
 
 .tp_mn li a {
-    width: 97%;
+    width: 94.5%;
 	border-radius:4px 4px 4px 4px;
 	border: 1px solid #c29f1a !important;}
 
@@ -313,4 +319,10 @@
 	
 .brand img{
 	width:100%;}
+	
+.srch_txt_blg{
+	width:48%;}
+	
+.search_txt {
+	width:65%;}
 }

@@ -66,9 +66,14 @@
 .drwn_dv{
 	width:714px;
 	height:42px;
-	background:url(../../img/bg_drwn_dv.png) no-repeat 0 0;
+	background: -moz-linear-gradient(center top , #ffffea, #f6f6d8) repeat scroll 0 0 transparent;
 	float:left;
-	padding:7px 0 0 9px;}
+	padding:7px 0 0 9px;
+	border:1px solid #dfdfc5;
+	border-radius:5px 5px 5px 5px;}
+	
+.srch_txt_blg{
+	width:477px;}
 	
 .search_txt{
 	font: 15px Arial, Helvetica, sans-serif;
