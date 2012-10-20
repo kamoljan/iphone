@@ -10,6 +10,7 @@
 
 <link rel="stylesheet" type="text/css" href="common/css/import.css">   
 <link rel="stylesheet" type="text/css" href="common/css/srch_mobile.css">   
+<link rel="stylesheet" type="text/css" href="common/css/bootstrap.css"> 
 <!--[if lte IE 8]>
 <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -64,11 +65,33 @@
 			<div class="main">
             	<div class="center_box">
                 	<div class="drwn_dv" id="iyo_mob_srch">
-                    	<div class="float-left">
-                        	<a href="#" title=""><img src="img/drwn_lnk_01.png" width="142" height="35" title="" alt="" /></a>
-                        </div>
-                        <div class="float-left">
-                        	<a href="#" title=""><img src="img/drwn_lnk_02.png" width="84" height="35" title="" alt="" /></a>
+                    <div class="btn-toolbar" style="margin: 0;">
+                    	    <div class="btn-group frst">
+                                <button class="btn">全てのカテゴリー</button>
+                                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#">Action</a></li>
+                                  <li><a href="#">Another action</a></li>
+                                  <li><a href="#">Something else here</a></li>
+                                  <li class="divider"></li>
+                                  <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                         	 <div class="btn-group">
+                                <button class="btn">北海道</button>
+                                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#">Action</a></li>
+                                  <li><a href="#">Another action</a></li>
+                                  <li><a href="#">Something</a></li>
+                                  <li class="divider"></li>
+                                  <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="float-left srch_txt_blg">
                         	<form method="get" id="search-form" class="search-form" action="http://www.iyoiyo.jp/search">
@@ -449,6 +472,26 @@
 <script src="common/js/jquery.js" type="text/javascript"></script>
 <script src="common/js/jquery-ui.min.js"  type="text/javascript"></script>
 <script src="common/js/jquery.dslib.js" type="text/javascript"></script>
+<script src="common/js/bootstrap-dropdown.js"></script>
+<script src="common/js/bootstrap-alert.js"></script>
+<script src="common/js/bootstrap-modal.js"></script>
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+<script src="common/js/bootstrap-scrollspy.js"></script>
+<script src="common/js/bootstrap-button.js"></script>
+<script src="common/js/bootstrap-typeahead.js"></script>
+<script type="text/javascript">
+var _gauges = _gauges || [];
+(function() {
+var t = document.createElement('script');
+t.type = 'text/javascript';
+t.async = true;
+t.id = 'gauges-tracker';
+t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+t.src = '//secure.gaug.es/track.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(t, s);
+})();
+</script>
 <script type="text/javascript">
 $(document).ready(function() {
 $('#japanese_map').maphilight({

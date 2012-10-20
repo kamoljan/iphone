@@ -1,0 +1,245 @@
+/*	mobile home	*/
+
+@media (min-width: 1200px) {
+#head header{
+	min-height:116px;
+	width:970px;}
+	
+#main{
+	width:970px;
+	}
+	
+.copyright {
+	width:970px;}
+	
+.foot_links{
+	width:970px; }
+	
+	
+
+ 
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+#head header{
+	min-height:116px;
+	width:970px;}
+	
+#main{
+	width:970px;
+	} 
+	
+.copyright {
+	width:970px;}
+	
+	
+.foot_links{
+	width:970px; }
+}
+ 
+
+@media (min-width: 980px) and (max-width: 1024px) {
+#head header{
+	min-height:116px;
+	width:970px;}
+	
+#main{
+	width:970px;
+	} 
+	
+.copyright {
+	width:970px;}
+	
+	
+.foot_links{
+	width:970px; }
+}
+ 
+ 
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+.iyo_video{
+	left: 255px;}
+	
+#head header{ 
+	width:100%;
+	height: 150px;}
+	
+#main{
+	width:100%;
+	} 
+	
+.copyright {
+	width:100%;}
+
+	
+.foot_links{
+	width:100%; }
+	
+.main{ 
+	min-height:800px;}	
+ 
+.iyo_map{ 
+    right: 0 !important;
+    top: 0;
+	}
+	
+.donation-box {  
+    padding: 0 0 0 10px;}
+	
+
+#head header .index_header { 
+    margin: 8px 0 0 10px;}	
+		
+.tp_mn {
+    float: left !important;
+    margin: 10px 0 0;
+	display: none;
+}
+ 
+
+.tp_mn li a { 
+    padding: 9px 50px 7px 15px; 
+}
+ .iyo_dog{
+	display:none;}
+	
+}
+
+ 
+
+@media (max-width: 767px) {
+ 
+#head header{ 
+	width:100%; 
+	height:300px;}
+	
+#main{
+	width:100%; }
+	  
+.main{ 
+	min-height:800px;}	 
+	
+.copyright {
+	width:100%;
+ }
+	  
+.foot_links{
+	width:100%;}
+ 
+.iyo_map{ 
+	top:155px;
+	display: none; }
+
+.iyo_video{
+	left: 250px;}
+ 
+ .iyo_dog{
+	display:none;}
+	
+.donation-box {  
+    padding: 0 0 0 10px;} 
+	
+
+#head header .index_header { 
+    margin: 8px 0 0 10px;}
+	
+.tp_mn {
+    float: left !important;
+    width: 99%;
+	margin:11px 0 0;
+	display:block;}
+
+.tp_mn li {
+    float: left;
+    width: 98%;
+	padding:0 0 3px;}
+
+.tp_mn li a {
+    width: 94.5%;
+	border-radius:4px 4px 4px 4px;
+	border: 1px solid #c29f1a !important;}	
+
+}
+
+@media (max-width: 480px) {
+	
+ 
+#head header{  
+	  padding: 0;
+	  height: 300px;}
+	
+#main{ 
+	  padding: 0;} 
+
+.main{ 
+	min-height:800px;}	
+	
+.copyright { 
+ }
+
+.iyo_video{
+	left: 0 !important;
+	top:0 !important;
+	position:relative; 
+	width:95%;
+	margin-left:2%; 
+ 	text-align:center;
+	height:300px;}
+	
+.iyo_video iframe{
+	width:100%;
+	height:100%;}
+	
+.iyo_map{  
+	display:none;}
+	
+.iyo_dog{
+	display:none;} 
+ 
+
+.stamp-red01 { 
+    right: 30px;}
+ 
+	
+.donation-box {
+    padding: 0 0 0 10px;
+    width: 93%;
+	margin:30px 0 0;
+}
+.newadd-link {
+	width:96%;}
+	
+.ad-bar {
+	width:95.5%;}
+	
+.up-triangle {
+	left:50%;}
+	
+.ad-bar .txt1 {
+	width:100%}
+	
+#head header .index_header { 
+    margin: 8px 0 0 10px;}
+ 
+ 
+ 	
+.tp_mn {
+    float: left !important;
+    width: 94%; 
+	display:block;
+	margin:11px auto 0;
+	padding: 0 0 0 5px;}
+
+.tp_mn li {
+    float: left;
+    width: 96%;
+	padding:0 0 3px;}
+
+.tp_mn li a {
+    width: 94.5%;
+	border-radius:4px 4px 4px 4px;
+	border: 1px solid #c29f1a !important;}
+ 
+}
