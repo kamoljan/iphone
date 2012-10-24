@@ -41,7 +41,7 @@
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#d2ed99', endColorstr='#b2d06e')"; /* IE8 */
 	border: 1px solid #a2b973;
     border-radius: 4px 4px 4px 4px;
-    color: #534200;
+    color: #496900;
     cursor: pointer;
     float: left;
     font-size: 15px;
@@ -266,6 +266,12 @@
 	text-align:center;}
 	
 .foot_links a{ }
+
+.iyo_socials{
+	float: left;
+    margin: 15px auto 0;
+    text-align: center;
+    width: 100%;}
 
 
 /*	map links	*/
