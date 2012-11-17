@@ -1353,7 +1353,6 @@
 
                     while ((className = classNames[ i++ ])) {
                         // check each className given, space seperated list
-
                         state = isBool ? state : !self.hasClass(className);
                         self[ state ? "addClass" : "removeClass" ](className);
                     }
@@ -2556,7 +2555,6 @@
 
                 if (type === "focus" || type === "blur") {
                     types.push(liveMap[ type ] + namespaces);
-
                     type = type + namespaces;
 
                 } else {
@@ -2673,7 +2671,6 @@
                 fn = data;
                 data = null;
             }
-
 
             return arguments.length > 0 ?
                     this.bind(name, data, fn) :
@@ -5121,7 +5118,6 @@
                 // Replace the =? sequence both in the query string and the data
                 if (s.data) {
                     s.data = (s.data + "").replace(jsre, "=" + jsonp + "$1");
-
                 }
 
                 s.url = s.url.replace(jsre, "=" + jsonp + "$1");
@@ -5649,7 +5645,6 @@
             } else {
                 for (var i = 0, l = this.length; i < l; i++) {
                     var old = jQuery.data(this[i], "olddisplay");
-
                     if (!old && old !== "none") {
                         jQuery.data(this[i], "olddisplay", jQuery.css(this[i], "display"));
                     }

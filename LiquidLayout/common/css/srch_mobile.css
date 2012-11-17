@@ -21,7 +21,7 @@
     width:100%;}
 	
 .drwn_dv {
-	width:98%;}
+	width:94%;}
 	
 .srch_brdc { 
     width:98%;}
@@ -53,8 +53,7 @@
 	
  
 
-.drwn_dv {
-	display:none;}
+.drwn_dv { }
 	
 .prg_bar { 
     width: 100%;
@@ -209,10 +208,10 @@
 	margin:0 10px 0 0 ;}
 	
 .srch_txt_blg{
-	width:60%;}
+	width:48%;}
 	
 .search_txt {
-	width:75%;}	
+	width:68%;}	
  }
      
     /* Landscape phones and down */

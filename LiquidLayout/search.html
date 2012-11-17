@@ -8,8 +8,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
 <meta http-equiv="Imagetoolbar" content="no">
 
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="" name="description">
+<meta content="" name="author">
+
 <link rel="stylesheet" type="text/css" href="common/css/import.css">   
 <link rel="stylesheet" type="text/css" href="common/css/srch_mobile.css">   
+<link rel="stylesheet" type="text/css" href="common/css/bootstrap.css"> 
 <!--[if lte IE 8]>
 <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -26,7 +31,17 @@
         <div class="nav_buttons">
         	<a href="#" class="nav_button_01" onclick="change('iyo_mob_srch')"  title=""><img src="img/search_button.png" width="42" height="39" alt="" title="" /></a>
             <a href="#" class="nav_button_02" onclick="change('iyo_mob_menu')" title=""><img src="img/menu_button.png" width="42" height="39" alt="" title="" /></a>
-        </div> 
+        </div>
+        <script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-146052-10']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script> 
         <script>
 				function change(iyo_mob_menu){
 			var cssDisplay = document.getElementById(iyo_mob_menu).style.display;
@@ -64,17 +79,48 @@
 			<div class="main">
             	<div class="center_box">
                 	<div class="drwn_dv" id="iyo_mob_srch">
-                    	<div class="float-left">
-                        	<a href="#" title=""><img src="img/drwn_lnk_01.png" width="142" height="35" title="" alt="" /></a>
-                        </div>
-                        <div class="float-left">
-                        	<a href="#" title=""><img src="img/drwn_lnk_02.png" width="84" height="35" title="" alt="" /></a>
-                        </div>
-                        <div class="float-left srch_txt_blg">
-                        	<form method="get" id="search-form" class="search-form" action="http://www.iyoiyo.jp/search">
-                                <input type="text" name="" value="" placeholder="Enter keyword" size="100" class="search_txt float-left"  />
-                                <input type="image" src="img/search_go.png" alt="Search" class="float-left" />
-                            </form>
+						<div class="bs-docs-example">
+							<div class="btn-toolbar" style="margin: 0;">
+								<div class="btn-group frst"> 
+									<button class="btn dropdown-toggle" data-toggle="dropdown">
+									全てのカテゴリー
+									<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu">
+									  <li><a href="#">Action</a></li>
+									  <li><a href="#">Another action</a></li>
+									  <li><a href="#">Something else here</a></li>
+									  <li class="divider"></li>
+									  <li><a href="#">Separated link</a></li>
+									</ul>
+								</div>
+								 <div class="btn-group"> 
+									<button class="btn dropdown-toggle" data-toggle="dropdown">
+									北海道
+									<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu">
+									  <li><a href="#">北海道</a></li>
+									  <li><a href="#">北海道 近県</a></li>
+									  <li><a href="#">日本全国</a></li>
+									  <li class="divider"></li>
+									  <li><a href="#">赤平市</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="float-left srch_txt_blg">
+								<form method="get" id="search-form" class="search-form" action="http://www.iyoiyo.jp/search">
+									<input type="text" name="" value="" placeholder="Enter keyword" size="100" class="search_txt float-left"  />
+									<input type="image" src="img/search_go.png" alt="Search" class="float-left" />
+								</form>
+							</div>
+						</div>
+						<div class="iyo_srch_frm">
+<div style="display: block;" class="floatl" id="filters">
+            <div id="ad_types"><label><input type="checkbox" onchange="categories.set_ad_types();" onclick="$(this).blur();" value="1" name="ad_type">売ります</label><label><input type="checkbox" onchange="categories.set_ad_types();" onclick="$(this).blur();" value="2" name="ad_type">探しています</label></div>
+            <div id="extra_forms_multi"></div>
+            <div id="extra_forms_range"><table style="float: left;"><tbody><tr><th id="reg_date_min">年式 min:</th><td><select name="reg_date_min"><option value="">«年式を選択»</option><option value="1990">1990年以前</option><option value="1991">1991</option><option value="1992">1992</option><option value="1993">1993</option><option value="1994">1994</option><option value="1995">1995</option><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option></select></td></tr><tr><th id="reg_date_max">年式 max:</th><td><select name="reg_date_max"><option value="">«年式を選択»</option><option value="1990">1990年以前</option><option value="1991">1991</option><option value="1992">1992</option><option value="1993">1993</option><option value="1994">1994</option><option value="1995">1995</option><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option></select></td></tr></tbody></table><table style="float: left;"><tbody><tr><th id="kilometers_min">走行距離 min:</th><td><select name="kilometers_min"><option value="">«走行距離を選ぶ»</option><option value="1">0 - 4 999</option><option value="2">5 000 - 9 999</option><option value="3">10 000 - 14 999</option><option value="4">15 000 - 19 999</option><option value="5">20 000 - 24 999</option><option value="6">25 000 - 29 999</option><option value="7">30 000 - 34 999</option><option value="8">35 000 - 39 999</option><option value="9">40 000 - 44 999</option><option value="10">45 000 - 49 999</option><option value="11">50 000 - 54 999</option><option value="12">55 000 - 59 999</option><option value="13">60 000 - 64 999</option><option value="14">65 000 - 69 999</option><option value="15">70 000 - 74 999</option><option value="16">75 000 - 79 999</option><option value="17">80 000 - 84 999</option><option value="18">85 000 - 89 999</option><option value="19">90 000 - 94 999</option><option value="20">95 000 - 99 999</option><option value="21">100 000 - 109 999</option><option value="22">110 000 - 119 999</option><option value="23">120 000 - 129 999</option><option value="24">130 000 - 139 999</option><option value="25">140 000 - 149 999</option><option value="26">150 000 - 159 999</option><option value="27">160 000 - 169 999</option><option value="28">170 000 - 179 999</option><option value="29">180 000 - 189 999</option><option value="30">190 000 - 199 999</option><option value="31">200 000 - 249 999</option><option value="32">250 000 - 299 999</option><option value="33">300 000 - 349 999</option><option value="34">350 000 - 399 999</option><option value="35">400 000 - 449 999</option><option value="36">450 000 - 499 999</option><option value="37">500 000以上</option></select></td></tr><tr><th id="kilometers_max">走行距離 max:</th><td><select name="kilometers_max"><option value="">«走行距離を選ぶ»</option><option value="1">0 - 4 999</option><option value="2">5 000 - 9 999</option><option value="3">10 000 - 14 999</option><option value="4">15 000 - 19 999</option><option value="5">20 000 - 24 999</option><option value="6">25 000 - 29 999</option><option value="7">30 000 - 34 999</option><option value="8">35 000 - 39 999</option><option value="9">40 000 - 44 999</option><option value="10">45 000 - 49 999</option><option value="11">50 000 - 54 999</option><option value="12">55 000 - 59 999</option><option value="13">60 000 - 64 999</option><option value="14">65 000 - 69 999</option><option value="15">70 000 - 74 999</option><option value="16">75 000 - 79 999</option><option value="17">80 000 - 84 999</option><option value="18">85 000 - 89 999</option><option value="19">90 000 - 94 999</option><option value="20">95 000 - 99 999</option><option value="21">100 000 - 109 999</option><option value="22">110 000 - 119 999</option><option value="23">120 000 - 129 999</option><option value="24">130 000 - 139 999</option><option value="25">140 000 - 149 999</option><option value="26">150 000 - 159 999</option><option value="27">160 000 - 169 999</option><option value="28">170 000 - 179 999</option><option value="29">180 000 - 189 999</option><option value="30">190 000 - 199 999</option><option value="31">200 000 - 249 999</option><option value="32">250 000 - 299 999</option><option value="33">300 000 - 349 999</option><option value="34">350 000 - 399 999</option><option value="35">400 000 - 449 999</option><option value="36">450 000 - 499 999</option><option value="37">500 000以上</option></select></td></tr></tbody></table><table style="float: left;"><tbody><tr><th id="price_min">価格 min:</th><td><input type="text" name="price_min"></td></tr><tr><th id="price_max">価格 max:</th><td><input type="text" name="price_max"></td></tr></tbody></table></div>
+          </div>
                         </div>
                     </div>
                     <div class="srch_brdc">
@@ -97,13 +143,9 @@
                             <li id="tab_1"><a onclick="redirect({'advertiser_type':'1', 'start':''})">個人で掲載, 73</a></li>
                             <li id="tab_2"><a onclick="redirect({'advertiser_type':'2', 'start':''})">会社で掲載, 136</a></li>
                             <li class="links">
-                              
-                              <a onclick="redirect({'show_images':'0'})">写真を非表示</a>
-                              
-                              |
-                              
-                              <a onclick="redirect({'start':'', 'sortby':'price'})">価格で並べ替え</a>
-                              
+                              <a onclick="redirect({'start':'', 'sortby':'price'})" class="srch_one_dol"><img src="img/srch_one$.png" width="21" height="15" alt="" /></a>
+                              <a onclick="redirect({'show_images':'0'})" class="srch_eye"><img src="img/srch_eye_01.png" width="24" height="16" alt="" /></a>
+                                                                                          
                             </li>
                           </ul>
                         </div>
@@ -446,406 +488,39 @@
         </div>
     </div>
 </footer>
-<script src="common/js/jquery.js" type="text/javascript"></script>
+<script src="common/js/jquery-1.8.2.min.js" type="text/javascript"></script>
 <script src="common/js/jquery-ui.min.js"  type="text/javascript"></script>
 <script src="common/js/jquery.dslib.js" type="text/javascript"></script>
+<script src="common/js/bootstrap-dropdown.js"></script>
+<script src="common/js/prettify.js"></script>
+<script src="common/js/bootstrap-alert.js"></script>
+<script src="common/js/bootstrap-modal.js"></script>
+<script src="common/js/bootstrap-transition.js"></script>
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+<script src="common/js/bootstrap-scrollspy.js"></script>
+<script src="common/js/bootstrap-tab.js"></script>
+<script src="common/js/bootstrap-tooltip.js"></script>
+<script src="common/js/bootstrap-popover.js"></script>
+<script src="common/js/bootstrap-button.js"></script>
+<script src="common/js/bootstrap-carousel.js"></script>
+<script src="common/js/bootstrap-typeahead.js"></script>
+<script src="common/js/bootstrap-collapse.js"></script>
+<script src="common/js/bootstrap-affix.js"></script>
+<script src="common/js/application.js"></script>
 <script type="text/javascript">
-$(document).ready(function() {
-$('#japanese_map').maphilight({
-fade: false,
-fill: true,
-fillColor: 'f76800',
-fillOpacity: 1,
-fade: true,
-stroke: false,
-strokeColor: 'ffffff',
-strokeOpacity: 1,
-strokeWidth: 1
-});
-$('#shreg1')
-.mouseover(function(e){ $('#reg1').mouseover(); })
-.mouseout(function(e){ $('#reg1').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region1').css('opacity', 0.7);
-$('#region1 a')
-.mouseover(function(e){ $('#reg1').mouseover(); })
-.mouseout( function(e){ $('#reg1').mouseout(); });
-$('#shreg2')
-.mouseover(function(e){ $('#reg2').mouseover(); })
-.mouseout(function(e){ $('#reg2').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region2').css('opacity', 0.7);
-$('#region2 a')
-.mouseover(function(e){ $('#reg2').mouseover(); })
-.mouseout( function(e){ $('#reg2').mouseout(); });
-$('#shreg3')
-.mouseover(function(e){ $('#reg3').mouseover(); })
-.mouseout(function(e){ $('#reg3').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region3').css('opacity', 0.7);
-$('#region3 a')
-.mouseover(function(e){ $('#reg3').mouseover(); })
-.mouseout( function(e){ $('#reg3').mouseout(); });
-$('#shreg4')
-.mouseover(function(e){ $('#reg4').mouseover(); })
-.mouseout(function(e){ $('#reg4').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region4').css('opacity', 0.7);
-$('#region4 a')
-.mouseover(function(e){ $('#reg4').mouseover(); })
-.mouseout( function(e){ $('#reg4').mouseout(); });
-$('#shreg5')
-.mouseover(function(e){ $('#reg5').mouseover(); })
-.mouseout(function(e){ $('#reg5').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region5').css('opacity', 0.7);
-$('#region5 a')
-.mouseover(function(e){ $('#reg5').mouseover(); })
-.mouseout( function(e){ $('#reg5').mouseout(); });
-$('#shreg6')
-.mouseover(function(e){ $('#reg6').mouseover(); })
-.mouseout(function(e){ $('#reg6').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region6').css('opacity', 0.7);
-$('#region6 a')
-.mouseover(function(e){ $('#reg6').mouseover(); })
-.mouseout( function(e){ $('#reg6').mouseout(); });
-$('#shreg7')
-.mouseover(function(e){ $('#reg7').mouseover(); })
-.mouseout(function(e){ $('#reg7').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region7').css('opacity', 0.7);
-$('#region7 a')
-.mouseover(function(e){ $('#reg7').mouseover(); })
-.mouseout( function(e){ $('#reg7').mouseout(); });
-$('#shreg8')
-.mouseover(function(e){ $('#reg8').mouseover(); })
-.mouseout(function(e){ $('#reg8').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region8').css('opacity', 0.7);
-$('#region8 a')
-.mouseover(function(e){ $('#reg8').mouseover(); })
-.mouseout( function(e){ $('#reg8').mouseout(); });
-$('#shreg9')
-.mouseover(function(e){ $('#reg9').mouseover(); })
-.mouseout(function(e){ $('#reg9').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region9').css('opacity', 0.7);
-$('#region9 a')
-.mouseover(function(e){ $('#reg9').mouseover(); })
-.mouseout( function(e){ $('#reg9').mouseout(); });
-$('#shreg10')
-.mouseover(function(e){ $('#reg10').mouseover(); })
-.mouseout(function(e){ $('#reg10').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region10').css('opacity', 0.7);
-$('#region10 a')
-.mouseover(function(e){ $('#reg10').mouseover(); })
-.mouseout( function(e){ $('#reg10').mouseout(); });
-$('#shreg11')
-.mouseover(function(e){ $('#reg11').mouseover(); })
-.mouseout(function(e){ $('#reg11').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region11').css('opacity', 0.7);
-$('#region11 a')
-.mouseover(function(e){ $('#reg11').mouseover(); })
-.mouseout( function(e){ $('#reg11').mouseout(); });
-$('#shreg12')
-.mouseover(function(e){ $('#reg12').mouseover(); })
-.mouseout(function(e){ $('#reg12').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region12').css('opacity', 0.7);
-$('#region12 a')
-.mouseover(function(e){ $('#reg12').mouseover(); })
-.mouseout( function(e){ $('#reg12').mouseout(); });
-$('#shreg13')
-.mouseover(function(e){ $('#reg13').mouseover(); })
-.mouseout(function(e){ $('#reg13').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region13').css('opacity', 0.7);
-$('#region13 a')
-.mouseover(function(e){ $('#reg13').mouseover(); })
-.mouseout( function(e){ $('#reg13').mouseout(); });
-$('#shreg14')
-.mouseover(function(e){ $('#reg14').mouseover(); })
-.mouseout(function(e){ $('#reg14').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region14').css('opacity', 0.7);
-$('#region14 a')
-.mouseover(function(e){ $('#reg14').mouseover(); })
-.mouseout( function(e){ $('#reg14').mouseout(); });
-$('#shreg15')
-.mouseover(function(e){ $('#reg15').mouseover(); })
-.mouseout(function(e){ $('#reg15').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region15').css('opacity', 0.7);
-$('#region15 a')
-.mouseover(function(e){ $('#reg15').mouseover(); })
-.mouseout( function(e){ $('#reg15').mouseout(); });
-$('#shreg16')
-.mouseover(function(e){ $('#reg16').mouseover(); })
-.mouseout(function(e){ $('#reg16').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region16').css('opacity', 0.7);
-$('#region16 a')
-.mouseover(function(e){ $('#reg16').mouseover(); })
-.mouseout( function(e){ $('#reg16').mouseout(); });
-$('#shreg17')
-.mouseover(function(e){ $('#reg17').mouseover(); })
-.mouseout(function(e){ $('#reg17').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region17').css('opacity', 0.7);
-$('#region17 a')
-.mouseover(function(e){ $('#reg17').mouseover(); })
-.mouseout( function(e){ $('#reg17').mouseout(); });
-$('#shreg18')
-.mouseover(function(e){ $('#reg18').mouseover(); })
-.mouseout(function(e){ $('#reg18').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region18').css('opacity', 0.7);
-$('#region18 a')
-.mouseover(function(e){ $('#reg18').mouseover(); })
-.mouseout( function(e){ $('#reg18').mouseout(); });
-$('#shreg19')
-.mouseover(function(e){ $('#reg19').mouseover(); })
-.mouseout(function(e){ $('#reg19').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region19').css('opacity', 0.7);
-$('#region19 a')
-.mouseover(function(e){ $('#reg19').mouseover(); })
-.mouseout( function(e){ $('#reg19').mouseout(); });
-$('#shreg20')
-.mouseover(function(e){ $('#reg20').mouseover(); })
-.mouseout(function(e){ $('#reg20').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region20').css('opacity', 0.7);
-$('#region20 a')
-.mouseover(function(e){ $('#reg20').mouseover(); })
-.mouseout( function(e){ $('#reg20').mouseout(); });
-$('#shreg21')
-.mouseover(function(e){ $('#reg21').mouseover(); })
-.mouseout(function(e){ $('#reg21').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region21').css('opacity', 0.7);
-$('#region21 a')
-.mouseover(function(e){ $('#reg21').mouseover(); })
-.mouseout( function(e){ $('#reg21').mouseout(); });
-$('#shreg22')
-.mouseover(function(e){ $('#reg22').mouseover(); })
-.mouseout(function(e){ $('#reg22').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region22').css('opacity', 0.7);
-$('#region22 a')
-.mouseover(function(e){ $('#reg22').mouseover(); })
-.mouseout( function(e){ $('#reg22').mouseout(); });
-$('#shreg23')
-.mouseover(function(e){ $('#reg23').mouseover(); })
-.mouseout(function(e){ $('#reg23').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region23').css('opacity', 0.7);
-$('#region23 a')
-.mouseover(function(e){ $('#reg23').mouseover(); })
-.mouseout( function(e){ $('#reg23').mouseout(); });
-$('#shreg24')
-.mouseover(function(e){ $('#reg24').mouseover(); })
-.mouseout(function(e){ $('#reg24').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region24').css('opacity', 0.7);
-$('#region24 a')
-.mouseover(function(e){ $('#reg24').mouseover(); })
-.mouseout( function(e){ $('#reg24').mouseout(); });
-$('#shreg25')
-.mouseover(function(e){ $('#reg25').mouseover(); })
-.mouseout(function(e){ $('#reg25').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region25').css('opacity', 0.7);
-$('#region25 a')
-.mouseover(function(e){ $('#reg25').mouseover(); })
-.mouseout( function(e){ $('#reg25').mouseout(); });
-$('#shreg26')
-.mouseover(function(e){ $('#reg26').mouseover(); })
-.mouseout(function(e){ $('#reg26').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region26').css('opacity', 0.7);
-$('#region26 a')
-.mouseover(function(e){ $('#reg26').mouseover(); })
-.mouseout( function(e){ $('#reg26').mouseout(); });
-$('#shreg27')
-.mouseover(function(e){ $('#reg27').mouseover(); })
-.mouseout(function(e){ $('#reg27').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region27').css('opacity', 0.7);
-$('#region27 a')
-.mouseover(function(e){ $('#reg27').mouseover(); })
-.mouseout( function(e){ $('#reg27').mouseout(); });
-$('#shreg28')
-.mouseover(function(e){ $('#reg28').mouseover(); })
-.mouseout(function(e){ $('#reg28').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region28').css('opacity', 0.7);
-$('#region28 a')
-.mouseover(function(e){ $('#reg28').mouseover(); })
-.mouseout( function(e){ $('#reg28').mouseout(); });
-$('#shreg29')
-.mouseover(function(e){ $('#reg29').mouseover(); })
-.mouseout(function(e){ $('#reg29').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region29').css('opacity', 0.7);
-$('#region29 a')
-.mouseover(function(e){ $('#reg29').mouseover(); })
-.mouseout( function(e){ $('#reg29').mouseout(); });
-$('#shreg30')
-.mouseover(function(e){ $('#reg30').mouseover(); })
-.mouseout(function(e){ $('#reg30').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region30').css('opacity', 0.7);
-$('#region30 a')
-.mouseover(function(e){ $('#reg30').mouseover(); })
-.mouseout( function(e){ $('#reg30').mouseout(); });
-$('#shreg31')
-.mouseover(function(e){ $('#reg31').mouseover(); })
-.mouseout(function(e){ $('#reg31').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region31').css('opacity', 0.7);
-$('#region31 a')
-.mouseover(function(e){ $('#reg31').mouseover(); })
-.mouseout( function(e){ $('#reg31').mouseout(); });
-$('#shreg32')
-.mouseover(function(e){ $('#reg32').mouseover(); })
-.mouseout(function(e){ $('#reg32').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region32').css('opacity', 0.7);
-$('#region32 a')
-.mouseover(function(e){ $('#reg32').mouseover(); })
-.mouseout( function(e){ $('#reg32').mouseout(); });
-$('#shreg33')
-.mouseover(function(e){ $('#reg33').mouseover(); })
-.mouseout(function(e){ $('#reg33').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region33').css('opacity', 0.7);
-$('#region33 a')
-.mouseover(function(e){ $('#reg33').mouseover(); })
-.mouseout( function(e){ $('#reg33').mouseout(); });
-$('#shreg34')
-.mouseover(function(e){ $('#reg34').mouseover(); })
-.mouseout(function(e){ $('#reg34').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region34').css('opacity', 0.7);
-$('#region34 a')
-.mouseover(function(e){ $('#reg34').mouseover(); })
-.mouseout( function(e){ $('#reg34').mouseout(); });
-$('#shreg35')
-.mouseover(function(e){ $('#reg35').mouseover(); })
-.mouseout(function(e){ $('#reg35').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region35').css('opacity', 0.7);
-$('#region35 a')
-.mouseover(function(e){ $('#reg35').mouseover(); })
-.mouseout( function(e){ $('#reg35').mouseout(); });
-$('#shreg36')
-.mouseover(function(e){ $('#reg36').mouseover(); })
-.mouseout(function(e){ $('#reg36').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region36').css('opacity', 0.7);
-$('#region36 a')
-.mouseover(function(e){ $('#reg36').mouseover(); })
-.mouseout( function(e){ $('#reg36').mouseout(); });
-$('#shreg37')
-.mouseover(function(e){ $('#reg37').mouseover(); })
-.mouseout(function(e){ $('#reg37').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region37').css('opacity', 0.7);
-$('#region37 a')
-.mouseover(function(e){ $('#reg37').mouseover(); })
-.mouseout( function(e){ $('#reg37').mouseout(); });
-$('#shreg38')
-.mouseover(function(e){ $('#reg38').mouseover(); })
-.mouseout(function(e){ $('#reg38').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region38').css('opacity', 0.7);
-$('#region38 a')
-.mouseover(function(e){ $('#reg38').mouseover(); })
-.mouseout( function(e){ $('#reg38').mouseout(); });
-$('#shreg39')
-.mouseover(function(e){ $('#reg39').mouseover(); })
-.mouseout(function(e){ $('#reg39').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region39').css('opacity', 0.7);
-$('#region39 a')
-.mouseover(function(e){ $('#reg39').mouseover(); })
-.mouseout( function(e){ $('#reg39').mouseout(); });
-$('#shreg40')
-.mouseover(function(e){ $('#reg40').mouseover(); })
-.mouseout(function(e){ $('#reg40').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region40').css('opacity', 0.7);
-$('#region40 a')
-.mouseover(function(e){ $('#reg40').mouseover(); })
-.mouseout( function(e){ $('#reg40').mouseout(); });
-$('#shreg41')
-.mouseover(function(e){ $('#reg41').mouseover(); })
-.mouseout(function(e){ $('#reg41').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region41').css('opacity', 0.7);
-$('#region41 a')
-.mouseover(function(e){ $('#reg41').mouseover(); })
-.mouseout( function(e){ $('#reg41').mouseout(); });
-$('#shreg42')
-.mouseover(function(e){ $('#reg42').mouseover(); })
-.mouseout(function(e){ $('#reg42').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region42').css('opacity', 0.7);
-$('#region42 a')
-.mouseover(function(e){ $('#reg42').mouseover(); })
-.mouseout( function(e){ $('#reg42').mouseout(); });
-$('#shreg43')
-.mouseover(function(e){ $('#reg43').mouseover(); })
-.mouseout(function(e){ $('#reg43').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region43').css('opacity', 0.7);
-$('#region43 a')
-.mouseover(function(e){ $('#reg43').mouseover(); })
-.mouseout( function(e){ $('#reg43').mouseout(); });
-$('#shreg44')
-.mouseover(function(e){ $('#reg44').mouseover(); })
-.mouseout(function(e){ $('#reg44').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region44').css('opacity', 0.7);
-$('#region44 a')
-.mouseover(function(e){ $('#reg44').mouseover(); })
-.mouseout( function(e){ $('#reg44').mouseout(); });
-$('#shreg45')
-.mouseover(function(e){ $('#reg45').mouseover(); })
-.mouseout(function(e){ $('#reg45').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region45').css('opacity', 0.7);
-$('#region45 a')
-.mouseover(function(e){ $('#reg45').mouseover(); })
-.mouseout( function(e){ $('#reg45').mouseout(); });
-$('#shreg46')
-.mouseover(function(e){ $('#reg46').mouseover(); })
-.mouseout(function(e){ $('#reg46').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region46').css('opacity', 0.7);
-$('#region46 a')
-.mouseover(function(e){ $('#reg46').mouseover(); })
-.mouseout( function(e){ $('#reg46').mouseout(); });
-$('#shreg47')
-.mouseover(function(e){ $('#reg47').mouseover(); })
-.mouseout(function(e){ $('#reg47').mouseout(); })
-.click(function(e){e.preventDefault();});
-$('#region47').css('opacity', 0.7);
-$('#region47 a')
-.mouseover(function(e){ $('#reg47').mouseover(); })
-.mouseout( function(e){ $('#reg47').mouseout(); });
-});
-$(document).ready(function() {
-$("#draggable").hide().delay(5000);
-$("#draggable").show();
-$("#draggable").animate({'opacity':1},2000);
-$("#draggable").draggable();
-});
+var _gauges = _gauges || [];
+(function() {
+var t = document.createElement('script');
+t.type = 'text/javascript';
+t.async = true;
+t.id = 'gauges-tracker';
+t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+t.src = '//secure.gaug.es/track.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(t, s);
+})();
 </script>
+ 
 
 <script type="text/javascript">
 var _gaq = _gaq || [];
